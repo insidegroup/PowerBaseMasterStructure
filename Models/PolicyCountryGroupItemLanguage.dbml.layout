@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PolicyCountryGroupItemLanguage">
+  <DataContextMoniker Name="/PolicyCountryGroupItemLanguageDC" />
+  <nestedChildShapes>
+    <classShape Id="32884614-0f14-4a37-af98-6374a16903e3" absoluteBounds="3.5, 1.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PolicyCountryGroupItemLanguageDC/PolicyCountryGroupItemLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95787fb7-4e00-4743-8c7a-dad555321342" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

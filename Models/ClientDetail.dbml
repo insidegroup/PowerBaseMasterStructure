@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v3011" Class="ClientDetailDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.1.48;Initial Catalog=Desktop_Local_v3011;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="v3011" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClientDetail" Member="ClientDetails">
+    <Type Name="ClientDetail">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WebsiteAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InheritFromParentFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDetailName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TripTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailClientAccount" Member="ClientDetailClientAccounts" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailClientAccount" />
+      <Association Name="ClientDetail_ClientDetailClientSubUnit" Member="ClientDetailClientSubUnits" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailClientSubUnit" />
+      <Association Name="ClientDetail_ClientDetailClientSubUnitTravelerType" Member="ClientDetailClientSubUnitTravelerTypes" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailClientSubUnitTravelerType" />
+      <Association Name="ClientDetail_ClientDetailClientTopUnit" Member="ClientDetailClientTopUnits" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailClientTopUnit" />
+      <Association Name="ClientDetail_ClientDetailTravelerType" Member="ClientDetailTravelerTypes" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailTravelerType" />
+      <Association Name="ClientDetail_ClientDetailAddress" Member="ClientDetailAddresses" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailAddress" />
+      <Association Name="ClientDetail_ClientDetailESCInformation" Member="ClientDetailESCInformation" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailESCInformation" Cardinality="One" />
+      <Association Name="ClientDetail_ClientDetailSubProductFormOfPaymentType" Member="ClientDetailSubProductFormOfPaymentTypes" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailSubProductFormOfPaymentType" />
+      <Association Name="ClientDetail_ClientDetailSupplierProduct" Member="ClientDetailSupplierProducts" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailSupplierProduct" />
+      <Association Name="ClientDetail_ClientDetailContact" Member="ClientDetailContacts" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetailContact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailClientAccount" Member="ClientDetailClientAccounts">
+    <Type Name="ClientDetailClientAccount">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ClientDetail_ClientDetailClientAccount" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailClientSubUnit" Member="ClientDetailClientSubUnits">
+    <Type Name="ClientDetailClientSubUnit">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailClientSubUnit" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailClientSubUnitTravelerType" Member="ClientDetailClientSubUnitTravelerTypes">
+    <Type Name="ClientDetailClientSubUnitTravelerType">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailClientSubUnitTravelerType" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailClientTopUnit" Member="ClientDetailClientTopUnits">
+    <Type Name="ClientDetailClientTopUnit">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailClientTopUnit" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailTravelerType" Member="ClientDetailTravelerTypes">
+    <Type Name="ClientDetailTravelerType">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailTravelerType" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailAddress" Member="ClientDetailAddresses">
+    <Type Name="ClientDetailAddress">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddressId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailAddress" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailESCInformation" Member="ClientDetailESCInformations">
+    <Type Name="ClientDetailESCInformation">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ESCInformation" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailESCInformation" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailSubProductFormOfPaymentType" Member="ClientDetailSubProductFormOfPaymentTypes">
+    <Type Name="ClientDetailSubProductFormOfPaymentType">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FormOfPaymentTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailSubProductFormOfPaymentType" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailSupplierProduct" Member="ClientDetailSupplierProducts">
+    <Type Name="ClientDetailSupplierProduct">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SupplierCode" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailSupplierProduct" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDetailContact" Member="ClientDetailContacts">
+    <Type Name="ClientDetailContact">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContactId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDetail_ClientDetailContact" Member="ClientDetail" ThisKey="ClientDetailId" OtherKey="ClientDetailId" Type="ClientDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDetailDeletedStatus_v1" Method="spDesktopDataAdmin_UpdateClientDetailDeletedStatus_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDetail_v1" Method="spDesktopDataAdmin_UpdateClientDetail_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WebsiteAddress" Parameter="websiteAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Logo" Parameter="logo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="InheritFromParentFlag" Parameter="inheritFromParentFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientDetailName" Parameter="clientDetailName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDetail_v1" Method="spDesktopDataAdmin_InsertClientDetail_v1">
+    <Parameter Name="WebsiteAddress" Parameter="websiteAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Logo" Parameter="logo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="InheritFromParentFlag" Parameter="inheritFromParentFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientDetailName" Parameter="clientDetailName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectClientDetailHierarchy_v1" Method="fnDesktopDataAdmin_SelectClientDetailHierarchy_v1" IsComposable="true">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectClientDetailHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDetailAddresses_v1" Method="spDesktopDataAdmin_SelectClientDetailAddresses_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDetailAddresses_v1Result">
+      <Column Name="AddressId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstAddressLine" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondAddressLine" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CountyName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="StateProvinceName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LatitudeDecimal" Type="System.Decimal" DbType="Decimal(10,7)" CanBeNull="true" />
+      <Column Name="LongitudeDecimal" Type="System.Decimal" DbType="Decimal(10,7)" CanBeNull="true" />
+      <Column Name="MappingQualityCode" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ReplicatedFromClientMaintenanceFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDetailAddress_v1" Method="spDesktopDataAdmin_InsertClientDetailAddress_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstAddressLine" Parameter="firstAddressLine" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="SecondAddressLine" Parameter="secondAddressLine" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="CityName" Parameter="cityName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="CountyName" Parameter="countyName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="StateProvinceName" Parameter="stateProvinceName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="LatitudeDecimal" Parameter="latitudeDecimal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="LongitudeDecimal" Parameter="longitudeDecimal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="MappingQualityCode" Parameter="mappingQualityCode" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ReplicatedFromClientMaintenanceFlag" Parameter="replicatedFromClientMaintenanceFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CountryCode" Parameter="countryCode" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientSubUnitClientDetails_v1" Method="spDesktopDataAdmin_SelectClientSubUnitClientDetails_v1">
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientSubUnitClientDetails_v1Result">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDetailName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientAccountClientDetails_v1" Method="spDesktopDataAdmin_SelectClientAccountClientDetails_v1">
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientAccountClientDetails_v1Result">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDetailName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientSubUnitTravelerTypeClientDetails_v1" Method="spDesktopDataAdmin_SelectClientSubUnitTravelerTypeClientDetails_v1">
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientSubUnitTravelerTypeClientDetails_v1Result">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDetailName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectTravelerTypeClientDetails_v1" Method="spDesktopDataAdmin_SelectTravelerTypeClientDetails_v1">
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectTravelerTypeClientDetails_v1Result">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDetailName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientTopUnitClientDetails_v1" Method="spDesktopDataAdmin_SelectClientTopUnitClientDetails_v1">
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientTopUnitClientDetails_v1Result">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDetailName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDetailESCInformation_v1" Method="spDesktopDataAdmin_InsertClientDetailESCInformation_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ESCInformation" Parameter="eSCInformation" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDetailESCInformation_v1" Method="spDesktopDataAdmin_SelectClientDetailESCInformation_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDetailESCInformation_v1Result">
+      <Column Name="ESCInformation" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDetailESCInformation_v1" Method="spDesktopDataAdmin_UpdateClientDetailESCInformation_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ESCInformation" Parameter="eSCInformation" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDetailSubProductFormOfPaymentType_v1" Method="spDesktopDataAdmin_InsertClientDetailSubProductFormOfPaymentType_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubProductId" Parameter="subProductId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FormOfPaymentTypeId" Parameter="formOfPaymentTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDetailSubProductFormOfPaymentTypes_v1" Method="spDesktopDataAdmin_SelectClientDetailSubProductFormOfPaymentTypes_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDetailSubProductFormOfPaymentTypes_v1Result">
+      <Column Name="ClientDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubProductName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FormOfPaymentTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormOfPaymentTypeDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDetailAvailableSubProducts_v1" Method="spDesktopDataAdmin_SelectClientDetailAvailableSubProducts_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDetailAvailableSubProducts_v1Result">
+      <Column Name="SubProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubProductName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDetailSupplierProducts_v1" Method="spDesktopDataAdmin_SelectClientDetailSupplierProducts_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDetailSupplierProducts_v1Result">
+      <Column Name="SupplierCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDetailSupplierProduct_v1" Method="spDesktopDataAdmin_InsertClientDetailSupplierProduct_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SupplierCode" Parameter="supplierCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteClientDetailESCInformation_v1" Method="spDesktopDataAdmin_DeleteClientDetailESCInformation_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteClientDetailSubProductFormOfPaymentType_v1" Method="spDesktopDataAdmin_DeleteClientDetailSubProductFormOfPaymentType_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubProductId" Parameter="subProductId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FormOfPaymentTypeId" Parameter="formOfPaymentTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteClientDetailSupplierProduct_v1" Method="spDesktopDataAdmin_DeleteClientDetailSupplierProduct_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SupplierCode" Parameter="supplierCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDetailContacts_v1" Method="spDesktopDataAdmin_SelectClientDetailContacts_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDetailContacts_v1Result">
+      <Column Name="ContactId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="JobTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactTypeName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDetailContact_v1" Method="spDesktopDataAdmin_InsertClientDetailContact_v1">
+    <Parameter Name="ClientDetailId" Parameter="clientDetailId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="JobTitle" Parameter="jobTitle" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="WorkPhone" Parameter="workPhone" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="WorkMobile" Parameter="workMobile" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactTypeId" Parameter="contactTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

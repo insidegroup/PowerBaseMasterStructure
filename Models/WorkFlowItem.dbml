@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DesktopData" Class="WorkFlowItemDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DMLAPTOP\SQLEXPRESS2008;Initial Catalog=Desktop_Local_v2011;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CWTDesktopDatabase" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.WorkFlowItem" Member="WorkFlowItems">
+    <Type Name="WorkFlowItem">
+      <Column Name="WorkFlowGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FormId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WorkFlowPanelDisplaySequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectWorkFlowItems_v1" Method="spDesktopDataAdmin_SelectWorkFlowItems_v1">
+    <Parameter Name="WorkFlowGroupId" Parameter="workFlowGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectWorkFlowItems_v1Result">
+      <Column Name="WorkFlowPanelDisplaySequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FormId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

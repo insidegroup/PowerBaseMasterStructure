@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1831" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1831;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="v1831" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DatabaseConnection" Member="DatabaseConnections">
+    <Type Name="DatabaseConnection">
+      <Column Name="DatabaseConnectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DatabaseName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DatabaseEnvironmentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsMilitaryGovernmentFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DatabaseEnvironment_DatabaseConnection" Member="DatabaseEnvironment" ThisKey="DatabaseEnvironmentId" OtherKey="DatabaseEnvironmentId" Type="DatabaseEnvironment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DatabaseEnvironment" Member="DatabaseEnvironments">
+    <Type Name="DatabaseEnvironment">
+      <Column Name="DatabaseEnvironmentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DatabaseEnvironmentName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DatabaseEnvironment_DatabaseConnection" Member="DatabaseConnections" ThisKey="DatabaseEnvironmentId" OtherKey="DatabaseEnvironmentId" Type="DatabaseConnection" />
+    </Type>
+  </Table>
+</Database>

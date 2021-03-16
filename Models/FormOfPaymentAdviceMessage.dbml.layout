@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 20.375" name="FormOfPaymentAdviceMessage">
+  <DataContextMoniker Name="/FormOfPaymentAdviceMessageGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="6ae736c7-29f7-41f9-911d-80233004b18e" absoluteBounds="3.5, 1.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69ad3724-d711-49f3-9985-a5b80e1450b7" absoluteBounds="3.515, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0870b6a-78b5-4d56-a577-04c9ea7fe58b" absoluteBounds="3.5, 10.5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupClientAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5660880c-df7a-468d-889a-abfbcffcfe2d" absoluteBounds="3.515, 10.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc0d6406-d914-419e-b9e4-20415c578155" absoluteBounds="3.5, 4.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupClientSubUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="340671e8-6cc2-40be-b2a9-403ae7a1a3fb" absoluteBounds="3.515, 5.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f12f3f2-6b8b-4df6-951c-94c4e5893d8b" absoluteBounds="3.5, 13.5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupClientSubUnitTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a357f1c-60b6-4517-9464-cc18bc24d05c" absoluteBounds="3.515, 13.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a91dfe7-d3bf-4135-9036-4fb382aaa068" absoluteBounds="3.5, 7.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupClientTopUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c4004b3-b183-4ca3-89c6-a904b19b85ea" absoluteBounds="3.515, 7.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35a37ffd-dcac-43cc-99b9-7a3c5afc80fd" absoluteBounds="1.625, 16.625, 3.875, 3.5016097005208309">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="829be6de-4c32-4bdc-a291-0d28132bab66" absoluteBounds="1.64, 17.085, 3.8449999999999998, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62fa02a7-cdf3-4ab4-9af6-44d72faa9faf" absoluteBounds="6.75, 0.75, 4, 2.5401025390625005">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroupItemTranslation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cc1ebfa-10cb-4ed3-b2ac-6b85023edcc2" absoluteBounds="6.765, 1.21, 3.9699999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="116ddd70-aa34-4967-a474-f1b7f2418750" absoluteBounds="6.75, 11.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="754b5d96-cac3-4516-8c1d-a52a562b7efb" absoluteBounds="6.765, 11.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.75 : 11.5); (6.375 : 11.125); (6.375 : 2.82774983723958); (5.5 : 2.82774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup/FormOfPaymentAdviceMessageGroup_FormOfPaymentAdviceMessageGroupTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="116ddd70-aa34-4967-a474-f1b7f2418750" />
+        <classShapeMoniker Id="6ae736c7-29f7-41f9-911d-80233004b18e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 12.2051530533854); (5.5 : 12.2051530533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup/FormOfPaymentAdviceMessageGroup_FormOfPaymentAdviceMessageGroupClientAccount" />
+      <nodes>
+        <classShapeMoniker Id="116ddd70-aa34-4967-a474-f1b7f2418750" />
+        <classShapeMoniker Id="c0870b6a-78b5-4d56-a577-04c9ea7fe58b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.7812525 : 11.5); (7.7812525 : 5.70274983723958); (5.5 : 5.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup/FormOfPaymentAdviceMessageGroup_FormOfPaymentAdviceMessageGroupClientSubUnit" />
+      <nodes>
+        <classShapeMoniker Id="116ddd70-aa34-4967-a474-f1b7f2418750" />
+        <classShapeMoniker Id="fc0d6406-d914-419e-b9e4-20415c578155" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 14.0585034179687); (5.5 : 14.0585034179687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup/FormOfPaymentAdviceMessageGroup_FormOfPaymentAdviceMessageGroupClientSubUnitTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="116ddd70-aa34-4967-a474-f1b7f2418750" />
+        <classShapeMoniker Id="1f12f3f2-6b8b-4df6-951c-94c4e5893d8b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.26562625 : 11.5); (7.26562625 : 8.57774983723958); (6.45833333333333 : 8.57774983723958 : JumpStart); (6.29166666666667 : 8.57774983723958 : JumpEnd); (5.5 : 8.57774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup/FormOfPaymentAdviceMessageGroup_FormOfPaymentAdviceMessageGroupClientTopUnit" />
+      <nodes>
+        <classShapeMoniker Id="116ddd70-aa34-4967-a474-f1b7f2418750" />
+        <classShapeMoniker Id="2a91dfe7-d3bf-4135-9036-4fb382aaa068" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 14.6170068359375); (7.75 : 18.3758048502604); (5.5 : 18.3758048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FormOfPaymentAdviceMessageGroupDC/FormOfPaymentAdviceMessageGroup/FormOfPaymentAdviceMessageGroup_FormOfPaymentAdviceMessageGroupItem" />
+      <nodes>
+        <classShapeMoniker Id="116ddd70-aa34-4967-a474-f1b7f2418750" />
+        <classShapeMoniker Id="35a37ffd-dcac-43cc-99b9-7a3c5afc80fd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

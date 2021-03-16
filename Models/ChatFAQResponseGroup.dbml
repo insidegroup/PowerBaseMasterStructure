@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1931" Class="ChatFAQResponseGroupDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1931;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v1931" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ChatFAQResponseGroupTravelerType" Member="ChatFAQResponseGroupTravelerTypes">
+    <Type Name="ChatFAQResponseGroupTravelerType">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupTravelerType" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupClientSubUnit" Member="ChatFAQResponseGroupClientSubUnits">
+    <Type Name="ChatFAQResponseGroupClientSubUnit">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientSubUnit" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupClientSubUnitTravelerType" Member="ChatFAQResponseGroupClientSubUnitTravelerTypes">
+    <Type Name="ChatFAQResponseGroupClientSubUnitTravelerType">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientSubUnitTravelerType" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupClientTopUnit" Member="ChatFAQResponseGroupClientTopUnits">
+    <Type Name="ChatFAQResponseGroupClientTopUnit">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientTopUnit" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupCountry" Member="ChatFAQResponseGroupCountries">
+    <Type Name="ChatFAQResponseGroupCountry">
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupCountry" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupCountryRegion" Member="ChatFAQResponseGroupCountryRegions">
+    <Type Name="ChatFAQResponseGroupCountryRegion">
+      <Column Name="CountryRegionId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupCountryRegion" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupGlobal" Member="ChatFAQResponseGroupGlobals">
+    <Type Name="ChatFAQResponseGroupGlobal">
+      <Column Name="GlobalId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupGlobal" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupGlobalRegion" Member="ChatFAQResponseGroupGlobalRegions">
+    <Type Name="ChatFAQResponseGroupGlobalRegion">
+      <Column Name="GlobalRegionCode" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupGlobalRegion" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupGlobalSubRegion" Member="ChatFAQResponseGroupGlobalSubRegions">
+    <Type Name="ChatFAQResponseGroupGlobalSubRegion">
+      <Column Name="GlobalSubRegionCode" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupGlobalSubRegion" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupTeam" Member="ChatFAQResponseGroupTeams">
+    <Type Name="ChatFAQResponseGroupTeam">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupTeam" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseItem" Member="ChatFAQResponseItems">
+    <Type Name="ChatFAQResponseItem">
+      <Column Name="ChatFAQResponseItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChatFAQResponseItemDescription" Type="System.String" DbType="NVarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="ChatMessageFAQId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseItem_ChatFAQResponseItemLanguage" Member="ChatFAQResponseItemLanguages" ThisKey="ChatFAQResponseItemId" OtherKey="ChatFAQResponseItemId" Type="ChatFAQResponseItemLanguage" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseItem" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseItemLanguage" Member="ChatFAQResponseItemLanguages">
+    <Type Name="ChatFAQResponseItemLanguage">
+      <Column Name="ChatFAQResponseItemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseItemLanguageDescription" Type="System.String" DbType="NVarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseItem_ChatFAQResponseItemLanguage" Member="ChatFAQResponseItem" ThisKey="ChatFAQResponseItemId" OtherKey="ChatFAQResponseItemId" Type="ChatFAQResponseItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroup" Member="ChatFAQResponseGroups">
+    <Type Name="ChatFAQResponseGroup">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupTravelerType" Member="ChatFAQResponseGroupTravelerTypes" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupTravelerType" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientSubUnit" Member="ChatFAQResponseGroupClientSubUnits" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupClientSubUnit" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientSubUnitTravelerType" Member="ChatFAQResponseGroupClientSubUnitTravelerTypes" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupClientSubUnitTravelerType" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientTopUnit" Member="ChatFAQResponseGroupClientTopUnits" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupClientTopUnit" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupCountry" Member="ChatFAQResponseGroupCountries" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupCountry" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupCountryRegion" Member="ChatFAQResponseGroupCountryRegions" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupCountryRegion" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupGlobal" Member="ChatFAQResponseGroupGlobals" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupGlobal" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupGlobalRegion" Member="ChatFAQResponseGroupGlobalRegions" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupGlobalRegion" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupGlobalSubRegion" Member="ChatFAQResponseGroupGlobalSubRegions" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupGlobalSubRegion" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupTeam" Member="ChatFAQResponseGroupTeams" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupTeam" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseItem" Member="ChatFAQResponseItems" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseItem" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientAccount" Member="ChatFAQResponseGroupClientAccounts" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroupClientAccount" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChatFAQResponseGroupClientAccount" Member="ChatFAQResponseGroupClientAccounts">
+    <Type Name="ChatFAQResponseGroupClientAccount">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ChatFAQResponseGroup_ChatFAQResponseGroupClientAccount" Member="ChatFAQResponseGroup" ThisKey="ChatFAQResponseGroupId" OtherKey="ChatFAQResponseGroupId" Type="ChatFAQResponseGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectChatFAQResponseGroupLinkedClientSubUnits_v1" Method="spDesktopDataAdmin_SelectChatFAQResponseGroupLinkedClientSubUnits_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="Linked" Parameter="linked" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="spDesktopDataAdmin_SelectChatFAQResponseGroupLinkedClientSubUnits_v1Result">
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseGroup_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseGroup_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChatFAQResponseGroupName" Parameter="chatFAQResponseGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Hierarchy" Parameter="hierarchy" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="IsMultipleHierarchy" Parameter="isMultipleHierarchy" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseGroupLinkedClientSubUnit_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseGroupLinkedClientSubUnit_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseGroupDeletedStatus_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseGroupDeletedStatus_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectChatFAQResponseGroupHierarchy_v1" Method="fnDesktopDataAdmin_SelectChatFAQResponseGroupHierarchy_v1" IsComposable="true">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectChatFAQResponseGroupHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertChatFAQResponseGroup_v1" Method="spDesktopDataAdmin_InsertChatFAQResponseGroup_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ChatFAQResponseGroupName" Parameter="chatFAQResponseGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteChatFAQResponseItem_v1" Method="spDesktopDataAdmin_DeleteChatFAQResponseItem_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertChatFAQResponseItem_v1" Method="spDesktopDataAdmin_InsertChatFAQResponseItem_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChatFAQResponseItemDescription" Parameter="chatFAQResponseItemDescription" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="ChatMessageFAQId" Parameter="chatMessageFAQId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectChatFAQResponseItems_v1" Method="spDesktopDataAdmin_SelectChatFAQResponseItems_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectChatFAQResponseItems_v1Result">
+      <Column Name="ChatFAQResponseItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChatFAQResponseItemDescription" Type="System.String" DbType="NVarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="ChatMessageFAQId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChatMessageFAQName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseItem_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseItem_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChatFAQResponseItemDescription" Parameter="chatFAQResponseItemDescription" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="ChatMessageFAQId" Parameter="chatMessageFAQId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectChatFAQResponseItemLanguages_v1" Method="spDesktopDataAdmin_SelectChatFAQResponseItemLanguages_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectChatFAQResponseItemLanguages_v1Result">
+      <Column Name="ChatFAQResponseItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ChatFAQResponseItemLanguageDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteChatFAQResponseItemLanguage_v1" Method="spDesktopDataAdmin_DeleteChatFAQResponseItemLanguage_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectChatFAQResponseItemAvailableLanguages_v1" Method="spDesktopDataAdmin_SelectChatFAQResponseItemAvailableLanguages_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectChatFAQResponseItemAvailableLanguages_v1Result">
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseItemLanguage_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseItemLanguage_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="ChatFAQResponseItemLanguageDescription" Parameter="chatFAQResponseItemLanguageDescription" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertChatFAQResponseItemLanguage_v1" Method="spDesktopDataAdmin_InsertChatFAQResponseItemLanguage_v1">
+    <Parameter Name="ChatFAQResponseItemId" Parameter="chatFAQResponseItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="ChatFAQResponseItemLanguageDescription" Parameter="chatFAQResponseItemLanguageDescription" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectChatFAQResponseGroups_v1" Method="spDesktopDataAdmin_SelectChatFAQResponseGroups_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectChatFAQResponseGroups_v1Result">
+      <Column Name="ChatFAQResponseGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChatFAQResponseGroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkedItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseItemCount_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseItemCount_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="XML" Parameter="xML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_UpdateChatFAQResponseItemCount_v1Result">
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Success" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MessageText" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateChatFAQResponseItems_v1" Method="spDesktopDataAdmin_UpdateChatFAQResponseItems_v1">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="XML" Parameter="xML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_UpdateChatFAQResponseItems_v1Result">
+      <Column Name="MessageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Success" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MessageText" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

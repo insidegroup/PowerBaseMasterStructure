@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1841" Class="PublicHolidayGroupDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1841;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v1841" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PublicHolidayGroup" Member="PublicHolidayGroups">
+    <Type Name="PublicHolidayGroup">
+      <Column Name="PublicHolidayGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PublicHolidayGroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PublicHolidayGroup_PublicHolidayGroupLocation" Member="PublicHolidayGroupLocations" ThisKey="PublicHolidayGroupId" OtherKey="PublicHolidayGroupId" Type="PublicHolidayGroupLocation" />
+      <Association Name="PublicHolidayGroup_PublicHolidayGroupTeam" Member="PublicHolidayGroupTeams" ThisKey="PublicHolidayGroupId" OtherKey="PublicHolidayGroupId" Type="PublicHolidayGroupTeam" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PublicHolidayGroupLocation" Member="PublicHolidayGroupLocations">
+    <Type Name="PublicHolidayGroupLocation">
+      <Column Name="PublicHolidayGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PublicHolidayGroup_PublicHolidayGroupLocation" Member="PublicHolidayGroup" ThisKey="PublicHolidayGroupId" OtherKey="PublicHolidayGroupId" Type="PublicHolidayGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PublicHolidayGroupTeam" Member="PublicHolidayGroupTeams">
+    <Type Name="PublicHolidayGroupTeam">
+      <Column Name="PublicHolidayGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PublicHolidayGroup_PublicHolidayGroupTeam" Member="PublicHolidayGroup" ThisKey="PublicHolidayGroupId" OtherKey="PublicHolidayGroupId" Type="PublicHolidayGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPublicHolidayGroup_v1" Method="spDesktopDataAdmin_InsertPublicHolidayGroup_v1">
+    <Parameter Name="PublicHolidayGroupName" Parameter="publicHolidayGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePublicHolidayGroup_v1" Method="spDesktopDataAdmin_UpdatePublicHolidayGroup_v1">
+    <Parameter Name="PublicHolidayGroupId" Parameter="publicHolidayGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PublicHolidayGroupName" Parameter="publicHolidayGroupName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPublicHolidayGroups_v1" Method="spDesktopDataAdmin_SelectPublicHolidayGroups_v1">
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPublicHolidayGroups_v1Result">
+      <Column Name="PublicHolidayGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PublicHolidayGroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePublicHolidayGroup_v1" Method="spDesktopDataAdmin_DeletePublicHolidayGroup_v1">
+    <Parameter Name="PublicHolidayGroupId" Parameter="publicHolidayGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPublicHolidayGroupsOrphaned_v1" Method="spDesktopDataAdmin_SelectPublicHolidayGroupsOrphaned_v1">
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPublicHolidayGroupsOrphaned_v1Result">
+      <Column Name="PublicHolidayGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PublicHolidayGroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectPublicHolidayGroupHierarchy_v1" Method="fnDesktopDataAdmin_SelectPublicHolidayGroupHierarchy_v1" IsComposable="true">
+    <Parameter Name="PublicHolidayGroupId" Parameter="publicHolidayGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectPublicHolidayGroupHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

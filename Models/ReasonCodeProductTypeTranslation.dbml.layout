@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ReasonCodeProductTypeTranslation">
+  <DataContextMoniker Name="/ReasonCodeProductTypeTranslationDC" />
+  <nestedChildShapes>
+    <classShape Id="f81d3e14-7672-4dd4-bf7e-55d6d676a35a" absoluteBounds="2.125, 1.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ReasonCodeProductTypeTranslationDC/ReasonCodeProductTypeTranslation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c998785-ef16-4012-abb8-bd0a448140c8" absoluteBounds="2.14, 1.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

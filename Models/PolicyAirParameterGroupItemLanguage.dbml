@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v4051" Class="PolicyAirParameterGroupItemLanguageDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.83;Initial Catalog=Desktop_Local_v4051;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v4051ConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyAirParameterGroupItemLanguages_v1" Method="spDesktopDataAdmin_SelectPolicyAirParameterGroupItemLanguages_v1">
+    <Parameter Name="PolicyAirParameterGroupItemId" Parameter="policyAirParameterGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PolicyGroupId" Parameter="policyGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyAirParameterGroupItemLanguages_v1Result">
+      <Column Name="PolicyAirParameterGroupItemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PolicyGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Translation" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPolicyAirParameterGroupItemLanguage_v1" Method="spDesktopDataAdmin_InsertPolicyAirParameterGroupItemLanguage_v1">
+    <Parameter Name="PolicyAirParameterGroupItemId" Parameter="policyAirParameterGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="Translation" Parameter="translation" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePolicyAirParameterGroupItemLanguage_v1" Method="spDesktopDataAdmin_DeletePolicyAirParameterGroupItemLanguage_v1">
+    <Parameter Name="PolicyAirParameterGroupItemId" Parameter="policyAirParameterGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyAirParameterGroupItemAvailableLanguages_v1" Method="spDesktopDataAdmin_SelectPolicyAirParameterGroupItemAvailableLanguages_v1">
+    <Parameter Name="PolicyAirParameterGroupItemId" Parameter="policyAirParameterGroupItemId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyAirParameterGroupItemAvailableLanguages_v1Result">
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePolicyAirParameterGroupItemLanguage_v1" Method="spDesktopDataAdmin_UpdatePolicyAirParameterGroupItemLanguage_v1">
+    <Parameter Name="PolicyAirParameterGroupItemId" Parameter="policyAirParameterGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="Translation" Parameter="translation" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

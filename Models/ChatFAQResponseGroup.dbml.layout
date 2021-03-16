@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 37.875" name="ChatFAQResponseGroup">
+  <DataContextMoniker Name="/ChatFAQResponseGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="5b9306bf-72bb-4adf-9167-4f4bdbac3b73" absoluteBounds="3.5, 6, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8369676e-ece3-449b-bfc7-e3f9a1d5e3c8" absoluteBounds="3.515, 6.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1199b07-2ce1-481b-a636-8888e5b9e4f6" absoluteBounds="3.5, 12.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupClientSubUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1eae9f61-3c94-4d62-9108-b4ff644e755e" absoluteBounds="3.515, 12.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94e17d34-d67a-4f9a-8f9f-f05e53a2936e" absoluteBounds="3.5, 35.25, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupClientSubUnitTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08f438c6-1f1d-4d03-94b6-6bddbad39bd7" absoluteBounds="3.515, 35.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b400ca2c-3b96-4ca9-b781-4af9903037a3" absoluteBounds="3.5, 15, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupClientTopUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be9a212d-d0b3-4e92-b2b6-7457fd25a7d4" absoluteBounds="3.515, 15.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b6c567c-d2a1-453d-9af2-5900b9ee712f" absoluteBounds="3.5, 17.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupCountry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d898388-7883-4382-8c35-6be4d787f7bd" absoluteBounds="3.515, 18.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c1b5643-295a-40f4-9591-c08acac382b4" absoluteBounds="3.5, 20.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupCountryRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10e96afc-edf5-4c73-a084-aee679c3631f" absoluteBounds="3.515, 21.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="495677c0-44e7-4f33-bd0e-109c6ea5877e" absoluteBounds="3.5, 23.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupGlobal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bc37455-f69c-468c-99f1-8f65be083a74" absoluteBounds="3.515, 24.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53ab5b09-abb0-4209-956f-6ce8448a947f" absoluteBounds="3.5, 26.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupGlobalRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5ae74de-16b6-4c65-ad50-b65727ec4f97" absoluteBounds="3.515, 27.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f1e6c7c-51e7-4cde-9647-2a050ee81225" absoluteBounds="3.5, 29.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupGlobalSubRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d653d09f-69c4-415c-8762-09c1349af987" absoluteBounds="3.515, 29.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bac65f6-9266-4b07-bb8b-675344821dcc" absoluteBounds="3.5, 32.375, 2, 2.1554996744791737">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd0d93de-93b3-48c4-a20c-efa4099ae9be" absoluteBounds="3.515, 32.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8496bdd-f883-40e9-88e6-8e2ef319c721" absoluteBounds="3.5, 2.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11dbb7a7-4daa-4f5c-ab8f-3b9fae99e134" absoluteBounds="3.515, 3.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2746e03f-a441-4780-baab-0b7da9132de6" absoluteBounds="6.25, 2.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseItemLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1618f35-b488-4672-ac96-91d852801946" absoluteBounds="6.2650000000000006, 3.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.92390055338542); (6.25 : 3.92390055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseItem/ChatFAQResponseItem_ChatFAQResponseItemLanguage" />
+      <nodes>
+        <classShapeMoniker Id="c8496bdd-f883-40e9-88e6-8e2ef319c721" />
+        <classShapeMoniker Id="2746e03f-a441-4780-baab-0b7da9132de6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" absoluteBounds="0.75, 18.5, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d8f6ec1-8f2d-4e32-8316-363944606f65" absoluteBounds="0.765, 18.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 18.5); (1.75 : 7.07774983723958); (2.46354541666667 : 7.07774983723958 : JumpStart); (2.63021208333333 : 7.07774983723958 : JumpEnd); (3.5 : 7.07774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="5b9306bf-72bb-4adf-9167-4f4bdbac3b73" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 18.5); (2.2812525 : 13.2027498372396); (3.5 : 13.2027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupClientSubUnit" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="b1199b07-2ce1-481b-a636-8888e5b9e4f6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 21.6170068359375); (1.75 : 36.4239005533854); (3.5 : 36.4239005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupClientSubUnitTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="94e17d34-d67a-4f9a-8f9f-f05e53a2936e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 18.5); (1.2187475 : 16.0777498372396); (1.66666666666667 : 16.0777498372396 : JumpStart); (1.83333333333333 : 16.0777498372396 : JumpEnd); (1.93229291666667 : 16.0777498372396 : JumpStart); (2.09895958333333 : 16.0777498372396 : JumpEnd); (2.19791916666667 : 16.0777498372396 : JumpStart); (2.36458583333333 : 16.0777498372396 : JumpEnd); (2.46354541666667 : 16.0777498372396 : JumpStart); (2.63021208333333 : 16.0777498372396 : JumpEnd); (3.5 : 16.0777498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupClientTopUnit" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="b400ca2c-3b96-4ca9-b781-4af9903037a3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 19.2652498372396); (3.5 : 19.2652498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupCountry" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="1b6c567c-d2a1-453d-9af2-5900b9ee712f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 21.1835034179688); (3.5 : 21.1835034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupCountryRegion" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="8c1b5643-295a-40f4-9591-c08acac382b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 21.6170068359375); (2.2812525 : 24.7027498372396); (3.5 : 24.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupGlobal" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="495677c0-44e7-4f33-bd0e-109c6ea5877e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 21.6170068359375); (1.2187475 : 27.7027498372396); (1.66666666666667 : 27.7027498372396 : JumpStart); (1.83333333333333 : 27.7027498372396 : JumpEnd); (1.93229291666667 : 27.7027498372396 : JumpStart); (2.09895958333333 : 27.7027498372396 : JumpEnd); (2.46354541666667 : 27.7027498372396 : JumpStart); (2.63021208333333 : 27.7027498372396 : JumpEnd); (3.5 : 27.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupGlobalRegion" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="53ab5b09-abb0-4209-956f-6ce8448a947f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 21.6170068359375); (2.54687875 : 30.5777498372396); (3.5 : 30.5777498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupGlobalSubRegion" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="2f1e6c7c-51e7-4cde-9647-2a050ee81225" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.01562625 : 21.6170068359375); (2.01562625 : 33.4527498372396); (3.5 : 33.4527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupTeam" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="6bac65f6-9266-4b07-bb8b-675344821dcc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 18.5); (2.54687875 : 3.99120198567708); (3.5 : 3.99120198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseItem" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="c8496bdd-f883-40e9-88e6-8e2ef319c721" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4df9a318-31e4-4091-9ed8-e9b14ea876f9" absoluteBounds="3.5, 9, 2.625, 2.3478011067708344">
+      <DataClassMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroupClientAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf302d02-00c8-4f14-991f-419306290cd8" absoluteBounds="3.515, 9.46, 2.5949999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.01562625 : 18.5); (2.01562625 : 10.1739005533854); (3.5 : 10.1739005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChatFAQResponseGroupDC/ChatFAQResponseGroup/ChatFAQResponseGroup_ChatFAQResponseGroupClientAccount" />
+      <nodes>
+        <classShapeMoniker Id="e79802e5-f8de-4b6a-8f85-e2cf8d33db40" />
+        <classShapeMoniker Id="4df9a318-31e4-4091-9ed8-e9b14ea876f9" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

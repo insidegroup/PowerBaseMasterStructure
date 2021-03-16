@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CarTypeAdvice">
+  <DataContextMoniker Name="/PolicyCarTypeGroupItemLanguageDC" />
+  <nestedChildShapes>
+    <classShape Id="bb9de7e9-d8b6-4772-b16f-66aab459bd87" absoluteBounds="3.125, 1.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PolicyCarTypeGroupItemLanguageDC/PolicyCarTypeGroupItemLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7279552d-067b-4dd6-9537-fe0aaaf805d8" absoluteBounds="3.14, 1.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v4001" Class="ReasonCodeItemDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.48;Initial Catalog=Desktop_Local_v4001;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v4001ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ReasonCodeItem" Member="ReasonCodeItems">
+    <Type Name="ReasonCodeItem">
+      <Column Name="ReasonCodeItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerFacingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectReasonCodeGroupReasonCodeTypes_v1" Method="spDesktopDataAdmin_SelectReasonCodeGroupReasonCodeTypes_v1">
+    <Parameter Name="ReasonCodeGroupId" Parameter="reasonCodeGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectReasonCodeGroupReasonCodeTypes_v1Result">
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectReasonCodeItems_v1" Method="spDesktopDataAdmin_SelectReasonCodeItems_v1">
+    <Parameter Name="ReasonCodeGroupId" Parameter="reasonCodeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectReasonCodeItems_v1Result">
+      <Column Name="ReasonCodeItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerFacingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteReasonCodeItem_v1" Method="spDesktopDataAdmin_DeleteReasonCodeItem_v1">
+    <Parameter Name="ReasonCodeItemId" Parameter="reasonCodeItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertReasonCodeItem_v1" Method="spDesktopDataAdmin_InsertReasonCodeItem_v1">
+    <Parameter Name="ReasonCodeGroupId" Parameter="reasonCodeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReasonCode" Parameter="reasonCode" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReasonCodeTypeId" Parameter="reasonCodeTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TravelerFacingFlag" Parameter="travelerFacingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateReasonCodeItem_v1" Method="spDesktopDataAdmin_UpdateReasonCodeItem_v1">
+    <Parameter Name="ReasonCodeItemId" Parameter="reasonCodeItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReasonCode" Parameter="reasonCode" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReasonCodeTypeId" Parameter="reasonCodeTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TravelerFacingFlag" Parameter="travelerFacingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

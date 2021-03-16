@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CCDB_Test" Class="ccdbDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.1.49;Initial Catalog=CCDB_Test;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CreditCardDatabase" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spDesktopDataAdmin_DeleteCreditCard_v1" Method="spDesktopDataAdmin_DeleteCreditCard_v1">
+    <Parameter Name="CreditCardToken" Parameter="creditCardToken" Type="System.String" DbType="NVarChar(16)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateCreditCard_v1" Method="spDesktopDataAdmin_UpdateCreditCard_v1">
+    <Parameter Name="CreditCardToken" Parameter="creditCardToken" Type="System.String" DbType="NVarChar(16)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertCreditCard_v1" Method="spDesktopDataAdmin_InsertCreditCard_v1">
+    <Parameter Name="CreditCardNumber" Parameter="creditCardNumber" Type="System.String" DbType="VarChar(24)" />
+    <Parameter Name="CVVNumber" Parameter="cVVNumber" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="CreditCardToken" Parameter="creditCardToken" Type="System.String" DbType="NVarChar(16)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateCreditCardCVVNumber_v1" Method="spDesktopDataAdmin_UpdateCreditCardCVVNumber_v1">
+    <Parameter Name="CreditCardToken" Parameter="creditCardToken" Type="System.String" DbType="NVarChar(16)" />
+    <Parameter Name="CVVNumber" Parameter="cVVNumber" Type="System.String" DbType="NVarChar(4)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

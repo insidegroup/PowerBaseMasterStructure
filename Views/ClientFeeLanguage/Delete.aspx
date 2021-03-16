@@ -1,0 +1,62 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<CWTDesktopDatabase.Models.ClientFeeLanguage>" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">DesktopDataAdmin - Client Fee Groups</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+<div id="contentarea">
+<div id="banner"><div id="banner_text">Client Fee Alternate Descriptions</div></div>
+    <div id="content">
+        <table cellpadding="0" cellspacing="0" width="100%"> 
+            <tr> 
+                <th class="row_header" colspan="3">Delete Alternate Description</th> 
+            </tr> 
+            <tr>
+                <td>Language</td>
+                <td><%= Html.Encode(Model.Language.LanguageName)%></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alternate Description</td>
+                <td><%= Html.Encode(Model.ClientFeeLanguageDescription)%></td>
+                <td></td>
+            </tr>        
+            <tr>
+                <td width="30%" class="row_footer_left"></td>
+                <td width="40%" class="row_footer_centre"></td>
+                <td width="30%" class="row_footer_right"></td>
+            </tr>
+            <tr>
+                <td class="row_footer_blank_left"><a href="javascript:history.back();" class="red" title="Back">Back</a></td>
+                <td class="row_footer_blank_right" colspan="2">
+                <% using (Html.BeginForm()) { %>
+                    <%= Html.AntiForgeryToken() %>
+                    <input type="submit" value="Confirm Delete" title="Confirm Delete" class="red"/>
+                    <%= Html.HiddenFor(model => model.ClientFeeId) %>
+                    <%= Html.HiddenFor(model => model.VersionNumber) %>
+                <%}%>
+                </td>                
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#menu_clientfeegroups').click();
+        $("tr:odd").addClass("row_odd");
+        $("tr:even").addClass("row_even");
+        //for pages with long breadcrumb and no search box
+        $('#breadcrumb').css('width', '725px');
+        $('#search').css('width', '5px');
+    })
+</script>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="BreadCrumbContent" runat="server">
+<%=Html.RouteLink("Client Fees", "Main", new { controller = "ClientFee", action = "List", }, new { title = "ClientFees" })%> &gt;
+<%=Html.RouteLink(Model.ClientFee.ClientFeeDescription, "Default", new { controller = "ClientFee", action = "View", id = Model.ClientFee.ClientFeeId }, new { title = Model.ClientFee.ClientFeeDescription })%> &gt;
+<%=Html.RouteLink("Alternate Descriptions", "Default", new { controller = "ClientFeeLanguage", action = "List", id = Model.ClientFee.ClientFeeId }, new { title = Model.ClientFee.ClientFeeDescription })%> &gt;
+<%=Model.Language.LanguageName%>
+</asp:Content>
+
+

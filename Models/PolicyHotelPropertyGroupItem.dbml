@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v4021" Class="PolicyHotelPropertyGroupItemDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.83;Initial Catalog=Desktop_Local_v4021;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v4021ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PolicyHotelPropertyGroupItem" Member="PolicyHotelPropertyGroupItems">
+    <Type Name="PolicyHotelPropertyGroupItem">
+      <Column Name="PolicyHotelPropertyGroupItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PolicyGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyHotelStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HarpHotelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TravelDateValidFrom" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TravelDateValidTo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePolicyHotelPropertyGroupItem_v1" Method="spDesktopDataAdmin_UpdatePolicyHotelPropertyGroupItem_v1">
+    <Parameter Name="PolicyHotelPropertyGroupItemId" Parameter="policyHotelPropertyGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PolicyGroupId" Parameter="policyGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PolicyHotelStatusId" Parameter="policyHotelStatusId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HarpHotelId" Parameter="harpHotelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TravelDateValidFrom" Parameter="travelDateValidFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TravelDateValidTo" Parameter="travelDateValidTo" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPolicyHotelPropertyGroupItem_v1" Method="spDesktopDataAdmin_InsertPolicyHotelPropertyGroupItem_v1">
+    <Parameter Name="PolicyGroupId" Parameter="policyGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PolicyHotelStatusId" Parameter="policyHotelStatusId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HarpHotelId" Parameter="harpHotelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TravelDateValidFrom" Parameter="travelDateValidFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TravelDateValidTo" Parameter="travelDateValidTo" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePolicyHotelPropertyGroupItem_v1" Method="spDesktopDataAdmin_DeletePolicyHotelPropertyGroupItem_v1">
+    <Parameter Name="PolicyHotelPropertyGroupItemId" Parameter="policyHotelPropertyGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyHotelPropertyGroupItems_v1" Method="spDesktopDataAdmin_SelectPolicyHotelPropertyGroupItems_v1">
+    <Parameter Name="PolicyGroupID" Parameter="policyGroupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyHotelPropertyGroupItems_v1Result">
+      <Column Name="PolicyGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyHotelPropertyGroupItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PolicyHotelStatus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

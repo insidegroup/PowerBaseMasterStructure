@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v2031" Class="PolicyCountryGroupItemLanguageDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DMLAPTOP2\SQL2008;Initial Catalog=Desktop_Local_v2031;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v2031" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PolicyCountryGroupItemLanguage" Member="PolicyCountryGroupItemLanguages">
+    <Type Name="PolicyCountryGroupItemLanguage">
+      <Column Name="PolicyCountryGroupItemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryAdvice" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyCountryGroupItemCountryAdvice_v1" Method="spDesktopDataAdmin_SelectPolicyCountryGroupItemCountryAdvice_v1">
+    <Parameter Name="PolicyCountryGroupItemId" Parameter="policyCountryGroupItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyCountryGroupItemCountryAdvice_v1Result">
+      <Column Name="PolicyCountryGroupItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryAdvice" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyCountryGroupItemAvailableLanguages_v1" Method="spDesktopDataAdmin_SelectPolicyCountryGroupItemAvailableLanguages_v1">
+    <Parameter Name="PolicyCountryGroupitemId" Parameter="policyCountryGroupitemId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyCountryGroupItemAvailableLanguages_v1Result">
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePolicyCountryGroupItemCountryAdvice_v1" Method="spDesktopDataAdmin_UpdatePolicyCountryGroupItemCountryAdvice_v1">
+    <Parameter Name="PolicyCountryGroupitemId" Parameter="policyCountryGroupitemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="CountryAdvice" Parameter="countryAdvice" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPolicyCountryGroupItemCountryAdvice_v1" Method="spDesktopDataAdmin_InsertPolicyCountryGroupItemCountryAdvice_v1">
+    <Parameter Name="PolicyCountryGroupitemId" Parameter="policyCountryGroupitemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="CountryAdvice" Parameter="countryAdvice" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePolicyCountryGroupItemCountryAdvice_v1" Method="spDesktopDataAdmin_DeletePolicyCountryGroupItemCountryAdvice_v1">
+    <Parameter Name="PolicyCountryGroupitemId" Parameter="policyCountryGroupitemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

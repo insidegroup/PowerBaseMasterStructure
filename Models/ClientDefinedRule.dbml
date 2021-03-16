@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1841" Class="ClientDefinedRuleDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1841;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v1841" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClientDefinedRuleBusinessEntity" Member="ClientDefinedRuleBusinessEntities">
+    <Type Name="ClientDefinedRuleBusinessEntity">
+      <Column Name="ClientDefinedRuleBusinessEntityId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessEntityName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BusinessEntityDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="IsLogic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsResult" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleBusinessEntity_ClientDefinedRuleLogicItem" Member="ClientDefinedRuleLogicItems" ThisKey="ClientDefinedRuleBusinessEntityId" OtherKey="ClientDefinedRuleBusinessEntityId" Type="ClientDefinedRuleLogicItem" />
+      <Association Name="ClientDefinedRuleBusinessEntity_ClientDefinedRuleResultItem" Member="ClientDefinedRuleResultItems" ThisKey="ClientDefinedRuleBusinessEntityId" OtherKey="ClientDefinedRuleBusinessEntityId" Type="ClientDefinedRuleResultItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleWorkflowTriggerState" Member="ClientDefinedRuleWorkflowTriggerStates">
+    <Type Name="ClientDefinedRuleWorkflowTriggerState">
+      <Column Name="ClientDefinedRuleWorkflowTriggerStateId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleWorkflowTriggerStateName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleWorkflowTriggerState_ClientDefinedRuleWorkflowTrigger" Member="ClientDefinedRuleWorkflowTriggers" ThisKey="ClientDefinedRuleWorkflowTriggerStateId" OtherKey="ClientDefinedRuleWorkflowTriggerStateId" Type="ClientDefinedRuleWorkflowTrigger" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleBusinessEntityCategory" Member="ClientDefinedRuleBusinessEntityCategories">
+    <Type Name="ClientDefinedRuleBusinessEntityCategory">
+      <Column Name="ClientDefinedRuleBusinessEntityCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleBusinessEntityCategoryCode" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleBusinessEntityCategoryDescription" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContextId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroup" Member="ClientDefinedRuleGroups">
+    <Type Name="ClientDefinedRuleGroup">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="TripTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsBusinessGroupFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroup" Member="ClientDefinedRuleGroup2" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" Cardinality="One" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientAccount" Member="ClientDefinedRuleGroupClientAccounts" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupClientAccount" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientSubUnit" Member="ClientDefinedRuleGroupClientSubUnits" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupClientSubUnit" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientSubUnitTravelerType" Member="ClientDefinedRuleGroupClientSubUnitTravelerTypes" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupClientSubUnitTravelerType" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientTopUnit" Member="ClientDefinedRuleGroupClientTopUnits" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupClientTopUnit" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupLogic" Member="ClientDefinedRuleGroupLogics" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupLogic" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupResult" Member="ClientDefinedRuleGroupResults" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupResult" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupTravelerType" Member="ClientDefinedRuleGroupTravelerTypes" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupTravelerType" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupTrigger" Member="ClientDefinedRuleGroupTriggers" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroupTrigger" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroup" Member="ClientDefinedRuleGroup1" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupClientAccount" Member="ClientDefinedRuleGroupClientAccounts">
+    <Type Name="ClientDefinedRuleGroupClientAccount">
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientAccount" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupClientSubUnit" Member="ClientDefinedRuleGroupClientSubUnits">
+    <Type Name="ClientDefinedRuleGroupClientSubUnit">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientSubUnit" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupClientSubUnitTravelerType" Member="ClientDefinedRuleGroupClientSubUnitTravelerTypes">
+    <Type Name="ClientDefinedRuleGroupClientSubUnitTravelerType">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientSubUnitTravelerType" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupClientTopUnit" Member="ClientDefinedRuleGroupClientTopUnits">
+    <Type Name="ClientDefinedRuleGroupClientTopUnit">
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupClientTopUnit" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupLogic" Member="ClientDefinedRuleGroupLogics">
+    <Type Name="ClientDefinedRuleGroupLogic">
+      <Column Name="ClientDefinedRuleLogicItemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LogicSequenceNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupLogic" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+      <Association Name="ClientDefinedRuleLogicItem_ClientDefinedRuleGroupLogic" Member="ClientDefinedRuleLogicItem" ThisKey="ClientDefinedRuleLogicItemId" OtherKey="ClientDefinedRuleLogicItemId" Type="ClientDefinedRuleLogicItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupResult" Member="ClientDefinedRuleGroupResults">
+    <Type Name="ClientDefinedRuleGroupResult">
+      <Column Name="ClientDefinedRuleResultItemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupResult" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupTravelerType" Member="ClientDefinedRuleGroupTravelerTypes">
+    <Type Name="ClientDefinedRuleGroupTravelerType">
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupTravelerType" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleGroupTrigger" Member="ClientDefinedRuleGroupTriggers">
+    <Type Name="ClientDefinedRuleGroupTrigger">
+      <Column Name="ClientDefinedRuleWorkflowTriggerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleGroup_ClientDefinedRuleGroupTrigger" Member="ClientDefinedRuleGroup" ThisKey="ClientDefinedRuleGroupId" OtherKey="ClientDefinedRuleGroupId" Type="ClientDefinedRuleGroup" IsForeignKey="true" />
+      <Association Name="ClientDefinedRuleWorkflowTrigger_ClientDefinedRuleGroupTrigger" Member="ClientDefinedRuleWorkflowTrigger" ThisKey="ClientDefinedRuleWorkflowTriggerId" OtherKey="ClientDefinedRuleWorkflowTriggerId" Type="ClientDefinedRuleWorkflowTrigger" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleLogicItem" Member="ClientDefinedRuleLogicItems">
+    <Type Name="ClientDefinedRuleLogicItem">
+      <Column Name="ClientDefinedRuleLogicItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleLogicItemDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ClientDefinedRuleLogicItemValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleBusinessEntityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleRelationalOperatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleLogicItem_ClientDefinedRuleGroupLogic" Member="ClientDefinedRuleGroupLogics" ThisKey="ClientDefinedRuleLogicItemId" OtherKey="ClientDefinedRuleLogicItemId" Type="ClientDefinedRuleGroupLogic" />
+      <Association Name="ClientDefinedRuleBusinessEntity_ClientDefinedRuleLogicItem" Member="ClientDefinedRuleBusinessEntity" ThisKey="ClientDefinedRuleBusinessEntityId" OtherKey="ClientDefinedRuleBusinessEntityId" Type="ClientDefinedRuleBusinessEntity" IsForeignKey="true" />
+      <Association Name="ClientDefinedRuleRelationalOperator_ClientDefinedRuleLogicItem" Member="ClientDefinedRuleRelationalOperator" ThisKey="ClientDefinedRuleRelationalOperatorId" OtherKey="ClientDefinedRuleRelationalOperatorId" Type="ClientDefinedRuleRelationalOperator" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleRelationalOperator" Member="ClientDefinedRuleRelationalOperators">
+    <Type Name="ClientDefinedRuleRelationalOperator">
+      <Column Name="ClientDefinedRuleRelationalOperatorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RelationalOperatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleRelationalOperator_ClientDefinedRuleLogicItem" Member="ClientDefinedRuleLogicItems" ThisKey="ClientDefinedRuleRelationalOperatorId" OtherKey="ClientDefinedRuleRelationalOperatorId" Type="ClientDefinedRuleLogicItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleResultItem" Member="ClientDefinedRuleResultItems">
+    <Type Name="ClientDefinedRuleResultItem">
+      <Column Name="ClientDefinedRuleResultItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleResultItemDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ClientDefinedRuleResultItemValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleBusinessEntityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleBusinessEntity_ClientDefinedRuleResultItem" Member="ClientDefinedRuleBusinessEntity" ThisKey="ClientDefinedRuleBusinessEntityId" OtherKey="ClientDefinedRuleBusinessEntityId" Type="ClientDefinedRuleBusinessEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleWorkflowTrigger" Member="ClientDefinedRuleWorkflowTriggers">
+    <Type Name="ClientDefinedRuleWorkflowTrigger">
+      <Column Name="ClientDefinedRuleWorkflowTriggerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleWorkflowTriggerStateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleWorkflowTriggerApplicationModeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleWorkflowTrigger_ClientDefinedRuleGroupTrigger" Member="ClientDefinedRuleGroupTriggers" ThisKey="ClientDefinedRuleWorkflowTriggerId" OtherKey="ClientDefinedRuleWorkflowTriggerId" Type="ClientDefinedRuleGroupTrigger" />
+      <Association Name="ClientDefinedRuleWorkflowTriggerState_ClientDefinedRuleWorkflowTrigger" Member="ClientDefinedRuleWorkflowTriggerState" ThisKey="ClientDefinedRuleWorkflowTriggerStateId" OtherKey="ClientDefinedRuleWorkflowTriggerStateId" Type="ClientDefinedRuleWorkflowTriggerState" IsForeignKey="true" />
+      <Association Name="ClientDefinedRuleWorkflowTriggerApplicationMode_ClientDefinedRuleWorkflowTrigger" Member="ClientDefinedRuleWorkflowTriggerApplicationMode" ThisKey="ClientDefinedRuleWorkflowTriggerApplicationModeId" OtherKey="ClientDefinedRuleWorkflowTriggerApplicationModeId" Type="ClientDefinedRuleWorkflowTriggerApplicationMode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDefinedRuleWorkflowTriggerApplicationMode" Member="ClientDefinedRuleWorkflowTriggerApplicationModes">
+    <Type Name="ClientDefinedRuleWorkflowTriggerApplicationMode">
+      <Column Name="ClientDefinedRuleWorkflowTriggerApplicationModeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleWorkflowTriggerApplicationModeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ClientDefinedRuleWorkflowTriggerApplicationMode_ClientDefinedRuleWorkflowTrigger" Member="ClientDefinedRuleWorkflowTriggers" ThisKey="ClientDefinedRuleWorkflowTriggerApplicationModeId" OtherKey="ClientDefinedRuleWorkflowTriggerApplicationModeId" Type="ClientDefinedRuleWorkflowTrigger" />
+    </Type>
+  </Table>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectClientDefinedRuleGroupHierarchy_v1" Method="fnDesktopDataAdmin_SelectClientDefinedRuleGroupHierarchy_v1" IsComposable="true">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectClientDefinedRuleGroupHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDefinedBusinessRuleGroup_v1" Method="spDesktopDataAdmin_InsertClientDefinedBusinessRuleGroup_v1">
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientDefinedRuleLogicItemXML" Parameter="clientDefinedRuleLogicItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleResultItemXML" Parameter="clientDefinedRuleResultItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleWorkflowTriggerXML" Parameter="clientDefinedRuleWorkflowTriggerXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertClientDefinedRuleGroup_v1" Method="spDesktopDataAdmin_InsertClientDefinedRuleGroup_v1">
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientDefinedRuleLogicItemXML" Parameter="clientDefinedRuleLogicItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleResultItemXML" Parameter="clientDefinedRuleResultItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleWorkflowTriggerXML" Parameter="clientDefinedRuleWorkflowTriggerXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroups_v1" Method="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroups_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroups_v1Result">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkedItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupSequences_v1" Method="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupSequences_v1">
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RowsPerPage" Parameter="rowsPerPage" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupSequences_v1Result">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedRuleLogicSequences_v1" Method="spDesktopDataAdmin_SelectClientDefinedRuleLogicSequences_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RowsPerPage" Parameter="rowsPerPage" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedRuleLogicSequences_v1Result">
+      <Column Name="ClientDefinedRuleLogicItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogicSequenceNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientDefinedRuleLogicItemValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessEntityName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessEntityDescription" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="RelationalOperatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedRuleGroupSequences_v1" Method="spDesktopDataAdmin_SelectClientDefinedRuleGroupSequences_v1">
+    <Parameter Name="ClientTopUnitName" Parameter="clientTopUnitName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ClientSubUnitName" Parameter="clientSubUnitName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TravelerTypeName" Parameter="travelerTypeName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RowsPerPage" Parameter="rowsPerPage" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedRuleGroupSequences_v1Result">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedBusinessRuleGroup_v1" Method="spDesktopDataAdmin_UpdateClientDefinedBusinessRuleGroup_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientDefinedRuleLogicItemXML" Parameter="clientDefinedRuleLogicItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleResultItemXML" Parameter="clientDefinedRuleResultItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleWorkflowTriggerXML" Parameter="clientDefinedRuleWorkflowTriggerXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedRuleGroup_v1" Method="spDesktopDataAdmin_UpdateClientDefinedRuleGroup_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientDefinedRuleLogicItemXML" Parameter="clientDefinedRuleLogicItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleResultItemXML" Parameter="clientDefinedRuleResultItemXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="ClientDefinedRuleWorkflowTriggerXML" Parameter="clientDefinedRuleWorkflowTriggerXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="IsMultipleHierarchy" Parameter="isMultipleHierarchy" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedRuleGroupSequences_v1" Method="spDesktopDataAdmin_UpdateClientDefinedRuleGroupSequences_v1">
+    <Parameter Name="XML" Parameter="xML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedRuleGroupDeletedStatus_v1" Method="spDesktopDataAdmin_UpdateClientDefinedRuleGroupDeletedStatus_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedRuleGroupLinkedHierarchy_v1" Method="spDesktopDataAdmin_UpdateClientDefinedRuleGroupLinkedHierarchy_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyCode" Parameter="hierarchyCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedRuleGroupLogicSequences_v1" Method="spDesktopDataAdmin_UpdateClientDefinedRuleGroupLogicSequences_v1">
+    <Parameter Name="XML" Parameter="xML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateClientDefinedBusinessRuleGroupLinkedHierarchy_v1" Method="spDesktopDataAdmin_UpdateClientDefinedBusinessRuleGroupLinkedHierarchy_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyCode" Parameter="hierarchyCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedRuleGroups_v1" Method="spDesktopDataAdmin_SelectClientDefinedRuleGroups_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientTopUnitName" Parameter="clientTopUnitName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ClientSubUnitName" Parameter="clientSubUnitName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TravelerTypeName" Parameter="travelerTypeName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientDefinedRuleGroupName" Parameter="clientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedRuleGroups_v1Result">
+      <Column Name="ClientDefinedRuleGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientDefinedRuleGroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkedItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HierarchyItem" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GroupSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="IsBusinessGroupFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedRuleGroupAvailableHierarchies_v1" Method="spDesktopDataAdmin_SelectClientDefinedRuleGroupAvailableHierarchies_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientSubUnitName" Parameter="clientSubUnitName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="TravelerTypeName" Parameter="travelerTypeName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedRuleGroupAvailableHierarchies_v1Result">
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedRuleGroupLinkedHierarchies_v1" Method="spDesktopDataAdmin_SelectClientDefinedRuleGroupLinkedHierarchies_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedRuleGroupLinkedHierarchies_v1Result">
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupLinkedHierarchies_v1" Method="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupLinkedHierarchies_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupLinkedHierarchies_v1Result">
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupAvailableHierarchies_v1" Method="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupAvailableHierarchies_v1">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientSubUnitName" Parameter="clientSubUnitName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="TravelerTypeName" Parameter="travelerTypeName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectClientDefinedBusinessRuleGroupAvailableHierarchies_v1Result">
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

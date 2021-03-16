@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PolicyLocation">
+  <DataContextMoniker Name="/PolicyLocationDC" />
+  <nestedChildShapes>
+    <classShape Id="abef006e-e420-4870-8638-8cfa52ba055c" absoluteBounds="0.5, 1.875, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/PolicyLocationDC/PolicyLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3dea03d4-2370-4c00-bfaa-6c0a7c2e753e" absoluteBounds="0.515, 2.335, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.20923076923077 : 5.37660970052083); (1.20923076923077 : 5.62660970052083); (1.80461538461538 : 5.62660970052083); (1.80461538461538 : 5.37660970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PolicyLocationDC/PolicyLocation/PolicyLocation_PolicyLocation" />
+      <nodes>
+        <classShapeMoniker Id="abef006e-e420-4870-8638-8cfa52ba055c" />
+        <classShapeMoniker Id="abef006e-e420-4870-8638-8cfa52ba055c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

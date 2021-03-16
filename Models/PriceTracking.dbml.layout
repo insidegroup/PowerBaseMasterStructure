@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.75, 43.375" name="PriceTracking">
+  <DataContextMoniker Name="/PriceTrackingDC" />
+  <nestedChildShapes>
+    <classShape Id="27dfe7b0-a2cb-4c12-b60b-179d49017ad2" absoluteBounds="14.75, 22.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSystem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adbd281b-01d5-4a97-87ae-ebb883d7ff09" absoluteBounds="14.765, 23.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6b748da-d445-46c6-9c40-ba9587daa564" absoluteBounds="11.75, 20.375, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3103a61b-4bb4-4690-810c-7847b0b52865" absoluteBounds="11.765000000596046, 20.83500000089407, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0370a561-f9c2-476a-8a0e-9ec62c0527f5" absoluteBounds="14.5, 37.625, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupClientAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="891539e1-0ba4-441f-8702-b0cb50dbbec7" absoluteBounds="14.515000000596046, 38.08500000089407, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="226eaba3-16f2-4b47-99c3-1a4091118477" absoluteBounds="14.5, 4.625, 3.875, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupClientSubUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71a95197-440e-4664-aa93-dcb0b26a1ae2" absoluteBounds="14.515, 5.085, 3.8449999999999998, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f389f95-61a9-455d-861a-c2875b0e158f" absoluteBounds="14.5, 40.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupClientSubUnitTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dcca63c-1fd0-4f25-afa6-30c6ba57bb1c" absoluteBounds="14.515000000596046, 41.21000000089407, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29003c76-1cbb-4230-a6c7-7baa99e04f1a" absoluteBounds="14.5, 7.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupClientTopUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a1df3e8-21e1-47a6-81c4-3c2e6936b4b0" absoluteBounds="14.515000000596046, 8.08500000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94edda15-ac3f-4b34-ab98-2bb7ee6a857f" absoluteBounds="14.5, 10.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupCountry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fad330d1-acb4-4e74-976e-e93df4faea8d" absoluteBounds="14.515000000596046, 10.96000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3666b0c3-5dfd-4fee-992a-7127843c12e1" absoluteBounds="14.5, 13.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupCountryRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a2c79d6-7234-498b-be2c-fdd8a4b5ec6b" absoluteBounds="14.515000000596046, 13.83500000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="697dad9b-1d8b-4165-982d-202fde4b9200" absoluteBounds="14.5, 16.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupGlobal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88109442-c7f4-45f7-ba27-13997d5b3a25" absoluteBounds="14.515000000596046, 16.71000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fcd0b088-8741-4ead-a160-3c3632772bf7" absoluteBounds="14.5, 19.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupGlobalRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1806955-79de-4fc6-b50e-d6396eb0e5f0" absoluteBounds="14.515000000596046, 19.71000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="38ee9afe-c3e8-4f1c-b26b-48f309034cac" absoluteBounds="14.5, 26, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupGlobalSubRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53df36aa-a8c8-4da9-8b84-692b2344412f" absoluteBounds="14.515000000596046, 26.46000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3dcfb480-eac7-4c20-ade2-f8e5a5dcb624" absoluteBounds="14.5, 28.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c85a2c00-2eaa-448e-96e6-d40a66d12347" absoluteBounds="14.515000000596046, 29.33500000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d38e635-d3d2-41ad-b562-f21f14ba8bd1" absoluteBounds="14.5, 31.75, 2, 2.155499674479163">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55927078-941b-4c8a-b65a-073e72169512" absoluteBounds="14.515000000596046, 32.21000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e8d875e-06ec-468b-b484-22909a1fa541" absoluteBounds="14.5, 34.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroupTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b411c784-cd41-4476-a9e8-5d3132c9ba08" absoluteBounds="14.515000000596046, 35.21000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.75 : 23.4920068359375); (12.75 : 38.7989005533854); (14.5 : 38.7989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientAccount" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="0370a561-f9c2-476a-8a0e-9ec62c0527f5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.75 : 20.375); (12.75 : 5.70274983723958); (14.5 : 5.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientSubUnit" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="226eaba3-16f2-4b47-99c3-1a4091118477" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.2812525 : 23.4920068359375); (13.2812525 : 41.9239005533854); (14.5 : 41.9239005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientSubUnitTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="1f389f95-61a9-455d-861a-c2875b0e158f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.2812525 : 20.375); (13.2812525 : 8.70274983723958); (14.5 : 8.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientTopUnit" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="29003c76-1cbb-4230-a6c7-7baa99e04f1a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.2187475 : 20.375); (12.2187475 : 11.5777498372396); (12.6666666666667 : 11.5777498372396 : JumpStart); (12.8333333333333 : 11.5777498372396 : JumpEnd); (13.1979191666667 : 11.5777498372396 : JumpStart); (13.3645858333333 : 11.5777498372396 : JumpEnd); (14.5 : 11.5777498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupCountry" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="94edda15-ac3f-4b34-ab98-2bb7ee6a857f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.54687875 : 20.375); (13.54687875 : 14.4527498372396); (14.5 : 14.4527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupCountryRegion" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="3666b0c3-5dfd-4fee-992a-7127843c12e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.01562625 : 20.375); (13.01562625 : 17.3277498372396); (13.1979191666667 : 17.3277498372396 : JumpStart); (13.3645858333333 : 17.3277498372396 : JumpEnd); (14.5 : 17.3277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobal" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="697dad9b-1d8b-4165-982d-202fde4b9200" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 20.8902498372396); (14.5 : 20.8902498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobalRegion" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="fcd0b088-8741-4ead-a160-3c3632772bf7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.2187475 : 23.4920068359375); (12.2187475 : 27.0777498372396); (14.5 : 27.0777498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobalSubRegion" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="38ee9afe-c3e8-4f1c-b26b-48f309034cac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.54687875 : 23.4920068359375); (13.54687875 : 29.9527498372396); (14.5 : 29.9527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="3dcfb480-eac7-4c20-ade2-f8e5a5dcb624" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.01562625 : 23.4920068359375); (13.01562625 : 32.8277498372396); (13.1979191666667 : 32.8277498372396 : JumpStart); (13.3645858333333 : 32.8277498372396 : JumpEnd); (14.5 : 32.8277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupTeam" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="6d38e635-d3d2-41ad-b562-f21f14ba8bd1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.48437375 : 23.4920068359375); (12.48437375 : 35.8277498372396); (12.6666666666667 : 35.8277498372396 : JumpStart); (12.8333333333333 : 35.8277498372396 : JumpEnd); (14.5 : 35.8277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="7e8d875e-06ec-468b-b484-22909a1fa541" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="26c54ff2-058b-4a2f-bff1-b3b60ee0304e" absoluteBounds="17.5, 20.375, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e03cdc0-4e3d-4883-88cd-658c3d0d842d" absoluteBounds="17.515, 20.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 22.1402498372396); (17.5 : 22.1402498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingHandlingFeeGroup/PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeItem" />
+      <nodes>
+        <classShapeMoniker Id="a6b748da-d445-46c6-9c40-ba9587daa564" />
+        <classShapeMoniker Id="26c54ff2-058b-4a2f-bff1-b3b60ee0304e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 23.1835034179688); (17.5 : 23.1835034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSystem/PriceTrackingSystem_PriceTrackingHandlingFeeItem" />
+      <nodes>
+        <classShapeMoniker Id="27dfe7b0-a2cb-4c12-b60b-179d49017ad2" />
+        <classShapeMoniker Id="26c54ff2-058b-4a2f-bff1-b3b60ee0304e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bcfc2573-fc80-4ea4-9ff5-2cb3bd25276a" absoluteBounds="6.5, 3.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingEmailAlertType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd5cfcda-4e80-4803-8c9a-ef66aa50656c" absoluteBounds="6.5150000000000006, 3.7100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7b4f241-70ae-44e3-a250-d1960786b0a0" absoluteBounds="0.5, 1.75, 3.875, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingDashboardAccessType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb6fa086-d152-4d07-a61f-e518a724710d" absoluteBounds="0.5149999999999999, 2.21, 3.8449999999999998, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1fb19e6-c94d-4ce7-868f-14d936ff32e4" absoluteBounds="6.5, 6.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingContactUserType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a0b61e5-60e8-48a4-b239-6f31e29e8592" absoluteBounds="6.5150000000000006, 6.7100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bccb6af-6b5d-41de-9b21-efd6e80c9e6b" absoluteBounds="9.25, 23.125, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="565a35d0-543e-4206-ad9e-3a2f672fbd9e" absoluteBounds="9.265, 23.585, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 7.32774983723958); (10.2135391666667 : 7.32774983723958 : JumpStart); (10.3802058333333 : 7.32774983723958 : JumpEnd); (10.84375 : 7.32774983723958); (10.84375 : 23.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingContactUserType/PriceTrackingContactUserType_PriceTrackingContact" />
+      <nodes>
+        <classShapeMoniker Id="d1fb19e6-c94d-4ce7-868f-14d936ff32e4" />
+        <classShapeMoniker Id="3bccb6af-6b5d-41de-9b21-efd6e80c9e6b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 4.32774983723958); (10.2968725 : 4.32774983723958); (10.2968725 : 23.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingEmailAlertType/PriceTrackingEmailAlertType_PriceTrackingContact" />
+      <nodes>
+        <classShapeMoniker Id="bcfc2573-fc80-4ea4-9ff5-2cb3bd25276a" />
+        <classShapeMoniker Id="3bccb6af-6b5d-41de-9b21-efd6e80c9e6b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dd497d1f-68a8-4f12-b275-c64a0043472c" absoluteBounds="6.25, 30.875, 2, 2.1554996744791737">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupClientSubUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="341a9932-0cf3-4788-bb20-0a94fb91ee4a" absoluteBounds="6.2650000000000006, 31.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50477946-32aa-4e8c-899c-5fc6044d5bea" absoluteBounds="6.25, 33.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupClientTopUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b6c5fda-d398-4f33-b3e9-6bd9e693ec1a" absoluteBounds="6.2650000000000006, 34.209999999999994, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4add92e5-66a3-4f94-be20-370ed3479f6e" absoluteBounds="0.75, 19.375, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6e7537b-54e8-423c-84d2-09574730d871" absoluteBounds="0.76500000000000012, 19.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81ab41cb-c7d0-4d1f-8c1a-9671108beaa3" absoluteBounds="0.75, 27.25, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSystemRule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b06d2db5-2323-4327-b8c3-b39f733640d0" absoluteBounds="0.76500000000000012, 27.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="634fa1f6-81ca-449d-b1c7-98856eb7175a" absoluteBounds="0.75, 30.25, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingMidOfficePlatform" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3c5f6f9-e18a-4f96-9cb7-081f877f6498" absoluteBounds="0.76500000000000012, 30.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c413f0f-a401-4fed-a7de-9ffb3853fed2" absoluteBounds="0.75, 33.125, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingItinerarySolution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a98aa657-5bb7-4cd3-944e-b6f447715ef0" absoluteBounds="0.76500000000000012, 33.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89548f77-15b9-4d91-9446-41f8d47ffa9a" absoluteBounds="0.75, 23.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingBillingModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61e26429-f06d-490c-89bc-087a6e46e872" absoluteBounds="0.76500000000000012, 24.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="25ef883c-023d-4e6a-95c6-35b0ed926c78" absoluteBounds="6.25, 9.375, 3.5, 2.5401025390625023">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1a1b931-b65b-4e3f-8d15-cd8e5eb49635" absoluteBounds="6.265, 9.835, 3.4699999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6273ae5-f319-40c6-b0cd-152a1db88573" absoluteBounds="6.25, 27.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupExcludedTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6e837b8-a0d8-4130-a4d4-ad3fae3173c2" absoluteBounds="6.265, 28.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca89388c-0f2b-4817-87b8-91e65030ab64" absoluteBounds="3.5, 22, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59bffa56-63ed-46df-8d1e-2f60e1b7397d" absoluteBounds="3.515, 22.46, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 24.8292970565405); (9.25 : 24.8292970565405)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingContact" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="3bccb6af-6b5d-41de-9b21-efd6e80c9e6b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.29687875 : 27.6169254557292); (5.29687875 : 32.0659372965495); (6.25 : 32.0659372965495)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingSetupGroupClientSubUnit" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="dd497d1f-68a8-4f12-b275-c64a0043472c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.76562625 : 27.6169254557292); (4.76562625 : 35.0541247558594); (6.25 : 35.0541247558594)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingSetupGroupClientTopUnit" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="50477946-32aa-4e8c-899c-5fc6044d5bea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0312525 : 22); (5.0312525 : 10.6450512695313); (6.25 : 10.6450512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="25ef883c-023d-4e6a-95c6-35b0ed926c78" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 22.9354579617388); (6.41375 : 22.9354579617388); (6.41375 : 27.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingSetupGroupExcludedTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="a6273ae5-f319-40c6-b0cd-152a1db88573" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 24.8277498372396); (3.5 : 24.8277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingBillingModel/PriceTrackingBillingModel_PriceTrackingSetupGroup" />
+      <nodes>
+        <classShapeMoniker Id="89548f77-15b9-4d91-9446-41f8d47ffa9a" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 24.2263749186198); (3.5 : 24.2263749186198)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingBillingModel/PriceTrackingBillingModel_PriceTrackingSetupGroup1" />
+      <nodes>
+        <classShapeMoniker Id="89548f77-15b9-4d91-9446-41f8d47ffa9a" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 25.4291247558594); (3.5 : 25.4291247558594)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingBillingModel/PriceTrackingBillingModel_PriceTrackingSetupGroup2" />
+      <nodes>
+        <classShapeMoniker Id="89548f77-15b9-4d91-9446-41f8d47ffa9a" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 34.2027498372396); (3.9687475 : 34.2027498372396); (3.9687475 : 27.6169254557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingItinerarySolution/PriceTrackingItinerarySolution_PriceTrackingSetupGroup" />
+      <nodes>
+        <classShapeMoniker Id="1c413f0f-a401-4fed-a7de-9ffb3853fed2" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 31.1013749186198); (3.88541416666667 : 31.1013749186198 : JumpStart); (4.05208083333333 : 31.1013749186198 : JumpEnd); (4.5 : 31.1013749186198); (4.5 : 27.6169254557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingMidOfficePlatform/PriceTrackingMidOfficePlatform_PriceTrackingSetupGroup" />
+      <nodes>
+        <classShapeMoniker Id="634fa1f6-81ca-449d-b1c7-98856eb7175a" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 23.9334209234776); (5.75 : 23.9334209234776); (5.75 : 25.7251731896034); (5.5 : 25.7251731896034)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingSetupGroup" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 20.9317854817708); (4.5 : 20.9317854817708); (4.5 : 22)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupType/PriceTrackingSetupType_PriceTrackingSetupGroup" />
+      <nodes>
+        <classShapeMoniker Id="4add92e5-66a3-4f94-be20-370ed3479f6e" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 28.5424650651042); (3.88541416666667 : 28.5424650651042 : JumpStart); (4.05208083333333 : 28.5424650651042 : JumpEnd); (4.41666666666667 : 28.5424650651042 : JumpStart); (4.58333333333333 : 28.5424650651042 : JumpEnd); (4.68229291666667 : 28.5424650651042 : JumpStart); (4.84895958333333 : 28.5424650651042 : JumpEnd); (5.0312525 : 28.5424650651042); (5.0312525 : 27.6169254557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSystemRule/PriceTrackingSystemRule_PriceTrackingSetupGroup" />
+      <nodes>
+        <classShapeMoniker Id="81ab41cb-c7d0-4d1f-8c1a-9671108beaa3" />
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2a328e1a-5de7-4c82-97d7-6b07a53cfe0c" absoluteBounds="6.5, 36.5, 4.625, 2.3478011067708335">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c07ee8f0-b015-47c2-9830-8ff6e75b0621" absoluteBounds="6.515, 36.96, 4.5950000000000006, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9bb1f67-fc74-4f71-aac7-b9c1f18b0b70" absoluteBounds="0.75, 7.25, 2, 11.7705712890625">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupItemAir" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2b26574-0c75-4d00-ba4d-9fc196e5f2b1" absoluteBounds="0.765, 7.71, 1.9700000000000002, 11.2105712890625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68e8573d-a2fa-45c0-acbf-f29722630055" absoluteBounds="6.625, 26.25, 2, 10.424461263020833">
+      <DataClassMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupItemHotel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc53c0a6-7353-4ec3-bc8a-8fa78e9c7f70" absoluteBounds="6.64, 26.71, 1.9700000000000002, 9.8644612630208321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 31.5945543502604); (8.9062505 : 31.5945543502604); (8.9062505 : 36.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroupItemHotel/PriceTrackingSetupGroupItemHotel_PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress" />
+      <nodes>
+        <classShapeMoniker Id="68e8573d-a2fa-45c0-acbf-f29722630055" />
+        <classShapeMoniker Id="2a328e1a-5de7-4c82-97d7-6b07a53cfe0c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 26.9334627278646); (6.625 : 26.9334627278646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PriceTrackingDC/PriceTrackingSetupGroup/PriceTrackingSetupGroup_PriceTrackingSetupGroupItemHotel" />
+      <nodes>
+        <classShapeMoniker Id="ca89388c-0f2b-4817-87b8-91e65030ab64" />
+        <classShapeMoniker Id="68e8573d-a2fa-45c0-acbf-f29722630055" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

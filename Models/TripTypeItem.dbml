@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1841" Class="TripTypeItemDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1841;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v1841" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TripTypeItem" Member="TripTypeItems">
+    <Type Name="TripTypeItem">
+      <Column Name="TripTypeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TripTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultTripTypeFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectTripTypeGroupAvailableTripTypeItems_v1" Method="spDesktopDataAdmin_SelectTripTypeGroupAvailableTripTypeItems_v1">
+    <Parameter Name="TripTypeGroupId" Parameter="tripTypeGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectTripTypeGroupAvailableTripTypeItems_v1Result">
+      <Column Name="TripTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TripTypeDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertTripTypeItem_v1" Method="spDesktopDataAdmin_InsertTripTypeItem_v1">
+    <Parameter Name="TripTypeGroupId" Parameter="tripTypeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DefaultTripTypeFlag" Parameter="defaultTripTypeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateTripTypeItem_v1" Method="spDesktopDataAdmin_UpdateTripTypeItem_v1">
+    <Parameter Name="TripTypeGroupId" Parameter="tripTypeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DefaultTripTypeFlag" Parameter="defaultTripTypeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteTripTypeItem_v1" Method="spDesktopDataAdmin_DeleteTripTypeItem_v1">
+    <Parameter Name="TripTypeGroupId" Parameter="tripTypeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectTripTypeItems_v1" Method="spDesktopDataAdmin_SelectTripTypeItems_v1">
+    <Parameter Name="TripTypeGroupId" Parameter="tripTypeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectTripTypeItems_v1Result">
+      <Column Name="TripTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TripTypeDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BackOfficeTripTypeCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DefaultTripTypeFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

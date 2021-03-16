@@ -1,0 +1,66 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<CWTDesktopDatabase.ViewModels.BookingChannelImportStep3VM>" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+	DesktopDataAdmin - Client TopUnits
+</asp:Content>
+
+<asp:Content ID="headerStuff" ContentPlaceHolderID="headerContent" runat="server">
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<div id="contentarea">
+    <div id="banner"><div id="banner_text">Client SubUnits - Booking Channels</div></div>
+    <div id="content">
+     <% Html.EnableClientValidation(); %>
+
+        <% using (Html.BeginForm()) {%>
+            <%= Html.AntiForgeryToken() %>
+            <%= Html.ValidationSummary(true) %>
+        <table cellpadding="0" cellspacing="0" width="100%"> 
+		    <tr> 
+			    <th class="row_header" colspan="3">Client SubUnit Booking Channels Import Summary</th> 
+		    </tr>  
+            <tr>
+                <td valign="top" colspan="3">
+					<%foreach (string msg in Model.ReturnMessages){
+                                Response.Write(msg); %>
+                        <br/><br/>
+                        <%}%>
+                </td>
+            </tr>  
+            <tr>
+                <td width="25%" class="row_footer_left"></td>
+                <td width="50%" class="row_footer_centre"></td>
+                <td width="25%" class="row_footer_right"></td>
+            </tr>
+            <tr>
+                <td class="row_footer_blank_left" colspan="2"><a href="<%= Url.Action("List","BookingChannel", new {id= Model.ClientSubUnitGuid})%>" class="red" title="Back">Back</a></td>
+                <td class="row_footer_blank_right">
+                </td>
+            </tr>
+        </table>
+
+        <%= Html.HiddenFor(model => model.ClientSubUnitGuid) %>
+
+         <% } %>
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#menu_clients').click();
+        $("tr:odd").addClass("row_odd");
+        $("tr:even").addClass("row_even");
+        $('#breadcrumb').css('width', 'auto');
+    })
+ </script>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="BreadCrumbContent" runat="server">
+<%=Html.RouteLink("Client Top Units", "Main", new { controller = "ClientTopUnit", action = "List", }, new { title = "Client Top Units" })%> &gt;
+<%=Html.RouteLink(Model.ClientSubUnit.ClientTopUnit.ClientTopUnitName, "Main", new { controller = "ClientTopUnit", action = "ViewItem", id = Model.ClientSubUnit.ClientTopUnit.ClientTopUnitGuid }, new { title = Model.ClientSubUnit.ClientTopUnit.ClientTopUnitName })%> &gt;
+<%=Html.RouteLink("Client Sub Units", "Main", new { controller = "ClientSubUnit", action = "List", id = Model.ClientSubUnit.ClientTopUnit.ClientTopUnitGuid }, new { title = "Client Sub Units" })%> &gt;
+<%=Html.RouteLink(Model.ClientSubUnit.ClientSubUnitName, "Main", new { controller = "ClientSubUnit", action = "ViewItem", id = Model.ClientSubUnit.ClientSubUnitGuid }, new { title = Model.ClientSubUnit.ClientSubUnitName })%> &gt;
+<%= Html.RouteLink("Booking Channels", "Main", new { controller = "BookingChannel", action = "List", id = Model.ClientSubUnit.ClientSubUnitGuid} , new { title = "Booking Channels" })%> &gt; 
+Import
+</asp:Content>

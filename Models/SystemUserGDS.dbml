@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DesktopData" Class="SystemUserGDSDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DMLAPTOP\SQLEXPRESS2008;Initial Catalog=DesktopData;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CWTDesktopDatabase" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SystemUserGDS" Member="SystemUserGDS">
+    <Type Name="SystemUserGDS">
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SystemUserGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DefaultGDS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectSystemUserAvailableGDSs_v1" Method="spDesktopDataAdmin_SelectSystemUserAvailableGDSs_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectSystemUserAvailableGDSs_v1Result">
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteSystemUserGDS_v1" Method="spDesktopDataAdmin_DeleteSystemUserGDS_v1">
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertSystemUserGDS_v1" Method="spDesktopDataAdmin_InsertSystemUserGDS_v1">
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DefaultGDS" Parameter="defaultGDS" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="GDSSignOn" Parameter="gDSSignOn" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectSystemUserGDS_v1" Method="spDesktopDataAdmin_SelectSystemUserGDS_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="spDesktopDataAdmin_SelectSystemUserGDS_v1Result">
+      <Column Name="SystemUserGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultGDS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GDSName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="GDSSignOn" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUserGDS_v1" Method="spDesktopDataAdmin_UpdateSystemUserGDS_v1">
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DefaultGDS" Parameter="defaultGDS" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PseudoCityorOfficeID" Parameter="pseudoCityorOfficeID" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="GDSSignOn" Parameter="gDSSignOn" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectSystemUserGDSs_v1" Method="fnDesktopDataAdmin_SelectSystemUserGDSs_v1" IsComposable="true">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="fnDesktopDataAdmin_SelectSystemUserGDSs_v1Result">
+      <Column Name="SystemUserGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DefaultGDS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GDSName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GDSSignOn" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

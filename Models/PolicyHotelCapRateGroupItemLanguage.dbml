@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v2031" Class="PolicyHotelCapRateGroupItemLanguageDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DMLAPTOP2\SQL2008;Initial Catalog=Desktop_Local_v2031;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v2031" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PolicyHotelCapRateGroupItemLanguage" Member="PolicyHotelCapRateGroupItemLanguages">
+    <Type Name="PolicyHotelCapRateGroupItemLanguage">
+      <Column Name="PolicyHotelCapRateItemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HotelCapRateAdvice" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePolicyHotelCapRateGroupItemHotelCapRateAdvice_v1" Method="spDesktopDataAdmin_DeletePolicyHotelCapRateGroupItemHotelCapRateAdvice_v1">
+    <Parameter Name="PolicyHotelCapRateItemId" Parameter="policyHotelCapRateItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPolicyHotelCapRateGroupItemHotelCapRateAdvice_v1" Method="spDesktopDataAdmin_InsertPolicyHotelCapRateGroupItemHotelCapRateAdvice_v1">
+    <Parameter Name="PolicyHotelCapRateItemId" Parameter="policyHotelCapRateItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="HotelCapRateAdvice" Parameter="hotelCapRateAdvice" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyHotelCapRateGroupItemHotelCapRateAdvice_v1" Method="spDesktopDataAdmin_SelectPolicyHotelCapRateGroupItemHotelCapRateAdvice_v1">
+    <Parameter Name="PolicyHotelCapRateItemId" Parameter="policyHotelCapRateItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyHotelCapRateGroupItemHotelCapRateAdvice_v1Result">
+      <Column Name="PolicyHotelCapRateItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HotelCapRateAdvice" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPolicyHotelCapRateGroupItemAvailableLanguages_v1" Method="spDesktopDataAdmin_SelectPolicyHotelCapRateGroupItemAvailableLanguages_v1">
+    <Parameter Name="PolicyHotelCapRateItemId" Parameter="policyHotelCapRateItemId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectPolicyHotelCapRateGroupItemAvailableLanguages_v1Result">
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePolicyHotelCapRateGroupItemHotelCapRateAdvice_v1" Method="spDesktopDataAdmin_UpdatePolicyHotelCapRateGroupItemHotelCapRateAdvice_v1">
+    <Parameter Name="PolicyHotelCapRateItemId" Parameter="policyHotelCapRateItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="HotelCapRateAdvice" Parameter="hotelCapRateAdvice" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

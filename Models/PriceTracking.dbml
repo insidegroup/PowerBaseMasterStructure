@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v2011" Class="PriceTrackingDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v2011;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v2011" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PriceTrackingSystem" Member="PriceTrackingSystems">
+    <Type Name="PriceTrackingSystem">
+      <Column Name="PriceTrackingSystemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSystemName" Type="System.String" DbType="NVarChar(170) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSystem_PriceTrackingHandlingFeeItem" Member="PriceTrackingHandlingFeeItems" ThisKey="PriceTrackingSystemId" OtherKey="PriceTrackingSystemId" Type="PriceTrackingHandlingFeeItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroup" Member="PriceTrackingHandlingFeeGroups">
+    <Type Name="PriceTrackingHandlingFeeGroup">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingHandlingFeeGroupName" Type="System.String" DbType="NVarChar(170) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientAccount" Member="PriceTrackingHandlingFeeGroupClientAccounts" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupClientAccount" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientSubUnit" Member="PriceTrackingHandlingFeeGroupClientSubUnits" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupClientSubUnit" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientSubUnitTravelerType" Member="PriceTrackingHandlingFeeGroupClientSubUnitTravelerTypes" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupClientSubUnitTravelerType" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientTopUnit" Member="PriceTrackingHandlingFeeGroupClientTopUnits" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupClientTopUnit" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupCountry" Member="PriceTrackingHandlingFeeGroupCountries" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupCountry" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupCountryRegion" Member="PriceTrackingHandlingFeeGroupCountryRegions" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupCountryRegion" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobal" Member="PriceTrackingHandlingFeeGroupGlobals" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupGlobal" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobalRegion" Member="PriceTrackingHandlingFeeGroupGlobalRegions" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupGlobalRegion" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobalSubRegion" Member="PriceTrackingHandlingFeeGroupGlobalSubRegions" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupGlobalSubRegion" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupLocation" Member="PriceTrackingHandlingFeeGroupLocations" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupLocation" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupTeam" Member="PriceTrackingHandlingFeeGroupTeams" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupTeam" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupTravelerType" Member="PriceTrackingHandlingFeeGroupTravelerTypes" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroupTravelerType" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeItem" Member="PriceTrackingHandlingFeeItems" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupClientAccount" Member="PriceTrackingHandlingFeeGroupClientAccounts">
+    <Type Name="PriceTrackingHandlingFeeGroupClientAccount">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientAccount" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupClientSubUnit" Member="PriceTrackingHandlingFeeGroupClientSubUnits">
+    <Type Name="PriceTrackingHandlingFeeGroupClientSubUnit">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientSubUnit" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupClientSubUnitTravelerType" Member="PriceTrackingHandlingFeeGroupClientSubUnitTravelerTypes">
+    <Type Name="PriceTrackingHandlingFeeGroupClientSubUnitTravelerType">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientSubUnitTravelerType" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupClientTopUnit" Member="PriceTrackingHandlingFeeGroupClientTopUnits">
+    <Type Name="PriceTrackingHandlingFeeGroupClientTopUnit">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupClientTopUnit" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupCountry" Member="PriceTrackingHandlingFeeGroupCountries">
+    <Type Name="PriceTrackingHandlingFeeGroupCountry">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupCountry" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupCountryRegion" Member="PriceTrackingHandlingFeeGroupCountryRegions">
+    <Type Name="PriceTrackingHandlingFeeGroupCountryRegion">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryRegionId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupCountryRegion" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupGlobal" Member="PriceTrackingHandlingFeeGroupGlobals">
+    <Type Name="PriceTrackingHandlingFeeGroupGlobal">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GlobalId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobal" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupGlobalRegion" Member="PriceTrackingHandlingFeeGroupGlobalRegions">
+    <Type Name="PriceTrackingHandlingFeeGroupGlobalRegion">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GlobalRegionCode" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobalRegion" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupGlobalSubRegion" Member="PriceTrackingHandlingFeeGroupGlobalSubRegions">
+    <Type Name="PriceTrackingHandlingFeeGroupGlobalSubRegion">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GlobalSubRegionCode" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupGlobalSubRegion" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupLocation" Member="PriceTrackingHandlingFeeGroupLocations">
+    <Type Name="PriceTrackingHandlingFeeGroupLocation">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupLocation" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupTeam" Member="PriceTrackingHandlingFeeGroupTeams">
+    <Type Name="PriceTrackingHandlingFeeGroupTeam">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupTeam" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeGroupTravelerType" Member="PriceTrackingHandlingFeeGroupTravelerTypes">
+    <Type Name="PriceTrackingHandlingFeeGroupTravelerType">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeGroupTravelerType" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingHandlingFeeItem" Member="PriceTrackingHandlingFeeItems">
+    <Type Name="PriceTrackingHandlingFeeItem">
+      <Column Name="PriceTrackingHandlingFeeItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTrackingSystem" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SavingAmountPercentage" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="HandlingFee" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTrackingSystemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingHandlingFeeGroup_PriceTrackingHandlingFeeItem" Member="PriceTrackingHandlingFeeGroup" ThisKey="PriceTrackingHandlingFeeGroupId" OtherKey="PriceTrackingHandlingFeeGroupId" Type="PriceTrackingHandlingFeeGroup" IsForeignKey="true" />
+      <Association Name="PriceTrackingSystem_PriceTrackingHandlingFeeItem" Member="PriceTrackingSystem1" ThisKey="PriceTrackingSystemId" OtherKey="PriceTrackingSystemId" Type="PriceTrackingSystem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingEmailAlertType" Member="PriceTrackingEmailAlertTypes">
+    <Type Name="PriceTrackingEmailAlertType">
+      <Column Name="PriceTrackingEmailAlertTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingEmailAlertTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingEmailAlertType_PriceTrackingContact" Member="PriceTrackingContacts" ThisKey="PriceTrackingEmailAlertTypeId" OtherKey="PriceTrackingEmailAlertTypeId" Type="PriceTrackingContact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingDashboardAccessType" Member="PriceTrackingDashboardAccessTypes">
+    <Type Name="PriceTrackingDashboardAccessType">
+      <Column Name="PriceTrackingDashboardAccessTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingDashboardAccessTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingContactUserType" Member="PriceTrackingContactUserTypes">
+    <Type Name="PriceTrackingContactUserType">
+      <Column Name="PriceTrackingContactUserTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingContactUserTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingContactUserType_PriceTrackingContact" Member="PriceTrackingContacts" ThisKey="PriceTrackingContactUserTypeId" OtherKey="PriceTrackingContactUserTypeId" Type="PriceTrackingContact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingContact" Member="PriceTrackingContacts">
+    <Type Name="PriceTrackingContact">
+      <Column Name="PriceTrackingContactId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PriceTrackingContactUserTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceTrackingDashboardAccessFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PriceTrackingEmailAlertTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingContactUserType_PriceTrackingContact" Member="PriceTrackingContactUserType" ThisKey="PriceTrackingContactUserTypeId" OtherKey="PriceTrackingContactUserTypeId" Type="PriceTrackingContactUserType" IsForeignKey="true" />
+      <Association Name="PriceTrackingEmailAlertType_PriceTrackingContact" Member="PriceTrackingEmailAlertType" ThisKey="PriceTrackingEmailAlertTypeId" OtherKey="PriceTrackingEmailAlertTypeId" Type="PriceTrackingEmailAlertType" IsForeignKey="true" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingContact" Member="PriceTrackingSetupGroup" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupClientSubUnit" Member="PriceTrackingSetupGroupClientSubUnits">
+    <Type Name="PriceTrackingSetupGroupClientSubUnit">
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupClientSubUnit" Member="PriceTrackingSetupGroup" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupClientTopUnit" Member="PriceTrackingSetupGroupClientTopUnits">
+    <Type Name="PriceTrackingSetupGroupClientTopUnit">
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupClientTopUnit" Member="PriceTrackingSetupGroup" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupType" Member="PriceTrackingSetupTypes">
+    <Type Name="PriceTrackingSetupType">
+      <Column Name="PriceTrackingSetupTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingSetupType_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroups" ThisKey="PriceTrackingSetupTypeId" OtherKey="PriceTrackingSetupTypeId" Type="PriceTrackingSetupGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSystemRule" Member="PriceTrackingSystemRules">
+    <Type Name="PriceTrackingSystemRule">
+      <Column Name="PriceTrackingSystemRuleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSystemRuleName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingSystemRule_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroups" ThisKey="PriceTrackingSystemRuleId" OtherKey="PriceTrackingSystemRuleId" Type="PriceTrackingSetupGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingMidOfficePlatform" Member="PriceTrackingMidOfficePlatforms">
+    <Type Name="PriceTrackingMidOfficePlatform">
+      <Column Name="PriceTrackingMidOfficePlatformId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingMidOfficePlatformName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingMidOfficePlatform_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroups" ThisKey="PriceTrackingMidOfficePlatformId" OtherKey="PriceTrackingMidOfficePlatformId" Type="PriceTrackingSetupGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingItinerarySolution" Member="PriceTrackingItinerarySolutions">
+    <Type Name="PriceTrackingItinerarySolution">
+      <Column Name="PriceTrackingItinerarySolutionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingItinerarySolutionName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingItinerarySolution_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroups" ThisKey="PriceTrackingItinerarySolutionId" OtherKey="PriceTrackingItinerarySolutionId" Type="PriceTrackingSetupGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingBillingModel" Member="PriceTrackingBillingModels">
+    <Type Name="PriceTrackingBillingModel">
+      <Column Name="PriceTrackingBillingModelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingBillingModelName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PriceTrackingBillingModel_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroups" ThisKey="PriceTrackingBillingModelId" OtherKey="AirPriceTrackingBillingModelId" Type="PriceTrackingSetupGroup" />
+      <Association Name="PriceTrackingBillingModel_PriceTrackingSetupGroup1" Member="PriceTrackingSetupGroups1" ThisKey="PriceTrackingBillingModelId" OtherKey="HotelPriceTrackingBillingModelId" Type="PriceTrackingSetupGroup" />
+      <Association Name="PriceTrackingBillingModel_PriceTrackingSetupGroup2" Member="PriceTrackingSetupGroups2" ThisKey="PriceTrackingBillingModelId" OtherKey="PreTicketPriceTrackingBillingModelId" Type="PriceTrackingSetupGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId" Member="PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeIds">
+    <Type Name="PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId">
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SharedPseudoCityOrOfficeIdFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId" Member="PriceTrackingSetupGroup" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupExcludedTravelerType" Member="PriceTrackingSetupGroupExcludedTravelerTypes">
+    <Type Name="PriceTrackingSetupGroupExcludedTravelerType">
+      <Column Name="PriceTrackingSetupGroupExcludedId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupExcludedTravelerType" Member="PriceTrackingSetupGroup" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroup" Member="PriceTrackingSetupGroups">
+    <Type Name="PriceTrackingSetupGroup">
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupName" Type="System.String" DbType="NVarChar(170) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="SharedPseudoCityOrOfficeIdFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FIQID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DesktopUsedTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceTrackingMidOfficePlatformId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MidOfficeUsedForQCTicketingFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PriceTrackingItinerarySolutionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceTrackingSystemRuleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USGovernmentContractorFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BackOfficeSystemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherExclusions" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="AirPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HotelPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreTicketPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingContact" Member="PriceTrackingContacts" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingContact" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupClientSubUnit" Member="PriceTrackingSetupGroupClientSubUnits" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroupClientSubUnit" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupClientTopUnit" Member="PriceTrackingSetupGroupClientTopUnits" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroupClientTopUnit" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId" Member="PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeIds" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeId" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupExcludedTravelerType" Member="PriceTrackingSetupGroupExcludedTravelerTypes" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroupExcludedTravelerType" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroup2" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" Cardinality="One" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupItemHotel" Member="PriceTrackingSetupGroupItemHotels" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroupItemHotel" />
+      <Association Name="PriceTrackingBillingModel_PriceTrackingSetupGroup" Member="PriceTrackingBillingModel" ThisKey="AirPriceTrackingBillingModelId" OtherKey="PriceTrackingBillingModelId" Type="PriceTrackingBillingModel" IsForeignKey="true" />
+      <Association Name="PriceTrackingBillingModel_PriceTrackingSetupGroup1" Member="PriceTrackingBillingModel1" ThisKey="HotelPriceTrackingBillingModelId" OtherKey="PriceTrackingBillingModelId" Type="PriceTrackingBillingModel" IsForeignKey="true" />
+      <Association Name="PriceTrackingBillingModel_PriceTrackingSetupGroup2" Member="PriceTrackingBillingModel2" ThisKey="PreTicketPriceTrackingBillingModelId" OtherKey="PriceTrackingBillingModelId" Type="PriceTrackingBillingModel" IsForeignKey="true" />
+      <Association Name="PriceTrackingItinerarySolution_PriceTrackingSetupGroup" Member="PriceTrackingItinerarySolution" ThisKey="PriceTrackingItinerarySolutionId" OtherKey="PriceTrackingItinerarySolutionId" Type="PriceTrackingItinerarySolution" IsForeignKey="true" />
+      <Association Name="PriceTrackingMidOfficePlatform_PriceTrackingSetupGroup" Member="PriceTrackingMidOfficePlatform" ThisKey="PriceTrackingMidOfficePlatformId" OtherKey="PriceTrackingMidOfficePlatformId" Type="PriceTrackingMidOfficePlatform" IsForeignKey="true" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroup" Member="PriceTrackingSetupGroup1" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+      <Association Name="PriceTrackingSetupType_PriceTrackingSetupGroup" Member="PriceTrackingSetupType" ThisKey="PriceTrackingSetupTypeId" OtherKey="PriceTrackingSetupTypeId" Type="PriceTrackingSetupType" IsForeignKey="true" />
+      <Association Name="PriceTrackingSystemRule_PriceTrackingSetupGroup" Member="PriceTrackingSystemRule" ThisKey="PriceTrackingSystemRuleId" OtherKey="PriceTrackingSystemRuleId" Type="PriceTrackingSystemRule" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress" Member="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddresses">
+    <Type Name="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress">
+      <Column Name="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddressId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupItemHotelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PriceTrackingSetupGroupItemHotel_PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress" Member="PriceTrackingSetupGroupItemHotel" ThisKey="PriceTrackingSetupGroupItemHotelId" OtherKey="PriceTrackingSetupGroupItemHotelId" Type="PriceTrackingSetupGroupItemHotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupItemAir" Member="PriceTrackingSetupGroupItemAirs">
+    <Type Name="PriceTrackingSetupGroupItemAir">
+      <Column Name="PriceTrackingSetupGroupItemAirId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SharedSavingsFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SharedSavingsAmount" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="TransactionFeeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="AnnualTransactionCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnnualSpendAmount" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="EstimatedCWTRebookingFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="CWTVoidRefundFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="NoPenaltyVoidWindowThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="OutsideVoidPenaltyThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="TimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="RefundableToRefundableWithPenaltyForRefundAllowedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RefundableToRefundablePreDepartureDayAmount" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="NoPenaltyRefundableToPenaltyRefundableThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="RefundableToNonRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RefundableToNonRefundablePreDepartureDayAmount" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="NoPenaltyRefundableToPenaltyNonRefundableThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="VoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RefundableToRefundableOutsideVoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NonRefundableToNonRefundableOutsideVoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ExchangesAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VoidExchangeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ExchangePreviousExchangeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NonRefundableToLowerNonRefundableWithDifferentChangeFeeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RefundableToLowerNonRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RefundableToLowerRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NonPenaltyRefundableToLowerPenaltyRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChargeChangeFeeUpFrontForSpecificCarriersFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChangeFeeMustBeUsedFromResidualValueFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TrackPrivateNegotiatedFareFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NegotiatedPricingTrackingCode1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="NegotiatedPricingTrackingCode2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="NegotiatedPricingTrackingCode3" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="NegotiatedPricingTrackingCode4" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CompanyProfilesRequiringFIQID" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="RealisedSavingsCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="MissedSavingsCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeactivationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImportPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="ImportQueueInClientPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PricingPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="SavingsQueueId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AlphaCodeRemarkField" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AutomaticReticketingFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientHasProvidedWrittenApprovalFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CentralFulfillmentTimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="CentralFulfillmentBusinessHours" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTrackingSetupGroupItemHotel" Member="PriceTrackingSetupGroupItemHotels">
+    <Type Name="PriceTrackingSetupGroupItemHotel">
+      <Column Name="PriceTrackingSetupGroupItemHotelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SharedSavingsFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SharedSavingsAmount" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="TransactionFeeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="AnnualTransactionCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnnualSpendAmount" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="EstimatedCWTRebookingFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="CWTVoidRefundFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="ThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="BreakfastValue" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="AmenityUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RoomTypeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BeddingTypeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HotelRateCodeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NegotiatedUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CancellationPolicyUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KingQueenUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CorporateRateTrackingCode1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CorporateRateTrackingCode2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CorporateRateTrackingCode3" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CorporateRateTrackingCode4" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CWTRateTrackingCode1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CWTRateTrackingCode2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeactivationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RebookOnlyBestMatchAlertFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ParkingValue" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="EnableValueTrackingFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InternetAccessValue" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="TMCFeeThreshold" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="ImportPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="ImportQueueInClientPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PricingPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="SavingsQueueId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AlphaCodeRemarkField" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientHasProvidedWrittenApprovalFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClientHasHotelFeesInMSAFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CentralFulfillmentTimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="CentralFulfillmentBusinessHours" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClientUsesConfermaVirtualCardsFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="BreakfastChangesAllowedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="PriceTrackingSetupGroupItemHotel_PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress" Member="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddresses" ThisKey="PriceTrackingSetupGroupItemHotelId" OtherKey="PriceTrackingSetupGroupItemHotelId" Type="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddress" />
+      <Association Name="PriceTrackingSetupGroup_PriceTrackingSetupGroupItemHotel" Member="PriceTrackingSetupGroup" ThisKey="PriceTrackingSetupGroupId" OtherKey="PriceTrackingSetupGroupId" Type="PriceTrackingSetupGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPriceTrackingHandlingFeeGroup_v1" Method="spDesktopDataAdmin_InsertPriceTrackingHandlingFeeGroup_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="PriceTrackingHandlingFeeGroupName" Parameter="priceTrackingHandlingFeeGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeGroupDeletedStatus_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeGroupDeletedStatus_v1">
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeGroup_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeGroup_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingHandlingFeeGroupName" Parameter="priceTrackingHandlingFeeGroupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Hierarchy" Parameter="hierarchy" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="IsMultipleHierarchy" Parameter="isMultipleHierarchy" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroupHierarchy_v1" Method="fnDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroupHierarchy_v1" IsComposable="true">
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroupHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ClientTopUnitName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePriceTrackingHandlingFeeItem_v1" Method="spDesktopDataAdmin_DeletePriceTrackingHandlingFeeItem_v1">
+    <Parameter Name="PriceTrackingHandlingFeeItemId" Parameter="priceTrackingHandlingFeeItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingHandlingFeeItems_v1" Method="spDesktopDataAdmin_SelectPriceTrackingHandlingFeeItems_v1">
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingHandlingFeeItems_v1Result">
+      <Column Name="PriceTrackingHandlingFeeItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTrackingHandlingFeeGroupName" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PriceTrackingSystemName" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="SavingAmountPercentage" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="HandlingFee" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeItem_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeItem_v1">
+    <Parameter Name="PriceTrackingHandlingFeeItemId" Parameter="priceTrackingHandlingFeeItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSystemId" Parameter="priceTrackingSystemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SavingAmountPercentage" Parameter="savingAmountPercentage" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="HandlingFee" Parameter="handlingFee" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPriceTrackingHandlingFeeItem_v1" Method="spDesktopDataAdmin_InsertPriceTrackingHandlingFeeItem_v1">
+    <Parameter Name="PriceTrackingHandlingFeeItemId" Parameter="priceTrackingHandlingFeeItemId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSystemId" Parameter="priceTrackingSystemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SavingAmountPercentage" Parameter="savingAmountPercentage" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="HandlingFee" Parameter="handlingFee" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroups_v1" Method="spDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroups_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroups_v1Result">
+      <Column Name="PriceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceTrackingHandlingFeeGroupName" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LinkedItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroupLinkedClientSubUnits_v1" Method="spDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroupLinkedClientSubUnits_v1">
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="Linked" Parameter="linked" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingHandlingFeeGroupLinkedClientSubUnits_v1Result">
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeGroupLinkedClientSubUnit_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingHandlingFeeGroupLinkedClientSubUnit_v1">
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeletePriceTrackingContact_v1" Method="spDesktopDataAdmin_DeletePriceTrackingContact_v1">
+    <Parameter Name="PriceTrackingContactId" Parameter="priceTrackingContactId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingContact_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingContact_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingContactId" Parameter="priceTrackingContactId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContactTypeId" Parameter="contactTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PriceTrackingContactUserTypeId" Parameter="priceTrackingContactUserTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingDashboardAccessFlag" Parameter="priceTrackingDashboardAccessFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PriceTrackingEmailAlertTypeId" Parameter="priceTrackingEmailAlertTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPriceTrackingContact_v1" Method="spDesktopDataAdmin_InsertPriceTrackingContact_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContactTypeId" Parameter="contactTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PriceTrackingContactUserTypeId" Parameter="priceTrackingContactUserTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingDashboardAccessFlag" Parameter="priceTrackingDashboardAccessFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PriceTrackingEmailAlertTypeId" Parameter="priceTrackingEmailAlertTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingContacts_v1" Method="spDesktopDataAdmin_SelectPriceTrackingContacts_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingContacts_v1Result">
+      <Column Name="PriceTrackingContactId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PriceTrackingContactUserTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PriceTrackingDashboardAccessFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PriceTrackingEmailAlertTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingSetupGroupDeletedStatus_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingSetupGroupDeletedStatus_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingSetupGroupLinkedClientSubUnit_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingSetupGroupLinkedClientSubUnit_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingSetupGroupLinkedClientSubUnits_v1" Method="spDesktopDataAdmin_SelectPriceTrackingSetupGroupLinkedClientSubUnits_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="Linked" Parameter="linked" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingSetupGroupLinkedClientSubUnits_v1Result">
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectPriceTrackingSetupGroupHierarchy_v1" Method="fnDesktopDataAdmin_SelectPriceTrackingSetupGroupHierarchy_v1" IsComposable="true">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectPriceTrackingSetupGroupHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ClientTopUnitName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingSetupGroups_v1" Method="spDesktopDataAdmin_SelectPriceTrackingSetupGroups_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingSetupGroups_v1Result">
+      <Column Name="PriceTrackingSetupGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceTrackingSetupGroupName" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="LinkedItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceTrackingSetupGroupItemAirId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceTrackingSetupGroupItemHotelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPriceTrackingSetupGroupItemAir_v1" Method="spDesktopDataAdmin_InsertPriceTrackingSetupGroupItemAir_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientHasProvidedWrittenApprovalFlag" Parameter="clientHasProvidedWrittenApprovalFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SharedSavingsFlag" Parameter="sharedSavingsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SharedSavingsAmount" Parameter="sharedSavingsAmount" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="TransactionFeeFlag" Parameter="transactionFeeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TransactionFeeAmount" Parameter="transactionFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CentralFulfillmentTimeZoneRuleCode" Parameter="centralFulfillmentTimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="CentralFulfillmentBusinessHours" Parameter="centralFulfillmentBusinessHours" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Comment" Parameter="comment" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="AnnualTransactionCount" Parameter="annualTransactionCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AnnualSpendAmount" Parameter="annualSpendAmount" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="CurrencyCode" Parameter="currencyCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="EstimatedCWTRebookingFeeAmount" Parameter="estimatedCWTRebookingFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CWTVoidRefundFeeAmount" Parameter="cWTVoidRefundFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="NoPenaltyVoidWindowThresholdAmount" Parameter="noPenaltyVoidWindowThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="OutsideVoidPenaltyThresholdAmount" Parameter="outsideVoidPenaltyThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="TimeZoneRuleCode" Parameter="timeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="RefundableToRefundableWithPenaltyForRefundAllowedFlag" Parameter="refundableToRefundableWithPenaltyForRefundAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToRefundablePreDepartureDayAmount" Parameter="refundableToRefundablePreDepartureDayAmount" Type="System.Decimal" DbType="Decimal(3,0)" />
+    <Parameter Name="NoPenaltyRefundableToPenaltyRefundableThresholdAmount" Parameter="noPenaltyRefundableToPenaltyRefundableThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="RefundableToNonRefundableAllowedFlag" Parameter="refundableToNonRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToNonRefundablePreDepartureDayAmount" Parameter="refundableToNonRefundablePreDepartureDayAmount" Type="System.Decimal" DbType="Decimal(3,0)" />
+    <Parameter Name="NoPenaltyRefundableToPenaltyNonRefundableThresholdAmount" Parameter="noPenaltyRefundableToPenaltyNonRefundableThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="VoidWindowAllowedFlag" Parameter="voidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToRefundableOutsideVoidWindowAllowedFlag" Parameter="refundableToRefundableOutsideVoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonRefundableToNonRefundableOutsideVoidWindowAllowedFlag" Parameter="nonRefundableToNonRefundableOutsideVoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExchangesAllowedFlag" Parameter="exchangesAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="VoidExchangeAllowedFlag" Parameter="voidExchangeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExchangePreviousExchangeAllowedFlag" Parameter="exchangePreviousExchangeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonRefundableToLowerNonRefundableWithDifferentChangeFeeAllowedFlag" Parameter="nonRefundableToLowerNonRefundableWithDifferentChangeFeeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToLowerNonRefundableAllowedFlag" Parameter="refundableToLowerNonRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToLowerRefundableAllowedFlag" Parameter="refundableToLowerRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonPenaltyRefundableToLowerPenaltyRefundableAllowedFlag" Parameter="nonPenaltyRefundableToLowerPenaltyRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ChargeChangeFeeUpFrontForSpecificCarriersFlag" Parameter="chargeChangeFeeUpFrontForSpecificCarriersFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ChangeFeeMustBeUsedFromResidualValueFlag" Parameter="changeFeeMustBeUsedFromResidualValueFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TrackPrivateNegotiatedFareFlag" Parameter="trackPrivateNegotiatedFareFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NegotiatedPricingTrackingCode1" Parameter="negotiatedPricingTrackingCode1" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="NegotiatedPricingTrackingCode2" Parameter="negotiatedPricingTrackingCode2" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="NegotiatedPricingTrackingCode3" Parameter="negotiatedPricingTrackingCode3" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="NegotiatedPricingTrackingCode4" Parameter="negotiatedPricingTrackingCode4" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CompanyProfilesRequiringFIQID" Parameter="companyProfilesRequiringFIQID" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="RealisedSavingsCode" Parameter="realisedSavingsCode" Type="System.String" DbType="NVarChar(3)" />
+    <Parameter Name="MissedSavingsCode" Parameter="missedSavingsCode" Type="System.String" DbType="NVarChar(3)" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DeactivationDate" Parameter="deactivationDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ImportPseudoCityOrOfficeId" Parameter="importPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="ImportQueueInClientPseudoCityOrOfficeId" Parameter="importQueueInClientPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PricingPseudoCityOrOfficeId" Parameter="pricingPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="SavingsQueueId" Parameter="savingsQueueId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AlphaCodeRemarkField" Parameter="alphaCodeRemarkField" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AutomaticReticketingFlag" Parameter="automaticReticketingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingSetupGroupItemAir_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingSetupGroupItemAir_v1">
+    <Parameter Name="PriceTrackingSetupGroupItemAirId" Parameter="priceTrackingSetupGroupItemAirId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientHasProvidedWrittenApprovalFlag" Parameter="clientHasProvidedWrittenApprovalFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SharedSavingsFlag" Parameter="sharedSavingsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SharedSavingsAmount" Parameter="sharedSavingsAmount" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="TransactionFeeFlag" Parameter="transactionFeeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TransactionFeeAmount" Parameter="transactionFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CentralFulfillmentTimeZoneRuleCode" Parameter="centralFulfillmentTimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="CentralFulfillmentBusinessHours" Parameter="centralFulfillmentBusinessHours" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Comment" Parameter="comment" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="AnnualTransactionCount" Parameter="annualTransactionCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AnnualSpendAmount" Parameter="annualSpendAmount" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="CurrencyCode" Parameter="currencyCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="EstimatedCWTRebookingFeeAmount" Parameter="estimatedCWTRebookingFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CWTVoidRefundFeeAmount" Parameter="cWTVoidRefundFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="NoPenaltyVoidWindowThresholdAmount" Parameter="noPenaltyVoidWindowThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="OutsideVoidPenaltyThresholdAmount" Parameter="outsideVoidPenaltyThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="TimeZoneRuleCode" Parameter="timeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="RefundableToRefundableWithPenaltyForRefundAllowedFlag" Parameter="refundableToRefundableWithPenaltyForRefundAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToRefundablePreDepartureDayAmount" Parameter="refundableToRefundablePreDepartureDayAmount" Type="System.Decimal" DbType="Decimal(3,0)" />
+    <Parameter Name="NoPenaltyRefundableToPenaltyRefundableThresholdAmount" Parameter="noPenaltyRefundableToPenaltyRefundableThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="RefundableToNonRefundableAllowedFlag" Parameter="refundableToNonRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToNonRefundablePreDepartureDayAmount" Parameter="refundableToNonRefundablePreDepartureDayAmount" Type="System.Decimal" DbType="Decimal(3,0)" />
+    <Parameter Name="NoPenaltyRefundableToPenaltyNonRefundableThresholdAmount" Parameter="noPenaltyRefundableToPenaltyNonRefundableThresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="VoidWindowAllowedFlag" Parameter="voidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToRefundableOutsideVoidWindowAllowedFlag" Parameter="refundableToRefundableOutsideVoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonRefundableToNonRefundableOutsideVoidWindowAllowedFlag" Parameter="nonRefundableToNonRefundableOutsideVoidWindowAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExchangesAllowedFlag" Parameter="exchangesAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="VoidExchangeAllowedFlag" Parameter="voidExchangeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExchangePreviousExchangeAllowedFlag" Parameter="exchangePreviousExchangeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonRefundableToLowerNonRefundableWithDifferentChangeFeeAllowedFlag" Parameter="nonRefundableToLowerNonRefundableWithDifferentChangeFeeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToLowerNonRefundableAllowedFlag" Parameter="refundableToLowerNonRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RefundableToLowerRefundableAllowedFlag" Parameter="refundableToLowerRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonPenaltyRefundableToLowerPenaltyRefundableAllowedFlag" Parameter="nonPenaltyRefundableToLowerPenaltyRefundableAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ChargeChangeFeeUpFrontForSpecificCarriersFlag" Parameter="chargeChangeFeeUpFrontForSpecificCarriersFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ChangeFeeMustBeUsedFromResidualValueFlag" Parameter="changeFeeMustBeUsedFromResidualValueFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TrackPrivateNegotiatedFareFlag" Parameter="trackPrivateNegotiatedFareFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NegotiatedPricingTrackingCode1" Parameter="negotiatedPricingTrackingCode1" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="NegotiatedPricingTrackingCode2" Parameter="negotiatedPricingTrackingCode2" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="NegotiatedPricingTrackingCode3" Parameter="negotiatedPricingTrackingCode3" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="NegotiatedPricingTrackingCode4" Parameter="negotiatedPricingTrackingCode4" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CompanyProfilesRequiringFIQID" Parameter="companyProfilesRequiringFIQID" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="RealisedSavingsCode" Parameter="realisedSavingsCode" Type="System.String" DbType="NVarChar(3)" />
+    <Parameter Name="MissedSavingsCode" Parameter="missedSavingsCode" Type="System.String" DbType="NVarChar(3)" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DeactivationDate" Parameter="deactivationDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ImportPseudoCityOrOfficeId" Parameter="importPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="ImportQueueInClientPseudoCityOrOfficeId" Parameter="importQueueInClientPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PricingPseudoCityOrOfficeId" Parameter="pricingPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="SavingsQueueId" Parameter="savingsQueueId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AlphaCodeRemarkField" Parameter="alphaCodeRemarkField" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AutomaticReticketingFlag" Parameter="automaticReticketingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPriceTrackingSetupGroupItemHotel_v1" Method="spDesktopDataAdmin_InsertPriceTrackingSetupGroupItemHotel_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SharedSavingsFlag" Parameter="sharedSavingsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SharedSavingsAmount" Parameter="sharedSavingsAmount" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="TransactionFeeFlag" Parameter="transactionFeeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TransactionFeeAmount" Parameter="transactionFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ClientHasProvidedWrittenApprovalFlag" Parameter="clientHasProvidedWrittenApprovalFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientHasHotelFeesInMSAFlag" Parameter="clientHasHotelFeesInMSAFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientUsesConfermaVirtualCardsFlag" Parameter="clientUsesConfermaVirtualCardsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CentralFulfillmentTimeZoneRuleCode" Parameter="centralFulfillmentTimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="CentralFulfillmentBusinessHours" Parameter="centralFulfillmentBusinessHours" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Comment" Parameter="comment" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="AnnualTransactionCount" Parameter="annualTransactionCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AnnualSpendAmount" Parameter="annualSpendAmount" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="CurrencyCode" Parameter="currencyCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="EstimatedCWTRebookingFeeAmount" Parameter="estimatedCWTRebookingFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CWTVoidRefundFeeAmount" Parameter="cWTVoidRefundFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ThresholdAmount" Parameter="thresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="BreakfastValue" Parameter="breakfastValue" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="RoomTypeUpgradeAllowedFlag" Parameter="roomTypeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BeddingTypeUpgradeAllowedFlag" Parameter="beddingTypeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="HotelRateCodeUpgradeAllowedFlag" Parameter="hotelRateCodeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CancellationPolicyUpgradeAllowedFlag" Parameter="cancellationPolicyUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="KingQueenUpgradeAllowedFlag" Parameter="kingQueenUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CorporateRateTrackingCode1" Parameter="corporateRateTrackingCode1" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CorporateRateTrackingCode2" Parameter="corporateRateTrackingCode2" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CorporateRateTrackingCode3" Parameter="corporateRateTrackingCode3" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CorporateRateTrackingCode4" Parameter="corporateRateTrackingCode4" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CWTRateTrackingCode1" Parameter="cWTRateTrackingCode1" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CWTRateTrackingCode2" Parameter="cWTRateTrackingCode2" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DeactivationDate" Parameter="deactivationDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="BreakfastChangesAllowedFlag" Parameter="breakfastChangesAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ParkingValue" Parameter="parkingValue" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="EnableValueTrackingFlag" Parameter="enableValueTrackingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InternetAccessValue" Parameter="internetAccessValue" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="TMCFeeThreshold" Parameter="tMCFeeThreshold" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ImportPseudoCityOrOfficeId" Parameter="importPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="ImportQueueInClientPseudoCityOrOfficeId" Parameter="importQueueInClientPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PricingPseudoCityOrOfficeId" Parameter="pricingPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="SavingsQueueId" Parameter="savingsQueueId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AlphaCodeRemarkField" Parameter="alphaCodeRemarkField" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddresses" Parameter="priceTrackingSetupGroupItemHotelTrackingAlertEmailAddresses" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingSetupGroupItemHotel_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingSetupGroupItemHotel_v1">
+    <Parameter Name="PriceTrackingSetupGroupItemHotelId" Parameter="priceTrackingSetupGroupItemHotelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SharedSavingsFlag" Parameter="sharedSavingsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SharedSavingsAmount" Parameter="sharedSavingsAmount" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="TransactionFeeFlag" Parameter="transactionFeeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TransactionFeeAmount" Parameter="transactionFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ClientHasProvidedWrittenApprovalFlag" Parameter="clientHasProvidedWrittenApprovalFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientHasHotelFeesInMSAFlag" Parameter="clientHasHotelFeesInMSAFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientUsesConfermaVirtualCardsFlag" Parameter="clientUsesConfermaVirtualCardsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CentralFulfillmentTimeZoneRuleCode" Parameter="centralFulfillmentTimeZoneRuleCode" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="CentralFulfillmentBusinessHours" Parameter="centralFulfillmentBusinessHours" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Comment" Parameter="comment" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="AnnualTransactionCount" Parameter="annualTransactionCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AnnualSpendAmount" Parameter="annualSpendAmount" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="CurrencyCode" Parameter="currencyCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="EstimatedCWTRebookingFeeAmount" Parameter="estimatedCWTRebookingFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CWTVoidRefundFeeAmount" Parameter="cWTVoidRefundFeeAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ThresholdAmount" Parameter="thresholdAmount" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="BreakfastValue" Parameter="breakfastValue" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="RoomTypeUpgradeAllowedFlag" Parameter="roomTypeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BeddingTypeUpgradeAllowedFlag" Parameter="beddingTypeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="HotelRateCodeUpgradeAllowedFlag" Parameter="hotelRateCodeUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CancellationPolicyUpgradeAllowedFlag" Parameter="cancellationPolicyUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="KingQueenUpgradeAllowedFlag" Parameter="kingQueenUpgradeAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CorporateRateTrackingCode1" Parameter="corporateRateTrackingCode1" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CorporateRateTrackingCode2" Parameter="corporateRateTrackingCode2" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CorporateRateTrackingCode3" Parameter="corporateRateTrackingCode3" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CorporateRateTrackingCode4" Parameter="corporateRateTrackingCode4" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CWTRateTrackingCode1" Parameter="cWTRateTrackingCode1" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CWTRateTrackingCode2" Parameter="cWTRateTrackingCode2" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DeactivationDate" Parameter="deactivationDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="BreakfastChangesAllowedFlag" Parameter="breakfastChangesAllowedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ParkingValue" Parameter="parkingValue" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="EnableValueTrackingFlag" Parameter="enableValueTrackingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InternetAccessValue" Parameter="internetAccessValue" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="TMCFeeThreshold" Parameter="tMCFeeThreshold" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ImportPseudoCityOrOfficeId" Parameter="importPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="ImportQueueInClientPseudoCityOrOfficeId" Parameter="importQueueInClientPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PricingPseudoCityOrOfficeId" Parameter="pricingPseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(9)" />
+    <Parameter Name="SavingsQueueId" Parameter="savingsQueueId" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AlphaCodeRemarkField" Parameter="alphaCodeRemarkField" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PriceTrackingSetupGroupItemHotelTrackingAlertEmailAddresses" Parameter="priceTrackingSetupGroupItemHotelTrackingAlertEmailAddresses" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingSetupGroupClientAccounts_v1" Method="spDesktopDataAdmin_SelectPriceTrackingSetupGroupClientAccounts_v1">
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HierarchyItem" Parameter="hierarchyItem" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingSetupGroupClientAccounts_v1Result">
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAccountName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientMasterCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectPriceTrackingSetupGroupTravelerTypes_v1" Method="spDesktopDataAdmin_SelectPriceTrackingSetupGroupTravelerTypes_v1">
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HierarchyItem" Parameter="hierarchyItem" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spDesktopDataAdmin_SelectPriceTrackingSetupGroupTravelerTypes_v1Result">
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientTopUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertPriceTrackingSetupGroup_v1" Method="spDesktopDataAdmin_InsertPriceTrackingSetupGroup_v1">
+    <Parameter Name="PriceTrackingSetupGroupName" Parameter="priceTrackingSetupGroupName" Type="System.String" DbType="NVarChar(170)" />
+    <Parameter Name="PriceTrackingSetupTypeId" Parameter="priceTrackingSetupTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="SharedPseudoCityOrOfficeIdFlag" Parameter="sharedPseudoCityOrOfficeIdFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FIQID" Parameter="fIQID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DesktopUsedTypeId" Parameter="desktopUsedTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingMidOfficePlatformId" Parameter="priceTrackingMidOfficePlatformId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MidOfficeUsedForQCTicketingFlag" Parameter="midOfficeUsedForQCTicketingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PriceTrackingItinerarySolutionId" Parameter="priceTrackingItinerarySolutionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSystemRuleId" Parameter="priceTrackingSystemRuleId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="USGovernmentContractorFlag" Parameter="uSGovernmentContractorFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BackOfficeSystemId" Parameter="backOfficeSystemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OtherExclusions" Parameter="otherExclusions" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="AirPriceTrackingBillingModelId" Parameter="airPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HotelPriceTrackingBillingModelId" Parameter="hotelPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PreTicketPriceTrackingBillingModelId" Parameter="preTicketPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeIds" Parameter="priceTrackingSetupGroupAdditionalPseudoCityOrOfficeIds" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="PriceTrackingSetupGroupExcludedTravelerTypes" Parameter="priceTrackingSetupGroupExcludedTravelerTypes" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdatePriceTrackingSetupGroup_v1" Method="spDesktopDataAdmin_UpdatePriceTrackingSetupGroup_v1">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSetupGroupName" Parameter="priceTrackingSetupGroupName" Type="System.String" DbType="NVarChar(170)" />
+    <Parameter Name="PriceTrackingSetupTypeId" Parameter="priceTrackingSetupTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="SharedPseudoCityOrOfficeIdFlag" Parameter="sharedPseudoCityOrOfficeIdFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FIQID" Parameter="fIQID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DesktopUsedTypeId" Parameter="desktopUsedTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingMidOfficePlatformId" Parameter="priceTrackingMidOfficePlatformId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MidOfficeUsedForQCTicketingFlag" Parameter="midOfficeUsedForQCTicketingFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PriceTrackingItinerarySolutionId" Parameter="priceTrackingItinerarySolutionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceTrackingSystemRuleId" Parameter="priceTrackingSystemRuleId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="USGovernmentContractorFlag" Parameter="uSGovernmentContractorFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BackOfficeSystemId" Parameter="backOfficeSystemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OtherExclusions" Parameter="otherExclusions" Type="System.String" DbType="NVarChar(240)" />
+    <Parameter Name="AirPriceTrackingBillingModelId" Parameter="airPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HotelPriceTrackingBillingModelId" Parameter="hotelPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PreTicketPriceTrackingBillingModelId" Parameter="preTicketPriceTrackingBillingModelId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(1)" />
+    <Parameter Name="IsMultipleHierarchy" Parameter="isMultipleHierarchy" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PriceTrackingSetupGroupAdditionalPseudoCityOrOfficeIds" Parameter="priceTrackingSetupGroupAdditionalPseudoCityOrOfficeIds" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="PriceTrackingSetupGroupExcludedTravelerTypes" Parameter="priceTrackingSetupGroupExcludedTravelerTypes" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

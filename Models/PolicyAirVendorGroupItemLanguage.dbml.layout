@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PolicyAirVendorGroupItemLanguage">
+  <DataContextMoniker Name="/PolicyAirVendorGroupItemLanguageDC" />
+  <nestedChildShapes>
+    <classShape Id="9081eddd-04ea-4bd5-bc5e-4f5d3ffec67a" absoluteBounds="1.375, 1.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PolicyAirVendorGroupItemLanguageDC/PolicyAirVendorGroupItemLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="885c86b8-3e3c-4070-845f-8f400e6ed033" absoluteBounds="1.3900000000000001, 2.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

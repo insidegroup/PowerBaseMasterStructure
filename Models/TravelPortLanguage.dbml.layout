@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TravelPortLanguage">
+  <DataContextMoniker Name="/TravelPortLanguageDC" />
+  <nestedChildShapes>
+    <classShape Id="b93be676-2c96-4893-ba0f-3d46b6371c91" absoluteBounds="1.25, 3, 2, 2.5401025390625">
+      <DataClassMoniker Name="/TravelPortLanguageDC/TravelPortLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8e44b6e-49c2-4a20-aaac-7a2b6d251166" absoluteBounds="1.2650000000000001, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

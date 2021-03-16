@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1931" Class="RolesDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1931;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="CWTDesktopDatabase.Properties.Settings" SettingsPropertyName="Desktop_Local_v1931ConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientTopUnit_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientTopUnit_v1" IsComposable="true">
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientAccount_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientAccount_v1" IsComposable="true">
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToExternalSystemParameter_v1" Method="fnDesktopDataAdmin_GetWriteAccessToExternalSystemParameter_v1" IsComposable="true">
+    <Parameter Name="ESPId" Parameter="eSPId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToGDSAdditionalEntry_v1" Method="fnDesktopDataAdmin_GetWriteAccessToGDSAdditionalEntry_v1" IsComposable="true">
+    <Parameter Name="GDSAEId" Parameter="gDSAEId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToLocalOperatingHoursGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToLocalOperatingHoursGroup_v1" IsComposable="true">
+    <Parameter Name="LOHGroupId" Parameter="lOHGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPNROutputGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPNROutputGroup_v1" IsComposable="true">
+    <Parameter Name="PNROutputGroupId" Parameter="pNROutputGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPolicyGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPolicyGroup_v1" IsComposable="true">
+    <Parameter Name="PolicyGroupId" Parameter="policyGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPublicHolidayGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPublicHolidayGroup_v1" IsComposable="true">
+    <Parameter Name="PubHolGroupId" Parameter="pubHolGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToReasonCodeGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToReasonCodeGroup_v1" IsComposable="true">
+    <Parameter Name="ReasonCodeGroupId" Parameter="reasonCodeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToServicingOptionGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToServicingOptionGroup_v1" IsComposable="true">
+    <Parameter Name="ServicingOptionGroupId" Parameter="servicingOptionGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToSystemUserRoles_v1" Method="fnDesktopDataAdmin_GetWriteAccessToSystemUserRoles_v1" IsComposable="true">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToTeam_v1" Method="fnDesktopDataAdmin_GetWriteAccessToTeam_v1" IsComposable="true">
+    <Parameter Name="TeamId" Parameter="teamId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToTicketQueueGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToTicketQueueGroup_v1" IsComposable="true">
+    <Parameter Name="TicketQueueGroupId" Parameter="ticketQueueGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToTripTypeGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToTripTypeGroup_v1" IsComposable="true">
+    <Parameter Name="TripTypeGroupId" Parameter="tripTypeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToWorkflowGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToWorkflowGroup_v1" IsComposable="true">
+    <Parameter Name="WorkflowGroupId" Parameter="workflowGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientSubUnit_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientSubUnit_v1" IsComposable="true">
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientSubUnitCreditCard_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientSubUnitCreditCard_v1" IsComposable="true">
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientAccountCreditCard_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientAccountCreditCard_v1" IsComposable="true">
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToLocation_v1" Method="fnDesktopDataAdmin_GetWriteAccessToLocation_v1" IsComposable="true">
+    <Parameter Name="LocationId" Parameter="locationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientTopUnitCreditCard_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientTopUnitCreditCard_v1" IsComposable="true">
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToReferenceInfo_v1" Method="fnDesktopDataAdmin_GetWriteAccessToReferenceInfo_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToQueueMinderGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToQueueMinderGroup_v1" IsComposable="true">
+    <Parameter Name="QueueMinderGroupId" Parameter="queueMinderGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToQueueMinderItem_v1" Method="fnDesktopDataAdmin_GetWriteAccessToQueueMinderItem_v1" IsComposable="true">
+    <Parameter Name="QueueMinderItemId" Parameter="queueMinderItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToConfigurationParameters_v1" Method="fnDesktopDataAdmin_GetWriteAccessToConfigurationParameters_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPolicyGroupMessages_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPolicyGroupMessages_v1" IsComposable="true">
+    <Parameter Name="PolicyGroupId" Parameter="policyGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToCDRLinkImport_v1" Method="fnDesktopDataAdmin_GetWriteAccessToCDRLinkImport_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToProductGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToProductGroup_v1" IsComposable="true">
+    <Parameter Name="ProductGroupId" Parameter="productGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToOptionalFieldGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToOptionalFieldGroup_v1" IsComposable="true">
+    <Parameter Name="OptionalFieldGroupId" Parameter="optionalFieldGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientFeeGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientFeeGroup_v1" IsComposable="true">
+    <Parameter Name="ClientFeeGroupId" Parameter="clientFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientProfileAdminGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientProfileAdminGroup_v1" IsComposable="true">
+    <Parameter Name="ClientProfileAdminGroupId" Parameter="clientProfileAdminGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientProfileGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientProfileGroup_v1" IsComposable="true">
+    <Parameter Name="ClientProfileGroupId" Parameter="clientProfileGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetAdminUserDomainHierarchyLevelWriteAccess_v1" Method="fnDesktopDataAdmin_GetAdminUserDomainHierarchyLevelWriteAccess_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="RoleName" Parameter="roleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HierarchyLevelTypeDescription" Parameter="hierarchyLevelTypeDescription" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToGDSEndWarningConfiguration_v1" Method="fnDesktopDataAdmin_GetWriteAccessToGDSEndWarningConfiguration_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToCommissionableRouteGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToCommissionableRouteGroup_v1" IsComposable="true">
+    <Parameter Name="CommissionableRouteGroupId" Parameter="commissionableRouteGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientDefinedReferenceItem_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientDefinedReferenceItem_v1" IsComposable="true">
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientSubUnitClientDefinedReferenceItem_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientSubUnitClientDefinedReferenceItem_v1" IsComposable="true">
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientSubUnitClientDefinedReferenceItemValue_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientSubUnitClientDefinedReferenceItemValue_v1" IsComposable="true">
+    <Parameter Name="ClientDefinedReferenceItemId" Parameter="clientDefinedReferenceItemId" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToApprovalGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToApprovalGroup_v1" IsComposable="true">
+    <Parameter Name="ApprovalGroupId" Parameter="approvalGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientDefinedRuleGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientDefinedRuleGroup_v1" IsComposable="true">
+    <Parameter Name="ClientDefinedRuleGroupId" Parameter="clientDefinedRuleGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPseudoCityOrOfficeMaintenance_CubaPseudoCityOrOfficeFlag_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPseudoCityOrOfficeMaintenance_CubaPseudoCityOrOfficeFlag_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToServiceAccount_CubaBookingAllowanceIndicator_v1" Method="fnDesktopDataAdmin_GetWriteAccessToServiceAccount_CubaBookingAllowanceIndicator_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToThirdPartyUser_CubaBookingAllowanceIndicator_v1" Method="fnDesktopDataAdmin_GetWriteAccessToThirdPartyUser_CubaBookingAllowanceIndicator_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToServiceAccount_MilitaryAndGovernmentUserFlag_v1" Method="fnDesktopDataAdmin_GetWriteAccessToServiceAccount_MilitaryAndGovernmentUserFlag_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToThirdPartyUser_MilitaryAndGovernmentUserFlag_v1" Method="fnDesktopDataAdmin_GetWriteAccessToThirdPartyUser_MilitaryAndGovernmentUserFlag_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToServiceAccounts_v1" Method="fnDesktopDataAdmin_GetWriteAccessToServiceAccounts_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToThirdPartyGDSAccessRight_v1" Method="fnDesktopDataAdmin_GetWriteAccessToThirdPartyGDSAccessRight_v1" IsComposable="true">
+    <Parameter Name="ThirdPartyUserId" Parameter="thirdPartyUserId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToSystemUserGDSAccessRights_v1" Method="fnDesktopDataAdmin_GetWriteAccessToSystemUserGDSAccessRights_v1" IsComposable="true">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToSystemUserGDSAccessRight_v1" Method="fnDesktopDataAdmin_GetWriteAccessToSystemUserGDSAccessRight_v1" IsComposable="true">
+    <Parameter Name="SystemUserGDSAccessRightId" Parameter="systemUserGDSAccessRightId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToThirdPartyGDSAccessRights_v1" Method="fnDesktopDataAdmin_GetWriteAccessToThirdPartyGDSAccessRights_v1" IsComposable="true">
+    <Parameter Name="ThirdPartyUserId" Parameter="thirdPartyUserId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToGDSOrderDetail_v1" Method="fnDesktopDataAdmin_GetWriteAccessToGDSOrderDetail_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToGDSOrderType_v1" Method="fnDesktopDataAdmin_GetWriteAccessToGDSOrderType_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToSystemUser_RestrictedFlag_v1" Method="fnDesktopDataAdmin_GetWriteAccessToSystemUser_RestrictedFlag_v1" IsComposable="true">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPriceTrackingHandlingFeeGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPriceTrackingHandlingFeeGroup_v1" IsComposable="true">
+    <Parameter Name="PriceTrackingHandlingFeeGroupId" Parameter="priceTrackingHandlingFeeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToSystemUserMilitaryAndGovernmentUserFlag_v1" Method="fnDesktopDataAdmin_GetWriteAccessToSystemUserMilitaryAndGovernmentUserFlag_v1" IsComposable="true">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToClientTopUnitClientLocationImport_v1" Method="fnDesktopDataAdmin_GetWriteAccessToClientTopUnitClientLocationImport_v1" IsComposable="true">
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPolicyHotelCapRateImport_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPolicyHotelCapRateImport_v1" IsComposable="true">
+    <Parameter Name="PolicyGroupID" Parameter="policyGroupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPointOfSaleFeeLoad_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPointOfSaleFeeLoad_v1" IsComposable="true">
+    <Parameter Name="PointOfSaleFeeLoadId" Parameter="pointOfSaleFeeLoadId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToTeamOutOfOfficeGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToTeamOutOfOfficeGroup_v1" IsComposable="true">
+    <Parameter Name="TeamOutOfOfficeGroupId" Parameter="teamOutOfOfficeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToChatFAQResponseGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToChatFAQResponseGroup_v1" IsComposable="true">
+    <Parameter Name="ChatFAQResponseGroupId" Parameter="chatFAQResponseGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPriceTrackingSetupGroup_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPriceTrackingSetupGroup_v1" IsComposable="true">
+    <Parameter Name="PriceTrackingSetupGroupId" Parameter="priceTrackingSetupGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToTeamOutOfOfficeGroupImport_v1" Method="fnDesktopDataAdmin_GetWriteAccessToTeamOutOfOfficeGroupImport_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToChatFAQResponseItemImport_v1" Method="fnDesktopDataAdmin_GetWriteAccessToChatFAQResponseItemImport_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToPolicyOnlineOtherGroupItem_v1" Method="fnDesktopDataAdmin_GetWriteAccessToPolicyOnlineOtherGroupItem_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_GetWriteAccessToSystemUserOnlineUserFlag_v1" Method="fnDesktopDataAdmin_GetWriteAccessToSystemUserOnlineUserFlag_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Boolean" />
+  </Function>
+</Database>

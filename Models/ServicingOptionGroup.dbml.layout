@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ServicingOptionGroup">
+  <DataContextMoniker Name="/ServicingOptionGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="25bdf450-16b5-4078-9c05-6b77eaa64ab7" absoluteBounds="4.375, 3.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ServicingOptionGroupDC/ServicingOptionGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6dbad48f-8845-4be7-a5af-8a7fdf7f95fd" absoluteBounds="4.39, 4.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2af0691-7116-499f-bcf6-a6eac6e4707a" absoluteBounds="3.875, 1.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ServicingOptionGroupDC/ServicingOptionGroupTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1ecbce4-abc2-4dde-af9e-29d2e16da618" absoluteBounds="3.89, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb0dc7ff-438e-479b-be50-48c52445f8ba" absoluteBounds="1.125, 0.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ServicingOptionGroupDC/ServicingOptionGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e77d7b2-ccf5-4242-b1ff-c39bd342f343" absoluteBounds="1.1400000000000001, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 3.93830485026042); (4.375 : 3.93830485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ServicingOptionGroupDC/ServicingOptionGroup/ServicingOptionGroup_ServicingOptionGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="cb0dc7ff-438e-479b-be50-48c52445f8ba" />
+        <classShapeMoniker Id="25bdf450-16b5-4078-9c05-6b77eaa64ab7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 2.45274983723958); (3.875 : 2.45274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ServicingOptionGroupDC/ServicingOptionGroup/ServicingOptionGroup_ServicingOptionGroupTeam" />
+      <nodes>
+        <classShapeMoniker Id="cb0dc7ff-438e-479b-be50-48c52445f8ba" />
+        <classShapeMoniker Id="f2af0691-7116-499f-bcf6-a6eac6e4707a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

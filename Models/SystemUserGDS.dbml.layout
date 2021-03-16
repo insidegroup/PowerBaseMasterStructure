@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SystemUserGDS">
+  <DataContextMoniker Name="/SystemUserGDSDC" />
+  <nestedChildShapes>
+    <classShape Id="c84c01fc-42a8-47f5-adc3-359b690486b5" absoluteBounds="5.25, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SystemUserGDSDC/SystemUserGDS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e05afa6f-09ac-4312-93bf-3cf3c77585c8" absoluteBounds="5.265, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

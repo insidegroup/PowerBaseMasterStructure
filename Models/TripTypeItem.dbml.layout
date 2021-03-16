@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TripTypeItem">
+  <DataContextMoniker Name="/TripTypeItemDC" />
+  <nestedChildShapes>
+    <classShape Id="81a90236-0ab2-4ef6-bee9-999adbb90fa7" absoluteBounds="0.625, 1.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/TripTypeItemDC/TripTypeItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="baf29bee-3545-4903-8836-cdd54ba21679" absoluteBounds="0.64, 1.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

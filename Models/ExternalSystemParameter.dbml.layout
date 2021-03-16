@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ExternalSystemParameter">
+  <DataContextMoniker Name="/ExternalSystemParameterDC" />
+  <nestedChildShapes>
+    <classShape Id="6440ddd2-94f6-4ee2-82ae-83a59fd92453" absoluteBounds="0.5, 1.25, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ExternalSystemParameterDC/ExternalSystemParameter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9415aeb5-b9c7-416d-b25b-f41cda612a66" absoluteBounds="0.51500000000000012, 1.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7e2d282-dcad-4587-b78e-1775d6c10a4f" absoluteBounds="5.5, 2.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ExternalSystemParameterDC/ExternalSystemParameterLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3501975-d5d0-46e2-aa2c-1465e95eb737" absoluteBounds="5.515, 2.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 3.68674967447917); (5.5 : 3.68674967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ExternalSystemParameterDC/ExternalSystemParameter/ExternalSystemParameter_ExternalSystemParameterLocation" />
+      <nodes>
+        <classShapeMoniker Id="6440ddd2-94f6-4ee2-82ae-83a59fd92453" />
+        <classShapeMoniker Id="e7e2d282-dcad-4587-b78e-1775d6c10a4f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="49b29b2d-56d9-4894-9a9c-8a81e05c138d" absoluteBounds="2.875, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ExternalSystemParameterDC/ExternalSystemParameterTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7a04a1d-5f55-422f-b14d-dfd829b07cff" absoluteBounds="2.8899999999999997, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 2.14024983723958); (2.875 : 2.14024983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ExternalSystemParameterDC/ExternalSystemParameter/ExternalSystemParameter_ExternalSystemParameterTeam" />
+      <nodes>
+        <classShapeMoniker Id="6440ddd2-94f6-4ee2-82ae-83a59fd92453" />
+        <classShapeMoniker Id="49b29b2d-56d9-4894-9a9c-8a81e05c138d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

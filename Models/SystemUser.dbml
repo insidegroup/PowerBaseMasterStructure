@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1931" Class="SystemUserDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1931;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="CWTDesktopDatabase.Properties.Settings" SettingsPropertyName="Desktop_Local_v1931ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SystemUser" Member="SystemUsers">
+    <Type Name="SystemUser">
+      <Column Name="SystemUserGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemUserLoginIdentifier" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ConsultantIdCode" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="UserProfileIdentifier" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="DefaultProfileIdentifier" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CubaBookingAllowanceIndicator" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MilitaryAndGovernmentUserFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RestrictedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OnlineUserFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_InsertSystemUserTeam_v1" Method="spDesktopDataAdmin_InsertSystemUserTeam_v1">
+    <Parameter Name="UserGuid" Parameter="userGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TeamId" Parameter="teamId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteSystemUserTeam_v1" Method="spDesktopDataAdmin_DeleteSystemUserTeam_v1">
+    <Parameter Name="UserGuid" Parameter="userGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TeamId" Parameter="teamId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectSystemUserAvailableRoles_v1" Method="spDesktopDataAdmin_SelectSystemUserAvailableRoles_v1">
+    <Parameter Name="UserGuid" Parameter="userGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectSystemUserAvailableRoles_v1Result">
+      <Column Name="HierarchyLevelTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdministratorRoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdministratorRoleHierarchyLevelTypeName" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUserLastLoginTimestamp_v1" Method="spDesktopDataAdmin_UpdateSystemUserLastLoginTimestamp_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectSystemUserRoles_v1" Method="fnDesktopDataAdmin_SelectSystemUserRoles_v1" IsComposable="true">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="fnDesktopDataAdmin_SelectSystemUserRoles_v1Result">
+      <Column Name="HierarchyLevelTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdministratorRoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdministratorRoleHierarchyLevelTypeName" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertAdministratorRoleHierarchyLevelTypeSystemUser_v1" Method="spDesktopDataAdmin_InsertAdministratorRoleHierarchyLevelTypeSystemUser_v1">
+    <Parameter Name="HierarchyLevelTypeId" Parameter="hierarchyLevelTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdministratorRoleId" Parameter="administratorRoleId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ApplicationName" Parameter="applicationName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ApplicationVersion" Parameter="applicationVersion" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="WorkflowGroupId" Parameter="workflowGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="ApplicationEventId" Parameter="applicationEventId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerGuid" Parameter="travelerGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdditionalInformation" Parameter="additionalInformation" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteAdministratorRoleHierarchyLevelTypeSystemUser_v1" Method="spDesktopDataAdmin_DeleteAdministratorRoleHierarchyLevelTypeSystemUser_v1">
+    <Parameter Name="HierarchyLevelTypeId" Parameter="hierarchyLevelTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdministratorRoleId" Parameter="administratorRoleId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ApplicationName" Parameter="applicationName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ApplicationVersion" Parameter="applicationVersion" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="WorkflowGroupId" Parameter="workflowGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="ApplicationEventId" Parameter="applicationEventId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerGuid" Parameter="travelerGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdditionalInformation" Parameter="additionalInformation" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_CopyUserRoles_v1" Method="spDesktopDataAdmin_CopyUserRoles_v1">
+    <Parameter Name="UserId" Parameter="userId" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="NewUserId" Parameter="newUserId" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectTeamsBySystemUser_v1" Method="spDesktopDataAdmin_SelectTeamsBySystemUser_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectTeamsBySystemUser_v1Result">
+      <Column Name="TeamId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TeamQueue" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TeamTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUserDefaultProfileIdentifier_v1" Method="spDesktopDataAdmin_UpdateSystemUserDefaultProfileIdentifier_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="DefaultProfileIdentifier" Parameter="defaultProfileIdentifier" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUserCubaBookingAllowanceIndicator_v1" Method="spDesktopDataAdmin_UpdateSystemUserCubaBookingAllowanceIndicator_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="CubaBookingAllowanceIndicator" Parameter="cubaBookingAllowanceIndicator" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ApplicationName" Parameter="applicationName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ApplicationVersion" Parameter="applicationVersion" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectSystemUsers_v1" Method="spDesktopDataAdmin_SelectSystemUsers_v1">
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FilterField_1" Parameter="filterField_1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilterValue_1" Parameter="filterValue_1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilterField_2" Parameter="filterField_2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilterValue_2" Parameter="filterValue_2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilterField_3" Parameter="filterField_3" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilterValue_3" Parameter="filterValue_3" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="spDesktopDataAdmin_SelectSystemUsers_v1Result">
+      <Column Name="SystemUserGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SystemUserLoginIdentifier" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="UserProfileIdentifier" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocationName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HasDefineRolesWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasRoleWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasLocationWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUserMilitaryAndGovernmentUserFlag_v1" Method="spDesktopDataAdmin_UpdateSystemUserMilitaryAndGovernmentUserFlag_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="MilitaryAndGovernmentUserFlag" Parameter="militaryAndGovernmentUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ApplicationName" Parameter="applicationName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ApplicationVersion" Parameter="applicationVersion" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUserRestrictedFlag_v1" Method="spDesktopDataAdmin_UpdateSystemUserRestrictedFlag_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="RestrictedFlag" Parameter="restrictedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateSystemUser_v1" Method="spDesktopDataAdmin_UpdateSystemUser_v1">
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="LocationId" Parameter="locationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DefaultProfileIdentifier" Parameter="defaultProfileIdentifier" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RestrictedFlag" Parameter="restrictedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="OnlineUserFlag" Parameter="onlineUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

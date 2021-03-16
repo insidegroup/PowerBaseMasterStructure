@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PointOfSaleFeeLoad">
+  <DataContextMoniker Name="/PointOfSaleFeeLoadDataContext" />
+  <nestedChildShapes>
+    <classShape Id="728e56f8-0c50-4512-899d-6605ffc242e6" absoluteBounds="0.75, 1.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/PointOfSaleFeeLoadDataContext/FeeLoadDescriptionType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eaf5f5cc-9cc2-4c54-bf60-e7388c3a5a0f" absoluteBounds="0.765, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9bd1c12b-7ccc-4689-b6bd-bfef29996626" absoluteBounds="5.125, 1.25, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/PointOfSaleFeeLoadDataContext/PointOfSaleFeeLoad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59516e30-0b1d-4c2f-afc3-1a8697b696db" absoluteBounds="5.14, 1.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.73159912109375); (5.125 : 2.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PointOfSaleFeeLoadDataContext/FeeLoadDescriptionType/FeeLoadDescriptionType_PointOfSaleFeeLoad" />
+      <nodes>
+        <classShapeMoniker Id="728e56f8-0c50-4512-899d-6605ffc242e6" />
+        <classShapeMoniker Id="9bd1c12b-7ccc-4689-b6bd-bfef29996626" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

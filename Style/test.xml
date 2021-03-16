@@ -1,0 +1,84 @@
+﻿<PolicyAirCabinGroupItemsAdded>
+  <PolicyAirCabinGroupItem>
+    <PolicyGroupId>21</PolicyGroupId>
+    <AirlineCabinCode>W</AirlineCabinCode>
+    <FlightDurationAllowedMin>222</FlightDurationAllowedMin>
+    <FlightDurationAllowedMax>222</FlightDurationAllowedMax>
+    <PolicyProhibitedFlag>1</PolicyProhibitedFlag>
+    <EnabledFlag>1</EnabledFlag>
+    <EnabledDate></EnabledDate>
+    <TravelDateValidTo></TravelDateValidTo>
+    <PolicyRouting>
+      <Name>Global_to_Global_AirCabin_005</Name>
+      <FromGlobalFlag>1</FromGlobalFlag>
+      <FromGlobalRegionCode></FromGlobalRegionCode>
+      <FromGlobalSubRegionCode /><FromCountryCode></FromCountryCode>
+      <FromCityCode></FromCityCode><FromTravelPortCode></FromTravelPortCode>
+      <FromTravelPortTypeId /><ToGlobalFlag>1</ToGlobalFlag>
+      <ToGlobalRegionCode></ToGlobalRegionCode>
+      <ToGlobalSubRegionCode />
+      <ToCountryCode></ToCountryCode>
+      <ToCityCode></ToCityCode>
+      <ToTravelPortCode> </ToTravelPortCode>
+      <ToTravelPortTypeId />
+      <RoutingViceVersaFlag>0</RoutingViceVersaFlag>
+    </PolicyRouting></PolicyAirCabinGroupItem>
+  <PolicyAirCabinGroupItem>
+    <PolicyGroupId>21</PolicyGroupId>
+    <AirlineCabinCode>W</AirlineCabinCode>
+    <FlightDurationAllowedMin>222</FlightDurationAllowedMin>
+    <FlightDurationAllowedMax>222</FlightDurationAllowedMax>
+    <PolicyProhibitedFlag>1</PolicyProhibitedFlag>
+    <EnabledFlag>1</EnabledFlag>
+    <EnabledDate></EnabledDate>
+    <TravelDateValidTo></TravelDateValidTo>
+    <PolicyRouting>
+      <Name>Global_to_Global_AirCabin_005</Name>
+      <FromGlobalFlag>1</FromGlobalFlag>
+      <FromGlobalRegionCode></FromGlobalRegionCode>
+      <FromGlobalSubRegionCode />
+      <FromCountryCode></FromCountryCode>
+      <FromCityCode></FromCityCode>
+      <FromTravelPortCode></FromTravelPortCode>
+      <FromTravelPortTypeId />
+      <ToGlobalFlag>1</ToGlobalFlag>
+      <ToGlobalRegionCode></ToGlobalRegionCode><ToGlobalSubRegionCode />
+      <ToCountryCode></ToCountryCode>
+      <ToCityCode></ToCityCode><ToTravelPortCode>
+        
+      </ToTravelPortCode>
+      <ToTravelPortTypeId />
+      <RoutingViceVersaFlag>0</RoutingViceVersaFlag>
+    </PolicyRouting>
+  </PolicyAirCabinGroupItem>
+  <PolicyAirCabinGroupItem>
+    <PolicyGroupId>21</PolicyGroupId>
+    <AirlineCabinCode>W</AirlineCabinCode>
+    <FlightDurationAllowedMin>222</FlightDurationAllowedMin>
+    <FlightDurationAllowedMax>222</FlightDurationAllowedMax>
+    <PolicyProhibitedFlag>1</PolicyProhibitedFlag>
+    <EnabledFlag>1</EnabledFlag>
+    <EnabledDate></EnabledDate>
+    <TravelDateValidTo>
+      
+    </TravelDateValidTo>
+    <PolicyRouting>
+      <Name>Global_to_Global_AirCabin_005</Name>
+      <FromGlobalFlag>1</FromGlobalFlag>
+      <FromGlobalRegionCode></FromGlobalRegionCode>
+      <FromGlobalSubRegionCode />
+      <FromCountryCode></FromCountryCode>
+      <FromCityCode></FromCityCode>
+      <FromTravelPortCode></FromTravelPortCode>
+      <FromTravelPortTypeId />
+      <ToGlobalFlag>1</ToGlobalFlag>
+      <ToGlobalRegionCode></ToGlobalRegionCode>
+      <ToGlobalSubRegionCode />
+      <ToCountryCode></ToCountryCode>
+      <ToCityCode></ToCityCode>
+      <ToTravelPortCode></ToTravelPortCode>
+      <ToTravelPortTypeId />
+      <RoutingViceVersaFlag>0</RoutingViceVersaFlag>
+    </PolicyRouting>
+  </PolicyAirCabinGroupItem>
+</PolicyAirCabinGroupItemsAdded>

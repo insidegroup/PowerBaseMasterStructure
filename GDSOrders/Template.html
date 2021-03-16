@@ -1,0 +1,146 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>##TITLE##</title>
+	<style type="text/css" media="all">
+		body {
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			
+			font-family: Verdana;
+			font-size: 12px;
+			text-align: left;
+		}
+		table, tr {
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			font-size: 12px;
+			word-break: break-all;
+			padding-bottom: 8px;
+			vertical-align: top;
+			
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		.logo {
+			width: 180px;
+			max-width: 180px;
+		}
+		.title {
+			width: 300px;
+			max-width: 300px;
+		}
+		.label {
+			width: 180px;
+			max-width: 180px;
+		}
+		.field {
+			width: 200px;
+			max-width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%">
+		<tr>
+			<td class="logo"><img src="##LOGO##" /></td>
+			<td class="title"><strong>Carlson Wagonlit Travel Order for:</strong> ##GDSNAME##</td>
+		</tr>
+	</table>
+	<br />
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%">
+		<tr>
+			<th class="label">Order Number</th><!-- Order Number:  GDS Order ID -->
+			<td class="field">##ORDERNUMBER##</td>
+			<th class="label">Order Date</th><!--Order Date: CreationTimestamp of Order-->
+			<td class="field">##ORDERDATE##</td>
+		</tr>
+		<tr>
+			<th class="label">Order Type</th><!--Order Type: Order Type-->
+			<td class="field">##ORDERTYPE##</td>
+			<th class="label">Expedite</th><!--Expedite: if checkbox is checked, True, if unchecked, False-->
+			<td class="field">##EXPEDITE##</td>
+		</tr>
+		<tr>
+			<th class="label">PCC/OID</th><!-- PCC/OID : PCC or OID – if this is a new order, then the PCC/OID field will be left blank -->
+			<td class="field">##PCCOID##</td>
+			<th class="label">Deinstall Date</th><!--Deinstall Date:  - Deinstall Date if one included on the GDS Order-->
+			<td class="field">##DEINSTALLDATE##</td>
+		</tr>
+		<tr>
+			<th class="label">Agency</th><!-- Agency :  External Name attached to the PCC/OID on the GDS Order -->
+			<td class="field">##AGENCY##</td>
+			<th class="label">IATA</th><!--IATA: -  IATA number attached to the PCC/OID on the GDS Order-->
+			<td class="field">##IATA##</td>
+		</tr>
+		<tr>
+			<th class="label">Address Line 1</th><!--Address Line 1: Address Line 1 from the PCC/OID Address attached to the PCC/OID on the GDS Order -->
+			<td class="field">##ADDRESSLINE1##</td>
+			<th class="label">Location Contact Name</th><!--Location Contact Name: - Location Contact Name attached to the PCC/OID on the GDS Order-->
+			<td class="field">##LOCATIONCONTACTNAME##</td>
+		</tr>
+		<tr>
+			<th class="label">Address Line 2</th><!--Address Line 2: Address Line 2 from the PCC/OID Address  attached to the PCC/OID on the GDS Order -->
+			<td class="field">##ADDRESSLINE2##</td>
+			<th class="label">Location Phone</th><!--Location Phone:  Location Phone attached to the PCC/OID on the GDS Order-->
+			<td class="field">##LOCATIONPHONE##</td>
+		</tr>
+		<tr>
+			<th class="label">City</th><!--City: - City from the PCC/OID Address attached to the PCC/OID on the GDS Order -->
+			<td class="field" colspan="3">##CITY##</td>
+		</tr>
+		<tr>
+			<th class="label">State/Province</th><!--State/Province:  State/Province from the PCC/OID Address attached to the PCC/OID on the GDS Order -->
+			<td class="field">##STATEPROVINCE##</td>
+            <td class="label" colspan="2" rowspan="4">
+                <strong>Note:  For questions regarding this order, <br/>please contact:</strong><br />
+                ##ORDERANALYSTNAME##<br/>
+                ##ORDERANALYSPHONE##<br />
+                ##ORDERFROMEMAIL##
+            </td>
+		</tr>
+		<tr>
+			<th class="label">Postal Code</th><!--Postal Code: Postal Code from the PCC/OID Address attached to the PCC/OID on the GDS Order -->
+			<td class="field" colspan="3">##POSTALCODE##</td>
+		</tr>
+		<tr>
+			<th class="label">Country</th><!--Country: Country from the PCC/OID Address attached to the PCC/OID on the GDS Order -->
+			<td class="field" colspan="3">##COUNTRY##</td>
+		</tr>
+		<tr>
+			<th class="label">Remarks</th><!--Remarks:  External Remarks from the order -->
+			<td class="field" colspan="3">##REMARKS##</td>
+		</tr>
+	</table>
+	##ADDITIONALORDERDETAILSOPEN##
+	<br />
+	<strong>Additional Order Details</strong><br /><br />
+	<table cellpadding="2" cellspacing="0" border="1" width="86%" style="width:86%">
+		<tr>
+			<th width="8%">Quantity</th>
+			<th width="8%">Add/Delete</th>
+			<th width="40%">Additional Order Detail</th>
+			<th width="44%">Comments</th>
+		</tr>
+		##ADDITIONALORDERDETAILS##
+	</table>
+	##ADDITIONALORDERDETAILSCLOSE##
+</body>
+</html> 

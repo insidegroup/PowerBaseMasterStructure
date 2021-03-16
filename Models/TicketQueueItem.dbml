@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1811" Class="TicketQueueItemDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1811;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="v1811" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TicketQueueItem" Member="TicketQueueItems">
+    <Type Name="TicketQueueItem">
+      <Column Name="TicketQueueItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TicketQueueGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketQueueItemDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="QueueNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QueueCategory" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TicketTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="QueueAlias" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="QueueRequiresCDRCollectionFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="QueueNumberOrAliasIsMandatoryFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TicketingFieldRemark" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="TicketingCommand" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteTicketQueueItem_v1" Method="spDesktopDataAdmin_DeleteTicketQueueItem_v1">
+    <Parameter Name="TicketQueueItemId" Parameter="ticketQueueItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertTicketQueueItem_v1" Method="spDesktopDataAdmin_InsertTicketQueueItem_v1">
+    <Parameter Name="TicketQueueGroupId" Parameter="ticketQueueGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TicketQueueItemDescription" Parameter="ticketQueueItemDescription" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="QueueNumber" Parameter="queueNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QueueCategory" Parameter="queueCategory" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="TicketTypeId" Parameter="ticketTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TicketingFieldRemark" Parameter="ticketingFieldRemark" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="TicketingCommand" Parameter="ticketingCommand" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectTicketQueueGroupTicketQueueItems_v1" Method="spDesktopDataAdmin_SelectTicketQueueGroupTicketQueueItems_v1">
+    <Parameter Name="TicketQueueGroupId" Parameter="ticketQueueGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SystemUserGuid" Parameter="systemUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectTicketQueueGroupTicketQueueItems_v1Result">
+      <Column Name="TicketQueueItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketQueueItemDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="QueueNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QueueCategory" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TicketTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TicketingFieldRemark" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="TicketingCommand" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateTicketQueueItem_v1" Method="spDesktopDataAdmin_UpdateTicketQueueItem_v1">
+    <Parameter Name="TicketQueueItemId" Parameter="ticketQueueItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TicketQueueItemDescription" Parameter="ticketQueueItemDescription" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PseudoCityOrOfficeId" Parameter="pseudoCityOrOfficeId" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="QueueNumber" Parameter="queueNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QueueCategory" Parameter="queueCategory" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="TicketTypeId" Parameter="ticketTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TicketingFieldRemark" Parameter="ticketingFieldRemark" Type="System.String" DbType="NVarChar(45)" />
+    <Parameter Name="TicketingCommand" Parameter="ticketingCommand" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v4021" Class="ReasonCodeTypeDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.83;Initial Catalog=Desktop_Local_v4021;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v4021ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ReasonCodeType" Member="ReasonCodeTypes">
+    <Type Name="ReasonCodeType">
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ReasonCodeType_ReasonCodeTypeDisplay" Member="ReasonCodeTypeDisplays" ThisKey="ReasonCodeTypeId" OtherKey="ReasonCodeTypeId" Type="ReasonCodeTypeDisplay" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReasonCodeTypeDisplay" Member="ReasonCodeTypeDisplays">
+    <Type Name="ReasonCodeTypeDisplay">
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReasonCodeTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ReasonCodeType_ReasonCodeTypeDisplay" Member="ReasonCodeType" ThisKey="ReasonCodeTypeId" OtherKey="ReasonCodeTypeId" Type="ReasonCodeType" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

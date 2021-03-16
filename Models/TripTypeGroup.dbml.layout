@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.375" name="TripTypeGroup">
+  <DataContextMoniker Name="/TripTypeGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="519ed7e5-6151-4477-8f82-a6e7faef7e93" absoluteBounds="3.875, 5.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/TripTypeGroupDC/TripTypeGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d8fbe5a-1e52-46bf-adf5-5c39d8a0518e" absoluteBounds="3.89, 6.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9df9d42-7736-4eea-9c45-96ad7755d890" absoluteBounds="4.625, 5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TripTypeGroupDC/TripTypeGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="919493e9-3a46-4708-8bda-584e4fad649a" absoluteBounds="4.64, 5.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 5.875); (4.875 : 4.75); (5.625 : 4.75); (5.625 : 5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TripTypeGroupDC/TripTypeGroup/TripTypeGroup_TripTypeGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="519ed7e5-6151-4477-8f82-a6e7faef7e93" />
+        <classShapeMoniker Id="c9df9d42-7736-4eea-9c45-96ad7755d890" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

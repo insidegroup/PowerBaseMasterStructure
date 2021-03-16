@@ -1,0 +1,312 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title>
+		<asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+	</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="<%=Url.Content("~/Style/Site.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=Url.Content("~/Style/Feedback.css")%>" rel="stylesheet" type="text/css" media="screen" />
+	<!--USED-->
+	<link href="<%=Url.Content("~/Style/accordian.css")%>" rel="stylesheet" type="text/css" />
+	<!--USED-->
+	<link href="<%=Url.Content("~/Style/themes/base/jquery.ui.css")%>" rel="stylesheet" type="text/css" />
+	<link href="<%=Url.Content("~/Style/themes/base/jquery.autocomplete.css")%>" rel="stylesheet" type="text/css" />
+	<link href="<%=Url.Content("~/Style/Calendrical.css")%>" rel="stylesheet" type="text/css" />
+	<link href="<%=Url.Content("~/Style/print.css")%>" rel="stylesheet" type="text/css" media="print" />
+	<script src="<%=Url.Content("~/Scripts/MVC/MicrosoftAjax.js")%>" type="text/javascript"></script>
+	<script src="<%=Url.Content("~/Scripts/MVC/MicrosoftMvcAjax.js")%>" type="text/javascript"></script>
+	<script src="<%=Url.Content("~/Scripts/MVC/MicrosoftMvcValidation.js")%>" type="text/javascript"></script>
+	<script src="<%=Url.Content("~/Scripts/MVC/MvcFoolproofValidation.js")%>" type="text/javascript"></script>
+
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-1.4.2.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.ui.core.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.ui.widget.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.ui.datepicker.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-ui-1.8.2.custom.min.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/Calendrical/jquery.calendrical.cwt.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/Wizard/jquery.NobleCount.min.js")%>"></script>
+
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.validate.min.js")%>"></script>
+	<script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")%>"></script>
+	<script src="<%=Url.Content("~/Scripts/Menu/accordian-menu.js")%>" type="text/javascript"></script>
+	<asp:ContentPlaceHolder ID="headerContent" runat="server"></asp:ContentPlaceHolder>
+
+	<script src="<%= Url.Content("~/Scripts/ckeditor/ckeditor.js")%>" type="text/javascript" ></script>
+	<script src="<%=Url.Content("~/Scripts/linkify.min.js")%>" type="text/javascript"></script>
+	<script src="<%=Url.Content("~/Scripts/linkify-jquery.min.js")%>" type="text/javascript"></script>
+	<!--[if IE 8]>
+		<script src="<%=Url.Content("~/Scripts/linkify-polyfill.min.js")%>"></script>
+	<![endif]-->
+
+	<script src="<%=Url.Content("~/Scripts/common.js")%>" type="text/javascript"></script>
+
+	<!--[if lt IE 8]>
+	<style type="text/css">
+		li a {display:inline-block;}
+		li a {display:block;}
+	</style>
+	<![endif]-->
+
+	<style id="antiClickjack">body{display:none !important;}</style>
+
+	<script type="text/javascript">
+		if (self === top) {
+			var antiClickjack = document.getElementById("antiClickjack");
+			antiClickjack.parentNode.removeChild(antiClickjack);
+		} else {
+			top.location = self.location;
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<img id="left-logo" src="../../images/common/CWT-logo-rebrand.png" alt="logo" />
+			<img id="right-logo" src="../../images/common/pb-logo.png" alt="logo" />
+		</div>
+		<div class="toolbar">
+            <a href="#" onclick="fby.push(['showForm', '8403']);return false;" class="feedback-btn">Feedback</a>
+        </div>
+        <div id="search_wrapper">
+			<div id="breadcrumb">
+				<asp:ContentPlaceHolder ID="BreadCrumbContent" runat="server"></asp:ContentPlaceHolder>
+			</div>
+			<div id="search">
+				<form id="frmSearch" method="get" action="" autocomplete="off">
+					<input type="hidden" value="" name="ft" id="ft" />
+					<input type="text" value="" class="txtSearch" name="filter" id="filter" autocomplete="off" />
+					<input type="button" value="search" class="btnSearch" id="btnSearch" title="search" />
+				</form>
+			</div>
+		</div>
+		<div id="nav">
+			<ul id="menu">
+				<li><%= Html.ActionLink("Home", "Index", "Home")%></li>
+				<li><a href="#" id="menu_wizards">Wizards</a>
+					<ul>
+						<li><%= Html.ActionLink("Teams", "Index", "TeamWizard", null, new { @class = "upper", title = "Team Wizard" })%></li>
+						<li><%= Html.ActionLink("Locations", "Index", "LocationWizard", null, new { @class = "upper", title = "Location Wizard" })%></li>
+						<li><%= Html.ActionLink("System Users", "Index", "SystemUserWizard", null, new { @class = "upper", title = "System User Wizard" })%></li>
+						<li><%= Html.ActionLink("Clients", "Index", "ClientWizard", null, new { @class = "last", title = "Client Wizard" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_admin">Admin</a>
+					<ul>
+						<li><%= Html.ActionLink("Airline Class Cabins", "List", "AirlineClassCabin", null, new { @class = "upper", title = "Airline Class Cabins" })%></li>
+						<li><%= Html.ActionLink("APIS Countries", "List", "APISCountry", null, new { @class = "upper", title = "APIS Countries" })%></li>
+						<li><%= Html.ActionLink("Approval Types", "List", "ApprovalGroupApprovalType", null, new { @class = "upper", title = "Approval Types" })%></li>
+                        <li><%= Html.ActionLink("Chat Message FAQs", "List", "ChatMessageFAQ", null, new { @class = "upper", title = "Chat Message FAQs" })%></li>
+						<li><%= Html.ActionLink("City", "List", "City", null, new { @class = "upper", title = "City" })%></li>
+						<li><%= Html.ActionLink("Client Telephony", "List", "ClientTelephony", null, new { @class = "upper", title = "Client Telephony" })%></li>
+						<li><%= Html.ActionLink("Contact Types", "List", "ContactType", null, new { @class = "upper", title = "Contact Types" })%></li>
+						<li><%= Html.ActionLink("Control Values", "List", "ControlValue", null, new { @class = "upper", title = "Control Values" })%></li>
+						<li><%= Html.ActionLink("Country Regions", "List", "CountryRegion", null, new { @class = "upper", title = "Country Regions" })%></li>
+						<li><%= Html.ActionLink("Country Translations", "List", "Country", null, new { @class = "upper", title = "Country Translations" })%></li>
+						<li><%= Html.ActionLink("Fare Restrictions", "List", "FareRestriction", null, new { @class = "upper", title = "Fare Restrictions" })%></li>
+                        <li><a href="#" id="menu_admin_gdsmanagement" class="sub-menu-trigger upper">GDS Management</a>
+							<ul class="sub-menu">
+								<li><%= Html.ActionLink("External Name", "List", "ExternalName", null, new { @class = "upper", title = "External Name" })%></li>
+								<li><%= Html.ActionLink("Fare Redistribution", "List", "FareRedistribution", null, new { @class = "upper", title = "Fare Redistribution" })%></li>
+								<li><%= Html.ActionLink("GDS Access Type", "List", "GDSAccessType", null, new { @class = "upper", title = "GDS Access Type" })%></li>
+								<li><%= Html.ActionLink("GDS Order Type", "List", "GDSOrderType", null, new { @class = "upper", title = "GDS Order Type" })%></li>
+								<li><%= Html.ActionLink("GDS Order Detail", "List", "GDSOrderDetail", null, new { @class = "upper", title = "GDS Order Detail" })%></li>
+								<li><%= Html.ActionLink("GDS Request Type", "List", "GDSRequestType", null, new { @class = "upper", title = "GDS Request Type" })%></li>
+								<li><%= Html.ActionLink("Partners", "List", "Partner", null, new { @class = "upper", title = "Partners" })%></li>
+								<li><%= Html.ActionLink("PCC/Office ID Location Type", "List", "PseudoCityOrOfficeLocationType", null, new { @class = "upper", title = "PCC/Office ID Location Type" })%></li>
+								<li><%= Html.ActionLink("PCC/Office ID Defined Region", "List", "PseudoCityOrOfficeDefinedRegion", null, new { @class = "upper", title = "PCC/Office ID Defined Region" })%></li>
+								<li><%= Html.ActionLink("PCC/Office ID Type", "List", "PseudoCityOrOfficeType", null, new { @class = "last", title = "PCC/Office ID Type" })%></li>
+								<li><%= Html.ActionLink("Third Party Vendors", "List", "GDSThirdPartyVendor", null, new { @class = "upper", title = "Third Party Vendors" })%></li>
+							</ul>
+						</li>
+						<li class="top-border"><%= Html.ActionLink("GDS Response Messages", "List", "GDSEndWarningConfiguration", null, new { @class = "upper", title = "GDS Response Messages" })%></li>
+						<li><%= Html.ActionLink("GST Identification Numbers", "List", "GSTIdentificationNumber", null, new { @class = "upper", title = "GST Identification Numbers" })%></li>
+						<li><%= Html.ActionLink("Locations", "List", "Location", null, new { @class = "upper", title = "Locations" })%></li>
+						<li><%= Html.ActionLink("Output Phrase", "List", "Phrase", null, new { @class = "upper", title = "Output Phrase Translations" })%></li>
+						<li><%= Html.ActionLink("Policy Other Group Headers", "List", "PolicyOtherGroupHeader", null, new { @class = "upper", title = "Policy Other Group Headers" })%></li>
+						<li><%= Html.ActionLink("Service Funds", "List", "ServiceFund", null, new { @class = "upper", title = "Service Funds" })%></li>
+						<li><%= Html.ActionLink("Supplier", "List", "Supplier", null, new { @class = "upper", title = "Supplier" })%></li>
+						<li><%= Html.ActionLink("Travel Port", "List", "TravelPort", null, new { @class = "last", title = "Travel Port" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_teams">Teams</a>
+					<ul>
+						<li><%= Html.ActionLink("Teams", "List", "Team", null, new { @class = "upper", title = "Teams" })%></li>
+						<li><%= Html.ActionLink("System Users", "List", "SystemUser", null, new { @class = "last", title = "System Users" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_approvalgroups">Approvals</a>
+					<ul>
+						<li><%= Html.ActionLink("Approval Groups", "ListUnDeleted", "ApprovalGroup", null, new { @class = "last", title = "Approval Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_businessrules">Business Rules</a>
+					<ul>
+						<li><%= Html.ActionLink("Client Rules Groups", "ListUndeleted", "ClientDefinedRuleGroup", null, new { @class = "upper", title = "Client Rules Groups" })%></li>
+						<li><%= Html.ActionLink("Business Rules Groups", "ListUndeleted", "ClientDefinedBusinessRuleGroup", null, new { @class = "last", title = "Business Rules Groups" })%></li>
+						<%--<li><%= Html.ActionLink("Business Entities", "List", "ClientDefinedRuleBusinessEntity", null, new { @class = "last", title = "Business Entities" })%></li>--%>
+					</ul>
+				</li>
+                <li><a href="#" id="menu_chatmessages">Chat Messages</a>
+					<ul>
+						<li><%= Html.ActionLink("Chat FAQ Response Groups", "ListUndeleted", "ChatFAQResponseGroup", null, new { @class = "upper", title = "Chat FAQ Response Groups" })%></li>
+						<li><%= Html.ActionLink("Team Out of Office Groups", "ListUndeleted", "TeamOutOfOfficeGroup", null, new { @class = "last", title = "Team Out of Office Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_clients">Clients</a>
+					<ul>
+						<li><%= Html.ActionLink("Client Summary", "SearchForm", "ClientSummary", null, new { @class = "upper", title = "Client Summary" })%></li>
+						<li><%= Html.ActionLink("Client Top Units", "List", "ClientTopUnit", null, new { @class = "last", title = "Client Top Units" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_clientfeegroups">Client Fees</a>
+					<ul>
+						<li><%= Html.ActionLink("MO Merchant Fee Groups", "ListUnDeleted", "ClientFeeGroup", new { ft = 4 }, new { @class = "upper", title = "Mid Office Merchant Fee Groups" })%></li>
+						<li><%= Html.ActionLink("MO Transaction Fee Groups", "ListUnDeleted", "ClientFeeGroup", new { ft = 3 }, new { @class = "upper", title = "Mid Office Transaction Fee Groups" })%></li>
+						<li><%= Html.ActionLink("Transaction Fee Groups", "ListUnDeleted", "ClientFeeGroup", new { ft = 2 }, new { @class = "upper", title = "Transaction Fee Groups" })%></li>
+						<li><%= Html.ActionLink("Supplemental Fee Groups", "ListUnDeleted", "ClientFeeGroup", new { ft = 1 }, new { @class = "upper", title = "Supplemental Fee Groups" })%></li>
+						<li><%= Html.ActionLink("Client Fees Base Definitions", "List", "ClientFee", null, new { @class = "upper", title = "Client Fees Base Definitions" })%></li>
+						<li><%= Html.ActionLink("MO Merchant Fees Definitions", "List", "MerchantFee", null, new { @class = "upper", title = "Mid Office Merchant Fees Definitions" })%></li>
+						<li><%= Html.ActionLink("MO Transaction Fees Definitions", "List", "TransactionFee", null, new { @class = "upper", title = "Mid Office Transaction Fees Definitions" })%></li>
+                        <li><%= Html.ActionLink("Point of Sale Fee Definitions", "List", "PointOfSaleFeeLoad", null, new { @class = "last", title = "Point of Sale Fee Definitions" })%></li>
+                    </ul>
+				</li>
+				<li><a href="#" id="menu_clientprofiles">Client Profiles</a>
+					<ul>
+						<li><%= Html.ActionLink("Client Profiles", "ListUnDeleted", "ClientProfileGroup", null, new { @class = "upper", title = "Client Profiles" })%></li>
+						<li><%= Html.ActionLink("Client Profile Administration", "ListUnDeleted", "ClientProfileAdminGroup", null, new { @class = "last", title = "Client Profile Administration" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_commissionableroutes">Commissionable Routes</a>
+					<ul>
+						<li><%= Html.ActionLink("Commissionable Route Groups", "ListUnDeleted", "CommissionableRouteGroup", null, new { @class = "last", title = "Commissionable Route Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_configparameters">Configuration Parameters</a>
+					<ul>
+						<li><%= Html.ActionLink("Configuration Parameters", "List", "ConfigurationParameter", null, new { @class = "last", title = "Configuration Parameters" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_creditcards">CWT Credit Cards</a>
+					<ul>
+						<li><%= Html.ActionLink("CWT Credit Cards", "List", "CWTCreditCard", null, new { @class = "last", title = "CWT Credit Cards" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_externalsystemparameters">External System Parameters</a>
+					<ul>
+						<li><%= Html.ActionLink("External System Parameters", "ListUnDeleted", "ExternalSystemParameter", null, new { @class = "last", title = "External System Parameters" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_fopadvicemessages">FOP Advice Messages</a>
+					<ul>
+						<li><%= Html.ActionLink("FOP Advice Message Groups", "ListUnDeleted", "FormOfPaymentAdviceMessageGroup", null, new { @class = "last", title = "FOP Advice Message Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_gdsadditionalentries">GDS Additional Entries</a>
+					<ul>
+						<li><%= Html.ActionLink("GDS Additional Entries", "ListUnDeleted", "GDSAdditionalEntry", null, new { @class = "last", title = "GDS Additional Entries" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_gdsmanagement">GDS Management</a>
+					<ul>
+						<li><%= Html.ActionLink("GDS Contacts", "List", "GDSContact", null, new { @class = "upper", title = "GDS Contacts" })%></li>
+						<li><%= Html.ActionLink("GDS Orders", "List", "GDSOrder", null, new { @class = "upper", title = "GDS Orders" })%></li>
+						<li><%= Html.ActionLink("IATA", "ListUnDeleted", "IATA", null, new { @class = "upper", title = "IATA" })%></li>
+						<li><%= Html.ActionLink("PCC/OID Address", "List", "PseudoCityOrOfficeAddress", null, new { @class = "upper", title = "PCC/OID Address" })%></li>
+						<li><%= Html.ActionLink("PCC/OID Maintenance", "ListUnDeleted", "PseudoCityOrOfficeMaintenance", null, new { @class = "upper", title = "PCC/OID Maintenance" })%></li>
+						<li><%= Html.ActionLink("Service Accounts", "ListUnDeleted", "ServiceAccount", null, new { @class = "upper", title = "Service Accounts" })%></li>
+						<li><%= Html.ActionLink("Third Party Users", "ListUnDeleted", "ThirdPartyUser", null, new { @class = "last", title = "Third Party Users" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_localoperatinghours">Local Operating Hours</a>
+					<ul>
+						<li><%= Html.ActionLink("Local Operating Hours Groups", "List", "LocalOperatingHoursGroup", null, new { @class = "last", title = "Local Operating Hours Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_meetings">Meetings</a>
+					<ul>
+						<li><%= Html.ActionLink("Meeting Groups", "ListUnDeleted", "Meeting", null, new { @class = "last", title = "Meeting Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_passivesegmentbuilder">Passive Segment Builder</a>
+					<ul>
+						<li><%= Html.ActionLink("Products", "ListUnDeleted", "PassiveSegmentBuilderGroup", null, new { @class = "upper", title = "Products" })%></li>
+						<li><a href="#" id="menu_passivesegmentbuilder_optionalfields" class="sub-menu-trigger last">Optional Fields</a>
+							<ul class="sub-menu">
+								<li><%= Html.ActionLink("Optional Field Groups", "ListUnDeleted", "OptionalFieldGroup", null, new { @class = "last", title = "Optional Field Groups" })%></li>
+								<li><%= Html.ActionLink("Optional Field Definitions", "List", "OptionalField", null, new { @class = "last", title = "Optional Field Definitions" })%></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_pnroutputs">PNR Outputs</a>
+					<ul>
+						<li><%= Html.ActionLink("PNR Outputs", "ListUnDeleted", "PNROutputGroup", null, new { @class = "last", title = "PNR Outputs" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_policies">Policies</a>
+					<ul>
+						<li><%= Html.ActionLink("Policy Groups", "ListUnDeleted", "PolicyGroup", null, new { @class = "upper", title = "Policy Groups" })%></li>
+						<li><%= Html.ActionLink("Policy Locations", "List", "PolicyLocation", null, new { @class = "last", title = "Policy Locations" })%></li>
+					</ul>
+				</li>
+                <li><a href="#" id="menu_pricetracking">Price Tracking</a>
+					<ul>
+						<li><%= Html.ActionLink("Price Tracking Fee Groups", "ListUnDeleted", "PriceTrackingHandlingFeeGroup", null, new { @class = "upper", title = "Price Tracking Fee Groups" })%></li>
+						<li><%= Html.ActionLink("Price Tracking Setups", "ListUnDeleted", "PriceTrackingSetupGroup", null, new { @class = "last", title = "Price Tracking Setups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_publicholidays">Public Holidays</a>
+					<ul>
+						<li><%= Html.ActionLink("Public Holidays", "List", "PublicHolidayGroup", null, new { @class = "last", title = "Public Holidays" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_ticketqueuegroups">Queues</a>
+					<ul>
+						<li><%= Html.ActionLink("Follow Up Queue Groups", "ListUnDeleted", "FollowUpQueueGroup", null, new { @class = "upper", title = "Follow Up Queue Groups" })%></li>
+						<li><%= Html.ActionLink("Ticket Queue Groups", "ListUnDeleted", "TicketQueueGroup", null, new { @class = "last", title = "Ticket Queue Groups" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_reasoncodes">Reason Codes</a>
+					<ul>
+						<li><%= Html.ActionLink("Reason Codes", "ListUnDeleted", "ReasonCodeGroup", null, new { @class = "upper", title = "Reason Codes" })%></li>
+						<li><%= Html.ActionLink("Reason Code Product Types", "List", "ReasonCodeProductType", null, new { @class = "last", title = "Reason Code Product Types" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_servicingoptions">Servicing Options</a>
+					<ul>
+						<li><%= Html.ActionLink("Servicing Option Groups", "ListUnDeleted", "ServicingOptionGroup", null, new { @class = "last", title = "Servicing Option Groups" })%></li>
+					</ul>
+				</li>
+
+				<li><a href="#" id="menu_triptypegroups">Trip Types</a>
+					<ul>
+						<li><%= Html.ActionLink("Trip Type Groups", "ListUnDeleted", "TripTypeGroup", null, new { @class = "upper", title = "Trip Type Groups" })%></li>
+						<li><%= Html.ActionLink("Trip Types", "List", "TripType", null, new { @class = "last", title = "TripTypes" })%></li>
+					</ul>
+				</li>
+				<li><a href="#" id="menu_workflowgroups">Workflow</a>
+					<ul>
+						<li><%= Html.ActionLink("Workflow Groups", "ListUnDeleted", "WorkflowGroup", null, new { @class = "last", title = "Workflow Groups" })%></li>
+					</ul>
+				</li>
+				<li><%= Html.ActionLink("Logout", "LogOff", "Account")%></li>
+			</ul>
+		</div>
+		<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+		<div id="footer">
+			CWT Desktop Admin <%= CWTDesktopDatabase.Models.Settings.ApplicationVersion()%>, 
+			Environment : <%= Html.Raw(!string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? HttpContext.Current.User.Identity.Name.Split(new[] { '|' })[1] : "")%></div>
+	</div>
+
+    <input id="Tracking_SystemUserLoginIdentifier" value="<%= HttpContext.Current.User.Identity.Name.Split(new[] { '|' })[0]%>" type="hidden" />
+    <input id="Tracking_ClientTopUnitGUID" value="<%= CWTDesktopDatabase.Helpers.Tracking.GetCurrentClientTopUnitGuid()%>" type="hidden" />
+    <input id="Tracking_ClientSubUnitGUID" value="<%= CWTDesktopDatabase.Helpers.Tracking.GetCurrentClientSubUnitGuid()%>" type="hidden" />
+    <input id="Tracking_PageUrl" value="<%= Request.Url.AbsoluteUri%>" type="hidden" />
+	<script src="<%=Url.Content("~/Scripts/Feedback.js")%>" type="text/javascript"></script>
+</body>
+</html>

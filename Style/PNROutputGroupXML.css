@@ -1,0 +1,12 @@
+﻿#pnr_wrapper {
+    width:100%;
+    margin:0 auto;
+}
+#pnr_col1 {
+    float:left;
+    width:55%;
+}
+#pnr_col2{
+    float:right;
+    width:45%;
+}

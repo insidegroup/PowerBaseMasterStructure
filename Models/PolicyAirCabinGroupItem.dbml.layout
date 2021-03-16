@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PolicyAirCabinGroupItem">
+  <DataContextMoniker Name="/PolicyAirCabinGroupItemDC" />
+  <nestedChildShapes>
+    <classShape Id="a545ee7b-94c2-4f36-8f39-5569992b9e99" absoluteBounds="1.5, 0.625, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/PolicyAirCabinGroupItemDC/PolicyAirCabinGroupItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63c13fbe-e18a-4eab-9b59-f38f5378a37c" absoluteBounds="1.5150000000000001, 1.085, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="262460ea-d4f8-4efd-a97a-3a20786a640f" absoluteBounds="0.5, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PolicyAirCabinGroupItemDC/PolicyAirCabinGroupItemLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14738381-f717-42be-8011-ea5171868131" absoluteBounds="0.51500000000000012, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 0.625); (2.5 : 0.375); (1.5 : 0.375); (1.5 : 0.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PolicyAirCabinGroupItemDC/PolicyAirCabinGroupItem/PolicyAirCabinGroupItem_PolicyAirCabinGroupItemLanguage" />
+      <nodes>
+        <classShapeMoniker Id="a545ee7b-94c2-4f36-8f39-5569992b9e99" />
+        <classShapeMoniker Id="262460ea-d4f8-4efd-a97a-3a20786a640f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

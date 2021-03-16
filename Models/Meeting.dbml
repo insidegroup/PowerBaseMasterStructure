@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v1841" Class="MeetingDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.11.90;Initial Catalog=Desktop_Local_v1841;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v1841" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CreditCardMeetingClientSubUnit" Member="CreditCardMeetingClientSubUnits">
+    <Type Name="CreditCardMeetingClientSubUnit">
+      <Column Name="CreditCardId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_CreditCardMeetingClientSubUnit" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Meeting" Member="Meetings">
+    <Type Name="Meeting">
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MeetingName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingReferenceNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MeetingLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingArriveByDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MeetingLeaveAfterDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CityCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_CreditCardMeetingClientSubUnit" Member="CreditCardMeetingClientSubUnits" ThisKey="MeetingID" OtherKey="MeetingID" Type="CreditCardMeetingClientSubUnit" />
+      <Association Name="Meeting_MeetingAdviceLanguage" Member="MeetingAdviceLanguages" ThisKey="MeetingID" OtherKey="MeetingID" Type="MeetingAdviceLanguage" />
+      <Association Name="Meeting_MeetingClientSubUnit" Member="MeetingClientSubUnits" ThisKey="MeetingID" OtherKey="MeetingID" Type="MeetingClientSubUnit" />
+      <Association Name="Meeting_MeetingContact" Member="MeetingContacts" ThisKey="MeetingID" OtherKey="MeetingID" Type="MeetingContact" />
+      <Association Name="Meeting_MeetingPNROutput" Member="MeetingPNROutputs" ThisKey="MeetingID" OtherKey="MeetingID" Type="MeetingPNROutput" />
+      <Association Name="Meeting_CreditCardMeetingTravelerType" Member="CreditCardMeetingTravelerTypes" ThisKey="MeetingID" OtherKey="MeetingID" Type="CreditCardMeetingTravelerType" />
+      <Association Name="Meeting_CreditCardMeetingClientSubUnitTravelerType" Member="CreditCardMeetingClientSubUnitTravelerTypes" ThisKey="MeetingID" OtherKey="MeetingID" Type="CreditCardMeetingClientSubUnitTravelerType" />
+      <Association Name="Meeting_CreditCardMeetingClientTopUnit" Member="CreditCardMeetingClientTopUnits" ThisKey="MeetingID" OtherKey="MeetingID" Type="CreditCardMeetingClientTopUnit" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingPNROutputLanguage" Member="MeetingPNROutputLanguages">
+    <Type Name="MeetingPNROutputLanguage">
+      <Column Name="MeetingPNROutputId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RemarkTranslation" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MeetingPNROutput_MeetingPNROutputLanguage" Member="MeetingPNROutput" ThisKey="MeetingPNROutputId" OtherKey="MeetingPNROutputId" Type="MeetingPNROutput" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingAdviceLanguage" Member="MeetingAdviceLanguages">
+    <Type Name="MeetingAdviceLanguage">
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MeetingAdviceTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MeetingAdvice" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_MeetingAdviceLanguage" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+      <Association Name="MeetingAdviceType_MeetingAdviceLanguage" Member="MeetingAdviceType" ThisKey="MeetingAdviceTypeId" OtherKey="MeetingAdviceTypeId" Type="MeetingAdviceType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingAdviceType" Member="MeetingAdviceTypes">
+    <Type Name="MeetingAdviceType">
+      <Column Name="MeetingAdviceTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MeetingAdviceTypeName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MeetingAdviceType_MeetingAdviceLanguage" Member="MeetingAdviceLanguages" ThisKey="MeetingAdviceTypeId" OtherKey="MeetingAdviceTypeId" Type="MeetingAdviceLanguage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingClientSubUnit" Member="MeetingClientSubUnits">
+    <Type Name="MeetingClientSubUnit">
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_MeetingClientSubUnit" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingContact" Member="MeetingContacts">
+    <Type Name="MeetingContact">
+      <Column Name="MeetingContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactFirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactLastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactPhoneNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactEmailAddress" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CopyItineraryFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_MeetingContact" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingPNROutput" Member="MeetingPNROutputs">
+    <Type Name="MeetingPNROutput">
+      <Column Name="MeetingPNROutputId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PNROutputRemarkTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PNROutputUpdateTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="PNROutputBindingTypeCode" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="GDSRemarkQualifier" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DefaultRemark" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MeetingPNROutput_MeetingPNROutputLanguage" Member="MeetingPNROutputLanguages" ThisKey="MeetingPNROutputId" OtherKey="MeetingPNROutputId" Type="MeetingPNROutputLanguage" />
+      <Association Name="Meeting_MeetingPNROutput" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CreditCardMeetingClientAccount" Member="CreditCardMeetingClientAccounts">
+    <Type Name="CreditCardMeetingClientAccount">
+      <Column Name="CreditCardId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CreditCardMeetingTravelerType" Member="CreditCardMeetingTravelerTypes">
+    <Type Name="CreditCardMeetingTravelerType">
+      <Column Name="CreditCardId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_CreditCardMeetingTravelerType" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CreditCardMeetingClientSubUnitTravelerType" Member="CreditCardMeetingClientSubUnitTravelerTypes">
+    <Type Name="CreditCardMeetingClientSubUnitTravelerType">
+      <Column Name="CreditCardId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_CreditCardMeetingClientSubUnitTravelerType" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CreditCardMeetingClientTopUnit" Member="CreditCardMeetingClientTopUnits">
+    <Type Name="CreditCardMeetingClientTopUnit">
+      <Column Name="CreditCardId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Meeting_CreditCardMeetingClientTopUnit" Member="Meeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="Meeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_InsertMeeting_v1" Method="spDesktopDataAdmin_InsertMeeting_v1">
+    <Parameter Name="MeetingName" Parameter="meetingName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MeetingReferenceNumber" Parameter="meetingReferenceNumber" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MeetingLocation" Parameter="meetingLocation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MeetingStartDate" Parameter="meetingStartDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MeetingEndDate" Parameter="meetingEndDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MeetingArriveByDateTime" Parameter="meetingArriveByDateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MeetingLeaveAfterDateTime" Parameter="meetingLeaveAfterDateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CityCode" Parameter="cityCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingDeletedStatus_v1" Method="spDesktopDataAdmin_UpdateMeetingDeletedStatus_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeeting_v1" Method="spDesktopDataAdmin_UpdateMeeting_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingName" Parameter="meetingName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MeetingReferenceNumber" Parameter="meetingReferenceNumber" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MeetingLocation" Parameter="meetingLocation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MeetingStartDate" Parameter="meetingStartDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MeetingEndDate" Parameter="meetingEndDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MeetingArriveByDateTime" Parameter="meetingArriveByDateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MeetingLeaveAfterDateTime" Parameter="meetingLeaveAfterDateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CityCode" Parameter="cityCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingLinkedClientSubUnit_v1" Method="spDesktopDataAdmin_UpdateMeetingLinkedClientSubUnit_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetings_v1" Method="spDesktopDataAdmin_SelectMeetings_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetings_v1Result">
+      <Column Name="MeetingId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingReferenceNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientTopUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LinkedItemCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingContacts_v1" Method="spDesktopDataAdmin_SelectMeetingContacts_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingContacts_v1Result">
+      <Column Name="MeetingContactID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactFirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactLastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactPhoneNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingContactEmailAddress" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CopyItineraryFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertMeetingContact_v1" Method="spDesktopDataAdmin_InsertMeetingContact_v1">
+    <Parameter Name="MeetingID" Parameter="meetingID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContactTypeId" Parameter="contactTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingContactLastName" Parameter="meetingContactLastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MeetingContactFirstName" Parameter="meetingContactFirstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MeetingContactPhoneNumber" Parameter="meetingContactPhoneNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="MeetingContactEmailAddress" Parameter="meetingContactEmailAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CountryCode" Parameter="countryCode" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="CopyItineraryFlag" Parameter="copyItineraryFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteMeetingContact_v1" Method="spDesktopDataAdmin_DeleteMeetingContact_v1">
+    <Parameter Name="MeetingContactId" Parameter="meetingContactId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingContact_v1" Method="spDesktopDataAdmin_UpdateMeetingContact_v1">
+    <Parameter Name="MeetingID" Parameter="meetingID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingContactId" Parameter="meetingContactId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContactTypeId" Parameter="contactTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingContactLastName" Parameter="meetingContactLastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MeetingContactFirstName" Parameter="meetingContactFirstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MeetingContactPhoneNumber" Parameter="meetingContactPhoneNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="MeetingContactEmailAddress" Parameter="meetingContactEmailAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CountryCode" Parameter="countryCode" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="CopyItineraryFlag" Parameter="copyItineraryFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteMeetingAdviceLanguage_v1" Method="spDesktopDataAdmin_DeleteMeetingAdviceLanguage_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingAdviceTypeId" Parameter="meetingAdviceTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertMeetingAdviceLanguage_v1" Method="spDesktopDataAdmin_InsertMeetingAdviceLanguage_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingAdviceTypeId" Parameter="meetingAdviceTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="MeetingAdvice" Parameter="meetingAdvice" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingAdviceLanguages_v1" Method="spDesktopDataAdmin_SelectMeetingAdviceLanguages_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingAdviceTypeId" Parameter="meetingAdviceTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingAdviceLanguages_v1Result">
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingAdvice" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingAdviceTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingAdviceTypeName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingAdviceLanguageAvailableLanguages_v1" Method="spDesktopDataAdmin_SelectMeetingAdviceLanguageAvailableLanguages_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingAdviceTypeId" Parameter="meetingAdviceTypeId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingAdviceLanguageAvailableLanguages_v1Result">
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingAdviceLanguage_v1" Method="spDesktopDataAdmin_UpdateMeetingAdviceLanguage_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingAdviceTypeId" Parameter="meetingAdviceTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="MeetingAdvice" Parameter="meetingAdvice" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingPNROutputItems_v1" Method="spDesktopDataAdmin_SelectMeetingPNROutputItems_v1">
+    <Parameter Name="MeetingID" Parameter="meetingID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingPNROutputItems_v1Result">
+      <Column Name="MeetingPNROutputId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PNROutputRemarkTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PNROutputRemarkTypeName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PNROutputUpdateTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PNROutputBindingTypeCode" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="GDSRemarkQualifier" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DefaultRemark" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteMeetingPNROutput_v1" Method="spDesktopDataAdmin_DeleteMeetingPNROutput_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_DeleteMeetingPNROutputLanguage_v1" Method="spDesktopDataAdmin_DeleteMeetingPNROutputLanguage_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertMeetingPNROutput_v1" Method="spDesktopDataAdmin_InsertMeetingPNROutput_v1">
+    <Parameter Name="MeetingID" Parameter="meetingID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PNROutputRemarkTypeCode" Parameter="pNROutputRemarkTypeCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DefaultLanguageCode" Parameter="defaultLanguageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="NVarChar(4)" />
+    <Parameter Name="GDSRemarkQualifier" Parameter="gDSRemarkQualifier" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DefaultRemark" Parameter="defaultRemark" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CountryCode" Parameter="countryCode" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertMeetingPNROutputLanguage_v1" Method="spDesktopDataAdmin_InsertMeetingPNROutputLanguage_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="RemarkTranslation" Parameter="remarkTranslation" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingPNROutputItems_v1" Method="spDesktopDataAdmin_SelectMeetingPNROutputItems_v11">
+    <Parameter Name="MeetingID" Parameter="meetingID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingPNROutputItems_v1Result1">
+      <Column Name="MeetingPNROutputId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PNROutputRemarkTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PNROutputRemarkTypeName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PNROutputUpdateTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PNROutputBindingTypeCode" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="GDSRemarkQualifier" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DefaultRemark" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingPNROutputLanguages_v1" Method="spDesktopDataAdmin_SelectMeetingPNROutputLanguages_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingPNROutputLanguages_v1Result">
+      <Column Name="MeetingPNROutputId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="RemarkTranslation" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingPNROutputLanguageAvailableLanguages_v1" Method="spDesktopDataAdmin_SelectMeetingPNROutputLanguageAvailableLanguages_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingPNROutputLanguageAvailableLanguages_v1Result">
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageCode" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingPNROutput_v1" Method="spDesktopDataAdmin_UpdateMeetingPNROutput_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MeetingID" Parameter="meetingID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PNROutputRemarkTypeCode" Parameter="pNROutputRemarkTypeCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DefaultLanguageCode" Parameter="defaultLanguageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="NVarChar(4)" />
+    <Parameter Name="GDSRemarkQualifier" Parameter="gDSRemarkQualifier" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DefaultRemark" Parameter="defaultRemark" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CountryCode" Parameter="countryCode" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingPNROutputLanguage_v1" Method="spDesktopDataAdmin_UpdateMeetingPNROutputLanguage_v1">
+    <Parameter Name="MeetingPNROutputId" Parameter="meetingPNROutputId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CurrentLanguageCode" Parameter="currentLanguageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="LanguageCode" Parameter="languageCode" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="RemarkTranslation" Parameter="remarkTranslation" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateMeetingLinkedCreditCard_v1" Method="spDesktopDataAdmin_UpdateMeetingLinkedCreditCard_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ClientTopUnitGuid" Parameter="clientTopUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="ClientAccountNumber" Parameter="clientAccountNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="CreditCardId" Parameter="creditCardId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingLinkedCreditCards_v1" Method="spDesktopDataAdmin_SelectMeetingLinkedCreditCards_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="Linked" Parameter="linked" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingLinkedCreditCards_v1Result">
+      <Column Name="CreditCardId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreditCardHolderName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaskedCreditCardNumber" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HierarchyItem" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ClientTopUnitGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="SourceSystemCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ClientAccountNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectMeetingLinkedClientSubUnits_v1" Method="spDesktopDataAdmin_SelectMeetingLinkedClientSubUnits_v1">
+    <Parameter Name="MeetingId" Parameter="meetingId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="Linked" Parameter="linked" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="spDesktopDataAdmin_SelectMeetingLinkedClientSubUnits_v1Result">
+      <Column Name="ClientSubUnitGuid" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSubUnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsClientExpiredFlag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

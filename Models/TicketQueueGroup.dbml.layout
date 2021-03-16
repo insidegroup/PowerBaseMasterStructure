@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TicketQueueGroup">
+  <DataContextMoniker Name="/TicketQueueGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="ccc15972-b6d6-4180-8619-373e552748bb" absoluteBounds="2.875, 1.625, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/TicketQueueGroupDC/TicketQueueGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19874db3-4a08-45bb-a85b-99e529a83522" absoluteBounds="2.89, 2.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c48d793-f0f7-42a3-94ed-4335abe9dc0f" absoluteBounds="6.625, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TicketQueueGroupDC/TicketQueueGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="832f500a-33d6-4a64-b3f6-792abac2c8f6" absoluteBounds="6.64, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 2.51524983723958); (6.625 : 2.51524983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TicketQueueGroupDC/TicketQueueGroup/TicketQueueGroup_TicketQueueGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="ccc15972-b6d6-4180-8619-373e552748bb" />
+        <classShapeMoniker Id="0c48d793-f0f7-42a3-94ed-4335abe9dc0f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0aae3974-df4d-4c70-8390-82029e7942dc" absoluteBounds="1.875, 2, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TicketQueueGroupDC/TicketQueueGroupTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f3575e6-a1b8-4df2-ba3b-507067510361" absoluteBounds="1.8900000000000001, 2.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 3.37580485026042); (1.625 : 3.37580485026042); (1.625 : 3.07774983723958); (1.875 : 3.07774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TicketQueueGroupDC/TicketQueueGroup/TicketQueueGroup_TicketQueueGroupTeam" />
+      <nodes>
+        <classShapeMoniker Id="ccc15972-b6d6-4180-8619-373e552748bb" />
+        <classShapeMoniker Id="0aae3974-df4d-4c70-8390-82029e7942dc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

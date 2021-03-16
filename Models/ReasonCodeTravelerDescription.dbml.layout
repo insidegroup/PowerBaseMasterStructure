@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ReasonCodeTravelerDescription">
+  <DataContextMoniker Name="/ReasonCodeTravelerDescriptionDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3477817c-d5cc-475d-8216-a724900a89c4" absoluteBounds="0.875, 1.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/ReasonCodeTravelerDescriptionDataContext/ReasonCodeTravelerDescription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03c94d68-47ab-441d-8b0d-a34a7268020b" absoluteBounds="0.89000000000000012, 2.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

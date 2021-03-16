@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TravelerBackOfficeType">
+  <DataContextMoniker Name="/TravelerBackOfficeTypeDC" />
+  <nestedChildShapes>
+    <classShape Id="8d17a12a-2b88-4f0b-9351-c62fc6aada3e" absoluteBounds="3.625, 1.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TravelerBackOfficeTypeDC/TravelerBackOfficeType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3171122-a665-41af-a874-0620ae0bce3c" absoluteBounds="3.64, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

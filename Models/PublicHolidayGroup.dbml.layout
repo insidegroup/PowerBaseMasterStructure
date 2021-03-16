@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PublicHolidayGroup">
+  <DataContextMoniker Name="/PublicHolidayGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="7c11328c-98da-4b70-b796-53b56f9b490e" absoluteBounds="2.75, 2, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/PublicHolidayGroupDC/PublicHolidayGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6577b3d2-b430-442d-81eb-aeb87e693759" absoluteBounds="2.765, 2.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cc9d89c-77bb-4f07-ba96-d0eb26494b4d" absoluteBounds="5.5, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PublicHolidayGroupDC/PublicHolidayGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66d8cd83-6865-430e-80ed-a6c410bd45bd" absoluteBounds="5.515, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 3.80370198567708); (5.5 : 3.80370198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PublicHolidayGroupDC/PublicHolidayGroup/PublicHolidayGroup_PublicHolidayGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="7c11328c-98da-4b70-b796-53b56f9b490e" />
+        <classShapeMoniker Id="7cc9d89c-77bb-4f07-ba96-d0eb26494b4d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="91877e87-71eb-41bc-b3bd-1b0789043761" absoluteBounds="7.875, 2.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PublicHolidayGroupDC/PublicHolidayGroupTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2824804-da33-4cd1-a526-ceaeaa59d6cc" absoluteBounds="7.89, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 2.53125); (7.875 : 2.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PublicHolidayGroupDC/PublicHolidayGroup/PublicHolidayGroup_PublicHolidayGroupTeam" />
+      <nodes>
+        <classShapeMoniker Id="7c11328c-98da-4b70-b796-53b56f9b490e" />
+        <classShapeMoniker Id="91877e87-71eb-41bc-b3bd-1b0789043761" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

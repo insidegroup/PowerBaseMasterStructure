@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TravelPortType">
+  <DataContextMoniker Name="/TravelPortTypeDC" />
+  <nestedChildShapes>
+    <classShape Id="2520fc20-ab06-48eb-84b3-d3fa0eea86cc" absoluteBounds="1.125, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TravelPortTypeDC/TravelPortType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec14915b-cf91-4082-a7bc-e160f1b687b0" absoluteBounds="1.1400000000000001, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

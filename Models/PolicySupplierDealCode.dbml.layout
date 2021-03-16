@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.25" name="PolicySupplierDealCode">
+  <DataContextMoniker Name="/PolicySupplierDealCodeDC" />
+  <nestedChildShapes>
+    <classShape Id="a471c945-9240-4b29-bc1f-e958cc76542c" absoluteBounds="6.5, 2.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/PolicySupplierDealCodeDC/PolicySupplierDealCodeOSI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55c6d39b-ab1f-4099-947f-8695244e8117" absoluteBounds="6.515, 3.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc30a791-1596-41ef-b118-d5bb9a894236" absoluteBounds="6, 7, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/PolicySupplierDealCodeDC/PolicySupplierDealCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a34e027-f47d-4033-8ab4-613f69c3f168" absoluteBounds="6.015, 7.46, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 7); (7.25 : 5.4151025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PolicySupplierDealCodeDC/PolicySupplierDealCode/PolicySupplierDealCode_PolicySupplierDealCodeOSI" />
+      <nodes>
+        <classShapeMoniker Id="fc30a791-1596-41ef-b118-d5bb9a894236" />
+        <classShapeMoniker Id="a471c945-9240-4b29-bc1f-e958cc76542c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

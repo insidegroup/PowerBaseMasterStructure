@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 31.5" name="Meeting">
+  <DataContextMoniker Name="/MeetingDC" />
+  <nestedChildShapes>
+    <classShape Id="bd0a11f0-052a-4d72-8f4a-f04226ec722f" absoluteBounds="3.5, 4, 2, 2.3478011067708349">
+      <DataClassMoniker Name="/MeetingDC/CreditCardMeetingClientSubUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccb0f044-7422-4b7f-b529-40eb8e6e3920" absoluteBounds="3.515, 4.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" absoluteBounds="0.75, 8.625, 2, 4.6554182942708309">
+      <DataClassMoniker Name="/MeetingDC/Meeting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc2f89b2-deed-41ef-ae72-b16943a7b114" absoluteBounds="0.76500000000000057, 9.085, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce524639-559c-4ede-9487-490ab2166139" absoluteBounds="6.25, 18.125, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/MeetingDC/MeetingPNROutputLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fbe1c3f-c373-4d68-a75b-eb78b55db332" absoluteBounds="6.265, 18.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e792bd73-2f00-42f8-b840-32520c90d009" absoluteBounds="6.5, 9.625, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/MeetingDC/MeetingAdviceLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45d66372-0da8-4d22-89e0-420714429801" absoluteBounds="6.515, 10.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5bfd7ba6-390b-4658-bd6a-c4382deced94" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MeetingDC/MeetingAdviceType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4fe2365-13e7-4ee1-be1d-ed2f893099bf" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b14e071-a3cd-4194-8f43-860549550a3a" absoluteBounds="3.5, 10.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MeetingDC/MeetingClientSubUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dae7e3d9-4c2d-4788-a552-2764fd5f1285" absoluteBounds="3.515, 10.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec9501e6-cbc0-4c94-93b6-f7297dd7036d" absoluteBounds="3.5, 13.25, 2, 3.5016097005208291">
+      <DataClassMoniker Name="/MeetingDC/MeetingContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1862e7ef-fb6d-4a3c-9a17-31df1f4bb02d" absoluteBounds="3.515, 13.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b49bbb1b-e605-4557-bc28-a762cced1009" absoluteBounds="3.5, 17.5, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/MeetingDC/MeetingPNROutput" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5143d43-5537-4a96-b964-eba90d4e87ed" absoluteBounds="3.515, 17.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 8.625); (1.75 : 5.17390055338542); (3.5 : 5.17390055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_CreditCardMeetingClientSubUnit" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="bd0a11f0-052a-4d72-8f4a-f04226ec722f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.96875); (6.5 : 9.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_MeetingAdviceLanguage" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="e792bd73-2f00-42f8-b840-32520c90d009" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625025 : 3.09780110677083); (5.65625025 : 9.7656225); (6.5 : 9.7656225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/MeetingAdviceType/MeetingAdviceType_MeetingAdviceLanguage" />
+      <nodes>
+        <classShapeMoniker Id="5bfd7ba6-390b-4658-bd6a-c4382deced94" />
+        <classShapeMoniker Id="e792bd73-2f00-42f8-b840-32520c90d009" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.4527498372396); (3.5 : 11.4527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_MeetingClientSubUnit" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="5b14e071-a3cd-4194-8f43-860549550a3a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 13.2804182942708); (1.75 : 15.0160144973958); (2.19791916666667 : 15.0160144973958 : JumpStart); (2.36458583333333 : 15.0160144973958 : JumpEnd); (3.5 : 15.0160144973958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_MeetingContact" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="ec9501e6-cbc0-4c94-93b6-f7297dd7036d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 19.2989005533854); (6.25 : 19.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/MeetingPNROutput/MeetingPNROutput_MeetingPNROutputLanguage" />
+      <nodes>
+        <classShapeMoniker Id="b49bbb1b-e605-4557-bc28-a762cced1009" />
+        <classShapeMoniker Id="ce524639-559c-4ede-9487-490ab2166139" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 13.2804182942708); (2.2812525 : 19.3469555664063); (3.5 : 19.3469555664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_MeetingPNROutput" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="b49bbb1b-e605-4557-bc28-a762cced1009" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed165f15-12ce-443c-9999-04d6821af3c5" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MeetingDC/CreditCardMeetingClientAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="538c85ce-aa0b-4d9a-9f7d-7334e22fb7ee" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c248b270-9f77-4cbe-afe6-43efb3764890" absoluteBounds="3.875, 22.625, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/MeetingDC/CreditCardMeetingTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb29a39d-f4d6-4e19-8ba6-3d376f5fe669" absoluteBounds="3.89, 23.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c54c6e1a-a5cf-4e8c-afbf-21d343bb1c85" absoluteBounds="3.875, 28.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/MeetingDC/CreditCardMeetingClientSubUnitTravelerType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1100d701-86fd-4d27-a8cb-a295604210fb" absoluteBounds="3.89, 29.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c9088cd-5145-4d4f-b91f-e42638b243c1" absoluteBounds="3.875, 25.625, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/MeetingDC/CreditCardMeetingClientTopUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf76da79-0e27-4e37-8a0b-f98f15c9d20f" absoluteBounds="3.89, 26.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.2187475 : 13.2804182942708); (1.2187475 : 23.7989005533854); (3.875 : 23.7989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_CreditCardMeetingTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="c248b270-9f77-4cbe-afe6-43efb3764890" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 13.2804182942708); (2.54687875 : 30.0200512695313); (3.875 : 30.0200512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_CreditCardMeetingClientSubUnitTravelerType" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="c54c6e1a-a5cf-4e8c-afbf-21d343bb1c85" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.01562625 : 13.2804182942708); (2.01562625 : 26.7989005533854); (3.875 : 26.7989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MeetingDC/Meeting/Meeting_CreditCardMeetingClientTopUnit" />
+      <nodes>
+        <classShapeMoniker Id="209d06c7-9b9c-43d2-bfe1-7b821f6f77c0" />
+        <classShapeMoniker Id="6c9088cd-5145-4d4f-b91f-e42638b243c1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

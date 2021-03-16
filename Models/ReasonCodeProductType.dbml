@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DesktopData" Class="ReasonCodeProductTypeDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DMLAPTOP\SQLEXPRESS2008;Initial Catalog=DesktopData;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CWTDesktopDatabase" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ReasonCodeProductType" Member="ReasonCodeProductTypes">
+    <Type Name="ReasonCodeProductType">
+      <Column Name="ReasonCode" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeSavingTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spDesktopDataAdmin_SelectReasonCodes_v1" Method="spDesktopDataAdmin_SelectReasonCodes_v1">
+    <ElementType Name="spDesktopDataAdmin_SelectReasonCodes_v1Result">
+      <Column Name="ReasonCode" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectReasonCodeProductTypes_v1" Method="spDesktopDataAdmin_SelectReasonCodeProductTypes_v1">
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectReasonCodeProductTypes_v1Result">
+      <Column Name="ReasonCode" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectReasonCodeItemAvailableReasonCodeTypes_v1" Method="spDesktopDataAdmin_SelectReasonCodeItemAvailableReasonCodeTypes_v1">
+    <Parameter Name="ReasonCodeItemId" Parameter="reasonCodeItemId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReasonCodeGroupId" Parameter="reasonCodeGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReasonCode" Parameter="reasonCode" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spDesktopDataAdmin_SelectReasonCodeItemAvailableReasonCodeTypes_v1Result">
+      <Column Name="ReasonCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReasonCodeTypeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectReasonCodeProducts_v1" Method="spDesktopDataAdmin_SelectReasonCodeProducts_v1">
+    <Parameter Name="ReasonCode" Parameter="reasonCode" Type="System.String" DbType="VarChar(3)" />
+    <ElementType Name="spDesktopDataAdmin_SelectReasonCodeProducts_v1Result">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WorkFlowGroup">
+  <DataContextMoniker Name="/WorkFlowGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="adf1887a-f2e9-4a7d-a4ba-764013e4a5de" absoluteBounds="1.125, 2.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/WorkFlowGroupDC/WorkFlowGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cd350b7-a5f5-4ed2-8d3e-7fbad04b1698" absoluteBounds="1.1400000000000001, 3.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62ae41d8-3ed9-4058-a269-1c99276efaa8" absoluteBounds="4.5, 2.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/WorkFlowGroupDC/WorkFlowGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d38b454-f1fd-4dae-b3f2-2dab5e9e21bb" absoluteBounds="4.515, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 3.57774983723958); (4.5 : 3.57774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WorkFlowGroupDC/WorkFlowGroup/WorkFlowGroup_WorkFlowGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="adf1887a-f2e9-4a7d-a4ba-764013e4a5de" />
+        <classShapeMoniker Id="62ae41d8-3ed9-4058-a269-1c99276efaa8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

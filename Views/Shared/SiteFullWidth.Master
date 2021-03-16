@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="<%=Url.Content("~/Style/Site.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%=Url.Content("~/Style/Feedback.css")%>" rel="stylesheet" type="text/css" media="screen" />
+    <!--USED-->
+    <link href="<%=Url.Content("~/Style/accordian.css")%>" rel="stylesheet" type="text/css" />
+    <!--USED-->
+    <link href="<%=Url.Content("~/Style/themes/base/jquery.ui.css")%>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Style/themes/base/jquery.autocomplete.css")%>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Style/Calendrical.css")%>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Style/print.css")%>" rel="stylesheet" type="text/css" media="print" />
+
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-1.4.2.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.ui.core.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.ui.widget.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.ui.datepicker.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-ui-1.8.2.custom.min.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/Calendrical/jquery.calendrical.cwt.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/Wizard/jquery.NobleCount.min.js")%>"></script>
+
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")%>"></script>
+    <script src="<%=Url.Content("~/Scripts/Menu/accordian-menu.js")%>" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="headerContent" runat="server"></asp:ContentPlaceHolder>
+	
+	<script src="<%= Url.Content("~/Scripts/ckeditor/ckeditor.js") %>" type="text/javascript" ></script>
+	<script src="<%=Url.Content("~/Scripts/linkify.min.js")%>" type="text/javascript"></script>
+	<script src="<%=Url.Content("~/Scripts/linkify-jquery.min.js")%>" type="text/javascript"></script>
+	<!--[if IE 8]>
+		<script src="<%=Url.Content("~/Scripts/linkify-polyfill.min.js")%>"></script>
+	<![endif]-->
+
+	<script src="<%=Url.Content("~/Scripts/common.js")%>" type="text/javascript"></script>
+
+	<!--[if lt IE 8]>
+	<style type="text/css">
+		li a {display:inline-block;}
+		li a {display:block;}
+	</style>
+	<![endif]-->
+
+	<style id="antiClickjack">body{display:none !important;}</style>
+
+	<script type="text/javascript">
+		if (self === top) {
+			var antiClickjack = document.getElementById("antiClickjack");
+			antiClickjack.parentNode.removeChild(antiClickjack);
+		} else {
+			top.location = self.location;
+		}
+	</script>
+
+</head>
+
+<body class="full-width">
+    <div id="wrapper">
+        <div class="toolbar">
+            <a href="#" onclick="fby.push(['showForm', '8403']);return false;" class="feedback-btn">Feedback</a>
+        </div>
+        <div id="header"></div>
+        <div id="search_wrapper">
+            <div id="breadcrumb">
+                <asp:ContentPlaceHolder ID="BreadCrumbContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div id="search">
+                <form id="frmSearch" method="get" action="" autocomplete="off">
+                    <input type="hidden" value="" name="ft" id="ft" />
+                    <input type="text" value="" class="txtSearch" name="filter" id="filter" autocomplete="off" />
+                    <input type="button" value="search" class="btnSearch" id="btnSearch" title="search" />
+                </form>
+            </div>
+        </div>
+		<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <div id="footer">CWT Desktop Admin <%= CWTDesktopDatabase.Models.Settings.ApplicationVersion() %>, Environment : <%=HttpContext.Current.User.Identity.Name.Split(new[] { '|' })[1]%></div>
+    </div>
+
+    <input id="Tracking_SystemUserLoginIdentifier" value="<%= HttpContext.Current.User.Identity.Name.Split(new[] { '|' })[0] %>" type="hidden" />
+    <input id="Tracking_ClientTopUnitGUID" value="<%= CWTDesktopDatabase.Helpers.Tracking.GetCurrentClientTopUnitGuid() %>" type="hidden" />
+    <input id="Tracking_ClientSubUnitGUID" value="<%= CWTDesktopDatabase.Helpers.Tracking.GetCurrentClientSubUnitGuid() %>" type="hidden" />
+    <input id="Tracking_PageUrl" value="<%= Request.Url.AbsoluteUri %>" type="hidden" />
+	<script src="<%=Url.Content("~/Scripts/Feedback.js")%>" type="text/javascript"></script>
+</body>
+</html>

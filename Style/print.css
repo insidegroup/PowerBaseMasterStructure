@@ -1,0 +1,446 @@
+﻿/*MAIN DIVS - BEGIN*/
+body
+{
+    background-color:#f3f3f3;
+	margin:0px;
+	padding:0px;
+	font-family: Verdana;
+	color:#000000;
+	font-size:10px;
+}
+#wrapper {
+    margin:0px;
+    padding:0px;
+    width:100%;
+    background-color:#ffffff;
+}
+#contentarea
+{
+    width:100%;
+    float:left;
+}
+#header
+{
+    display: none;
+   
+}
+#header_text
+{
+    font-family:'Formata Condensed';
+    font-size:25px;
+    text-align:right;
+    vertical-align:text-top;
+    padding-right:5px;
+    padding-top:70px;
+    
+}
+#breadcrumb
+{
+    height:20px;
+    vertical-align:top;
+    width:535px;
+    float:left;
+}
+#search_wrapper
+{
+    display: none;
+    height:23px;
+    background-color:#ffffff;
+    text-align:left;
+    padding-left:260px;
+    vertical-align:middle;
+
+}
+#search
+{
+    display: none;
+    text-align:right;
+    float:right;
+    width:195px;
+    height:20px;
+    display:none;
+    vertical-align:top;
+}
+#nav
+{
+    display: none;
+}
+#content
+{
+    padding-top:10px;
+    float:left;
+    width:100%;
+    padding-right:10px;
+    background-color:#ffffff; 
+    font-size:10px;
+}
+#banner
+{
+    height:42px;
+    width:745px;
+}
+#banner_text
+{
+    font-size:22px;
+
+}
+
+#footer
+{
+    clear:both;
+    background-color:#ffffff;
+    height:38px;   
+    font-size:9px;
+    padding-left:10px;
+}
+
+/*MAIN DIVS - END*/
+
+/*STANDARD HTML ITEMS - BEGIN*/
+a
+{
+    text-decoration: underline;
+    color:#000000;
+}
+
+/*STANDARD HTML ITEMS - END*/
+
+/*CONTENT - BEGIN*/
+td
+{
+      padding-left:7px;     
+}
+th
+{
+    background-color: #f3f3f3;
+    height: 19px;
+    color:#000000;
+    font-weight:bold;
+    text-align:left;
+    padding-left:7px;
+}
+.row_even
+{
+    padding-left:7px;
+    background-color: #f3f3f3;
+    height: 21px;
+}
+.row_odd
+{
+    padding-left:7px;
+    background-color: #ffffff;
+    height: 21px;  
+}
+.row_odd2   /*sometimes white strip on white back causes problems*/
+{
+    padding-left:7px;
+    background-color: #E6E6E6;
+    height: 21px;
+}
+.row_footer
+{
+    background-color: #f3f3f3;
+    height: 19px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    padding-left:7px;
+    padding-bottom:10px;
+}
+.row_footer_blank
+{
+    height:19px;
+    vertical-align:bottom;
+    padding-left:7px;
+    background-color: #ffffff;
+}
+.row_footer_left
+{
+    background-color: #f3f3f3;
+    height: 19px;
+    color:#000000;
+    border-bottom-left-radius:5px;
+    padding-left:7px;
+    padding-bottom:10px;
+}
+.row_footer_blank_left
+{
+    display: none;
+}
+.row_footer_right
+{
+   display: none;
+}
+.row_footer_centre
+{
+    display: none;
+}
+.row_footer_blank_right
+{
+   display: none;
+}
+.row_header
+{
+    background-color: #f3f3f3;
+    height: 19px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.row_header_left
+{
+    background-color: #f3f3f3;
+    height: 19px;
+    border-top-left-radius:5px;
+}
+.row_header_right
+{
+    background-color: #f3f3f3;
+    height: 19px;
+    border-top-right-radius:5px;
+    padding-right:9px;
+}
+
+span.error
+{
+    color: Red;
+}
+/*CONTENT - END*/
+
+/*BUTTONS - BEGIN*/
+a.red
+{
+    display: none;
+}
+input[type="submit"] 
+{
+    display: none;
+}
+/*BUTTONS - END*/
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    padding: 0 0 10px 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#header h1
+{
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    border: none;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+}
+
+#main
+{
+    padding: 30px 30px 15px 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #CCC;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    margin-top:40px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    /*border: 1px solid #ff0000;*/
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label,
+.display-field,
+.editor-field
+{
+    margin: 0.5em 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+
+
+
+
+
+
+.paging_container {
+    width: 100%;  
+    margin: auto;
+    text-align: left;
+}
+  
+.paging_left 
+{
+    float: left;
+    width: 100px;
+    background-color: #f3f3f3;
+    height: 19px;
+    border-bottom-left-radius:5px;
+    padding-left:7px;
+    padding-top:2px;
+    padding-bottom:10px;
+}
+
+.paging_centre 
+{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #f3f3f3;
+    height: 19px;
+    text-align:center;
+    padding-top:2px;
+    padding-bottom:10px;
+}
+.paging_right 
+{
+    float: right;
+    width: 100px;
+    background-color: #f3f3f3;
+    height: 19px;
+    border-bottom-right-radius:5px;
+    text-align:right;
+    padding-right:9px;
+    padding-top:2px;
+    padding-bottom:10px;
+}

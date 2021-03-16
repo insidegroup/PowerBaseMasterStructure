@@ -1,0 +1,220 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+	border:0;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border:0;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url('../../../images/tablesorter/bg.gif');
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url('../../../images/tablesorter/asc.gif');
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url('../../../images/tablesorterdesc.gif');
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+
+/*smaller version*/
+
+table.tablesorter_half {
+	font-family:arial;
+	background-color:#CCC;
+	margin:10px 0pt 15px;
+	font-size:10pt;
+	width: 50%;
+	text-align: left;
+}
+table.tablesorter_half thead tr th, table.tablesorter_half tfoot tr th {
+	background-color:#69C;
+	border: 0;
+	font-size: 10pt;
+	padding: 4px;
+	color:#000000;
+	
+}
+table.tablesorter_half thead tr .header {
+	background-image: url('//images/tablesorter/bg.gif');
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter_half tbody td {
+	color:#036;
+	padding: 4px;
+	background-color:#fff;
+	vertical-align: top;
+}
+table.tablesorter_half tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter_half thead tr .headerSortUp {
+	background-image: url('../../../images/tablesorter/asc.gif');
+}
+table.tablesorter_half thead tr .headerSortDown {
+	background-image: url('../../../images/tablesorterdesc.gif');
+}
+table.tablesorter_half thead tr .headerSortDown, table.tablesorter_half thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+/*other version*/
+
+table.tablesorter_other {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 12pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter_other thead tr th, table.tablesorter_other tfoot tr th {
+	background-color: #e6EEEE;
+	border: 0;
+	font-size: 12pt;
+	padding: 4px;
+}
+table.tablesorter_other thead tr .header {
+
+	cursor: pointer;
+}
+table.tablesorter_other tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	font-size: 10pt;
+}
+table.tablesorter_other tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter_other thead tr .headerSortUp {
+	
+	
+	
+}
+table.tablesorter_other thead tr .headerSortDown {
+	
+}
+table.tablesorter_other thead tr .headerSortDown, table.tablesorter_other thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+table.tablesorter_other2 {
+	font-family:arial;
+	background-color:#CCC;
+	margin:10px 0pt 15px;
+	font-size:10pt;
+	width: 100%;
+	text-align: left;
+}
+
+
+table.tablesorter_other2 thead tr th, table.tablesorter_other2 tfoot tr th {
+	background-color:#007886;
+	border: 0;
+	font-size: 10pt;
+	padding: 4px;
+	color:#000000;
+	color:#FFF;
+	
+}
+
+/*this is to mimick a TR THEAD but without the sorting*/
+
+.trTD{
+	background-color:#007886;
+	border: 0;
+	font-size: 10pt;
+	padding: 4px;
+	
+	color:#FFF;
+	
+}
+
+table.tablesorter_other2 thead tr .header {
+	
+	
+	
+	cursor: pointer;
+}
+table.tablesorter_other2 tbody td {
+	color:#036;
+	padding: 4px;
+	background-color:#fff;
+	vertical-align: top;
+	border: 0;
+}
+table.tablesorter_other2 tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter_other2 thead tr .headerSortUp {
+	
+}
+table.tablesorter_other2 thead tr .headerSortDown {
+
+}
+table.tablesorter_other2 thead tr .headerSortDown, table.tablesorter_other2 thead tr .headerSortUp {
+background-color: #007886;
+color:#000;
+}
+
+table.tablesorter_other2 tbody tr:hover td, tbody tr:hover th {
+	background-color: #BAE899;
+}
+
+table.tablesorter_other3 thead tr th, table.tablesorter_other3 tfoot tr th {
+	background-color:#e6EEEE;
+	border: 0;
+	font-size: 10pt;
+	padding: 4px;
+	color:#000000;
+	
+}
+
+table.tablesorter_other3 thead tr th, table.tablesorter_other3 tfoot tr th {
+	background-color:#f3f3f3;
+	border: 0;
+	font-size: 10pt;
+	padding: 4px;
+	color:#000000;
+	
+}
+
+table.tablesorter_other3 tbody td {
+	
+	padding: 4px;
+	/*background-color:#0C6;*/
+	vertical-align: top;
+}
+
+table.tablesorter selectedRow{
+	background-color:#999;
+}
+
+

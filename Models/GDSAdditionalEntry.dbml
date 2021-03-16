@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Desktop_Local_v2051" Class="GDSAdditionalEntryDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DMLAPTOP2\SQL2008;Initial Catalog=Desktop_Local_v2051;Persist Security Info=True;User ID=cdoadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Desktop_Local_v2051ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GDSAdditionalEntry" Member="GDSAdditionalEntries">
+    <Type Name="GDSAdditionalEntry">
+      <Column Name="GDSAdditionalEntryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GDSAdditionalEntryValue" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="GDSAdditionalEntryEventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TripTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GDSAdditionalEntry_GDSAdditionalEntryLocation" Member="GDSAdditionalEntryLocations" ThisKey="GDSAdditionalEntryId" OtherKey="GDSAdditionalEntryId" Type="GDSAdditionalEntryLocation" />
+      <Association Name="GDSAdditionalEntry_GDSAdditionalEntryTeam" Member="GDSAdditionalEntryTeams" ThisKey="GDSAdditionalEntryId" OtherKey="GDSAdditionalEntryId" Type="GDSAdditionalEntryTeam" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GDSAdditionalEntryLocation" Member="GDSAdditionalEntryLocations">
+    <Type Name="GDSAdditionalEntryLocation">
+      <Column Name="GDSAdditionalEntryId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GDSAdditionalEntry_GDSAdditionalEntryLocation" Member="GDSAdditionalEntry" ThisKey="GDSAdditionalEntryId" OtherKey="GDSAdditionalEntryId" Type="GDSAdditionalEntry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GDSAdditionalEntryTeam" Member="GDSAdditionalEntryTeams">
+    <Type Name="GDSAdditionalEntryTeam">
+      <Column Name="GDSAdditionalEntryId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="LastUpdateTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserIdentifier" Type="System.String" DbType="NVarChar(170)" CanBeNull="true" />
+      <Column Name="VersionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GDSAdditionalEntry_GDSAdditionalEntryTeam" Member="GDSAdditionalEntry" ThisKey="GDSAdditionalEntryId" OtherKey="GDSAdditionalEntryId" Type="GDSAdditionalEntry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.fnDesktopDataAdmin_SelectGDSAdditionalEntryHierarchy_v1" Method="fnDesktopDataAdmin_SelectGDSAdditionalEntryHierarchy_v1" IsComposable="true">
+    <Parameter Name="GDSAdditionalEntryId" Parameter="gDSAdditionalEntryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fnDesktopDataAdmin_SelectGDSAdditionalEntryHierarchy_v1Result">
+      <Column Name="HierarchyCode" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="HierarchyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TravelerTypeGuid" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="TravelerTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateGDSAdditionalEntryDeletedStatus_v1" Method="spDesktopDataAdmin_UpdateGDSAdditionalEntryDeletedStatus_v1">
+    <Parameter Name="GDSAdditionalEntryId" Parameter="gDSAdditionalEntryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_InsertGDSAdditionalEntry_v1" Method="spDesktopDataAdmin_InsertGDSAdditionalEntry_v1">
+    <Parameter Name="GDSAdditionalEntryValue" Parameter="gDSAdditionalEntryValue" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="GDSAdditionalEntryEventId" Parameter="gDSAdditionalEntryEventId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubProductId" Parameter="subProductId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_UpdateGDSAdditionalEntry_v1" Method="spDesktopDataAdmin_UpdateGDSAdditionalEntry_v1">
+    <Parameter Name="GDSAdditionalEntryId" Parameter="gDSAdditionalEntryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GDSAdditionalEntryValue" Parameter="gDSAdditionalEntryValue" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GDSCode" Parameter="gDSCode" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="GDSAdditionalEntryEventId" Parameter="gDSAdditionalEntryEventId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SubProductId" Parameter="subProductId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EnabledFlag" Parameter="enabledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EnabledDate" Parameter="enabledDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripTypeId" Parameter="tripTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HierarchyType" Parameter="hierarchyType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="HierarchyItemCode" Parameter="hierarchyItemCode" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="TravelerTypeGuid" Parameter="travelerTypeGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="ClientSubUnitGuid" Parameter="clientSubUnitGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="SourceSystemCode" Parameter="sourceSystemCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <Parameter Name="VersionNumber" Parameter="versionNumber" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectGDSAdditionalEntries_v1" Method="spDesktopDataAdmin_SelectGDSAdditionalEntries_v1">
+    <Parameter Name="DeletedFlag" Parameter="deletedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectGDSAdditionalEntries_v1Result">
+      <Column Name="GDSAdditionalEntryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDSAdditionalEntryValue" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EnabledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HierarchyType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDesktopDataAdmin_SelectGDSAdditionalEntriesOrphaned_v1" Method="spDesktopDataAdmin_SelectGDSAdditionalEntriesOrphaned_v1">
+    <Parameter Name="Filter" Parameter="filter" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="SortField" Parameter="sortField" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortOrder" Parameter="sortOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageNumber" Parameter="pageNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminUserGuid" Parameter="adminUserGuid" Type="System.String" DbType="VarChar(13)" />
+    <ElementType Name="spDesktopDataAdmin_SelectGDSAdditionalEntriesOrphaned_v1Result">
+      <Column Name="GDSAdditionalEntryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDSAdditionalEntryValue" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasWriteAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RecordCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

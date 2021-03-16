@@ -1,0 +1,40 @@
+﻿/* Feedbackify */
+
+.toolbar {
+	text-align: right;
+	padding: 6px;
+	position: relative;
+	background: #3b4852;
+	height: 59px;
+	padding-bottom: 6px;
+}
+
+.feedback-btn {
+	font-size: 12px;
+	line-height: normal;
+	min-width: 70px;
+	padding: 6px 12px;
+	margin: 0;
+	text-decoration: none;
+	/*border-radius: 4px;*/
+	display: inline-block;
+	text-align: center;
+	background: #ffa84c; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffa84c 0%, #ff7b0d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffa84c 0%,#ff7b0d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+	border: 1px solid #FF7200;
+	color: #fff;
+	position: relative;
+	bottom: -30px;
+	right: 10px;
+}
+
+.feedback-btn:focus,
+.feedback-btn:hover {
+	color: #fff;
+	background: #FF7200;
+	background-image: none;
+	text-decoration: none;
+}

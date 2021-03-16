@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.875" name="ServicingOption">
+  <DataContextMoniker Name="/ServicingOptionItemDC" />
+  <nestedChildShapes>
+    <classShape Id="e298937c-533b-490c-872a-cca9d2356632" absoluteBounds="2.125, 1.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/ServicingOptionItemDC/ServicingOptionItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ee86ffc-a680-416e-959c-909ba2269089" absoluteBounds="2.14, 1.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9a58633-c044-458d-9485-d40d4f048a25" absoluteBounds="2.125, 5.125, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ServicingOptionItemDC/ServicingOptionFareCalculation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b90ef64-f07d-44e8-bbb4-6c8576e0e0da" absoluteBounds="2.14, 5.585, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 4.43430826822917); (3.125 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ServicingOptionItemDC/ServicingOptionItem/ServicingOptionItem_ServicingOptionFareCalculation" />
+      <nodes>
+        <classShapeMoniker Id="e298937c-533b-490c-872a-cca9d2356632" />
+        <classShapeMoniker Id="d9a58633-c044-458d-9485-d40d4f048a25" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

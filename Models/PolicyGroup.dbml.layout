@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PolicyGroup">
+  <DataContextMoniker Name="/PolicyGroupDC" />
+  <nestedChildShapes>
+    <classShape Id="3576a38f-97a8-46b6-a042-dc1c35f71f1f" absoluteBounds="4, 3.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PolicyGroupDC/PolicyGroupLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c247a3d-61a3-462d-86ad-954d83cbdbc4" absoluteBounds="4.015, 3.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab9a18d3-1243-4578-b6c9-98739c89e9d7" absoluteBounds="3.875, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PolicyGroupDC/PolicyGroupTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccf91926-972b-4f9a-a8ca-f9c4d11e4e0a" absoluteBounds="3.8899999999999997, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20c43d4a-1bd9-4b32-9822-a0ff7de0b6c6" absoluteBounds="1.25, 0.875, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/PolicyGroupDC/PolicyGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcbb5f8d-0a06-41bc-a9dc-6a4c83bdf74b" absoluteBounds="1.2650000000000001, 1.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 4.03445556640625); (4 : 4.03445556640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PolicyGroupDC/PolicyGroup/PolicyGroup_PolicyGroupLocation" />
+      <nodes>
+        <classShapeMoniker Id="20c43d4a-1bd9-4b32-9822-a0ff7de0b6c6" />
+        <classShapeMoniker Id="3576a38f-97a8-46b6-a042-dc1c35f71f1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.25 : 1.86140055338542); (3.875 : 1.86140055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PolicyGroupDC/PolicyGroup/PolicyGroup_PolicyGroupTeam" />
+      <nodes>
+        <classShapeMoniker Id="20c43d4a-1bd9-4b32-9822-a0ff7de0b6c6" />
+        <classShapeMoniker Id="ab9a18d3-1243-4578-b6c9-98739c89e9d7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.95923076923077 : 4.5689111328125); (1.95923076923077 : 4.8189111328125); (2.55461538461538 : 4.8189111328125); (2.55461538461538 : 4.5689111328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PolicyGroupDC/PolicyGroup/PolicyGroup_PolicyGroup" />
+      <nodes>
+        <classShapeMoniker Id="20c43d4a-1bd9-4b32-9822-a0ff7de0b6c6" />
+        <classShapeMoniker Id="20c43d4a-1bd9-4b32-9822-a0ff7de0b6c6" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
